@@ -2,7 +2,6 @@
 layout: post
 title: Báo cáo xu hướng hành vi ứng viên 2026
 category: "Report"
-published: false
 ---
 
 Dưới đây là các con số quan trọng nổi bật:
