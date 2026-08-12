@@ -2,4 +2,4 @@ title: Bài viết của Upzi
 description: Chia sẻ bài viết & kiến thức
 permalink: /insights/:title/
 paginate: 5
-paginate_path: "/dung/page:num/"
+paginate_path: "/insights/page:num/"
