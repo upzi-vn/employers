@@ -1,9 +1,5 @@
 ---
 layout: null
-
-pagination:
-  enabled: true
-  per_page: 12
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -24,7 +20,7 @@ pagination:
 .sec{padding:105px 0}.sec-off{background:var(--off)}.head{max-width:700px;margin-bottom:48px}.eyebrow{display:inline-block;background:var(--purple-tint);color:var(--purple);font-family:var(--font-sub);font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}.head h2{font-family:var(--font-display);font-size:clamp(32px,4.2vw,48px);line-height:1.1;letter-spacing:-.025em}.head p{margin-top:15px;color:var(--body);font-size:16px;line-height:1.65}
 .feature-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}.article{background:#fff;border-radius:30px;overflow:hidden;border:1px solid #eeeaf5;transition:.3s;display:flex;flex-direction:column}.article:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(85,28,175,.1)}.article-img{height:250px;background:linear-gradient(135deg,#e8d9ff,#f4edff);background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:24px}.article.large .article-img{height:330px}.article-img span{background:var(--yellow);color:var(--purple-deep);padding:7px 12px;border-radius:999px;font:700 11px var(--font-sub);text-transform:uppercase}.article-body{padding:26px;flex:1;display:flex;flex-direction:column;justify-content:space-between}.article-body h3{font-family:var(--font-display);font-size:25px;line-height:1.2;margin:10px 0 12px}.article-body p{color:var(--body);font-size:14.5px;line-height:1.65}.meta{margin-top:20px;font-size:12px;color:#92899f;font-family:var(--font-sub);font-weight:600}
 .article-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.article-list .article-img{height:190px}.article-list .article-body h3{font-size:21px}
-.pager{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:44px;flex-wrap:wrap}.pager a,.pager span{min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;padding:0 12px;border-radius:999px;font:700 14px var(--font-sub);border:1px solid #e6dff2;color:#625c6e;transition:.2s}.pager a:hover{background:var(--purple);color:#fff;border-color:var(--purple)}.pager .on{background:var(--purple);color:#fff;border-color:var(--purple)}.pager .off{opacity:.35}
+
 .newsletter{background:var(--purple-tint);border-radius:36px;padding:55px;display:grid;grid-template-columns:1fr .8fr;gap:45px;align-items:center}.newsletter h2{font-family:var(--font-display);font-size:38px;line-height:1.12}.newsletter p{color:var(--body);line-height:1.6;margin-top:12px}.newsletter-form{display:flex;gap:10px}.newsletter-form input{flex:1;border:2px solid #e6ddf3;background:#fff;border-radius:999px;padding:15px 18px;font:14px var(--font-body)}.newsletter-form button{border:0;border-radius:999px;background:var(--purple);color:#fff;padding:0 22px;font:700 14px var(--font-sub);cursor:pointer}
 footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;color:#7a7488}.f-top{display:flex;justify-content:space-between;gap:35px;padding-bottom:28px;border-bottom:1px solid #e6e1ef}.f-logo{font:700 21px var(--font-display);color:var(--purple-dark);margin-bottom:10px}.f-col p{font-size:13px;line-height:1.7}.f-col h4{font:700 11px var(--font-sub);text-transform:uppercase;letter-spacing:.06em;color:#a49db4;margin-bottom:10px}.f-bot{padding-top:20px;font-size:12px;color:#a49db4;display:flex;justify-content:space-between}
 /* ===== success stories ===== */.story-card .article-img{position:relative;height:300px;padding:26px;display:flex;align-items:flex-end;overflow:hidden}.story-card .article-img::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.55),transparent 28%),linear-gradient(135deg,rgba(147,69,255,.16),transparent 52%);transform:rotate(-8deg)}.story-card .story-visual{position:relative;z-index:1;width:100%}.story-card .story-kicker{display:inline-block;background:rgba(255,255,255,.82);color:var(--purple-deep);padding:7px 12px;border-radius:999px;font:800 11px var(--font-sub);margin-bottom:12px}.story-card .story-number{font:700 64px/1 var(--font-display);color:var(--purple-deep);letter-spacing:-.05em}.story-card .story-number small{font:700 17px var(--font-sub);letter-spacing:0}.story-card .story-body{padding:28px}.story-card .story-body h3{font-size:25px;line-height:1.18;margin:9px 0 12px}.story-card .story-body p{color:var(--body);font-size:14.5px;line-height:1.65}.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}.story-stat{background:var(--off);border-radius:14px;padding:12px 11px}.story-stat strong{display:block;font:800 17px var(--font-display);color:var(--purple)}.story-stat span{display:block;margin-top:3px;font:600 10.5px/1.35 var(--font-sub);color:#81788e}.story-link{display:inline-block;margin-top:22px;font:800 13px var(--font-sub);color:var(--purple)}.story-card.retail .article-img{background:linear-gradient(135deg,#f1e7ff 0%,#e9f8f2 100%)}.story-card.construction .article-img{background:linear-gradient(135deg,#fff0df 0%,#f1e7ff 100%)}
@@ -41,9 +37,10 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   <div class="wrap nav-inner">
     <div class="logo"><a href="{{ '/' | relative_url }}"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="logo-img"></a></div>
     <div class="nav-links">
-      <a data-scroll="insights">Nổi bật</a>
-      <a data-scroll="latest">Tất cả bài viết</a>
-      <a data-scroll="stories">Success Stories</a>
+      {% assign cats = site.posts | map: "category" | compact | uniq | sort %}
+      {% for c in cats %}
+        <a data-scroll="cat-{{ c | slugify }}">{{ c }}</a>
+      {% endfor %}
     </div>
     <a class="nav-cta" data-scroll="newsletter">Nhận tài liệu</a>
   </div>
@@ -60,7 +57,7 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
     {% assign featured = site.posts | first %}
     {% if featured %}
     <article class="hero-card">
-      <div class="mini-tag">MỚI NHẤT</div>
+      <div class="mini-tag">NỔI BẬT</div>
       <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
       <p>{{ featured.description | default: featured.excerpt | strip_html | truncatewords: 20 }}</p>
       <a class="read" href="{{ featured.url | relative_url }}">Đọc câu chuyện →</a>
@@ -69,134 +66,75 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   </div>
 </section>
 
-<!-- INSIGHTS NỔI BẬT: Lấy 2 bài mới nhất -->
-<section class="sec" id="insights">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow">Nổi bật</div>
-      <h2>Những điều doanh nghiệp cần biết về nhân sự trẻ</h2>
-      <p>Chọn lọc những góc nhìn thực tế về hành vi ứng viên, Employer Branding và chiến lược tuyển dụng Gen Z.</p>
-    </div>
-    <div class="feature-grid">
-      {% assign featured = site.posts | slice: 0, 2 %}
-      {% for post in featured %}
-        <article class="article {% if forloop.first %}large{% endif %}">
-          <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
-            <span>{{ post.category | default: "INSIGHTS" }}</span>
-          </div>
-          <div class="article-body">
-            <div>
-              <div class="meta">{{ post.date | date: "%d/%m/%Y" }} · UPZI INSIGHTS</div>
-              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 22 }}</p>
-            </div>
-            <a href="{{ post.url | relative_url }}" class="meta" style="display:inline-block; margin-top:15px; color:var(--purple); font-weight:700;">Đọc bài viết →</a>
-          </div>
-        </article>
-      {% else %}
-        <p>Chưa có bài viết nào trong thư mục _posts.</p>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+<!-- ============================================================
+     KHU THEO CHỦ ĐỀ — tự sinh từ `category` trong _posts
+     Thêm tag mới => tự có khu mới + tự có mục trên menu.
+     Tag không còn bài đang hiện => tự biến mất.
+============================================================ -->
+{% assign cats = site.posts | map: "category" | compact | uniq | sort %}
+{% for c in cats %}
+  {% assign slug = c | slugify %}
+  {% assign posts_in_cat = site.posts | where: "category", c %}
 
-<!-- TẤT CẢ BÀI VIẾT -->
-<section class="sec sec-off" id="latest">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow">Tất cả bài viết</div>
-      <h2>Kho nội dung Upzi</h2>
-      <p>Toàn bộ bài viết, sắp xếp theo thời gian. Lọc theo chủ đề ở khu bên dưới.</p>
-    </div>
-    <div class="article-list">
-      {% assign pinned = site.posts | slice: 0, 2 %}
-      {% for post in paginator.posts %}
-        {% if paginator.page == 1 and pinned contains post %}{% continue %}{% endif %}
-        <article class="article" data-cat="{{ post.category | default: 'Blog' | slugify }}">
-          <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
-            <span>{{ post.category | default: "BLOG" }}</span>
-          </div>
-          <div class="article-body">
-            <div>
-              <div class="meta">{{ post.date | date: "%d/%m/%Y" }}</div>
-              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 16 }}</p>
+  <section class="sec {% cycle 'bg': '', 'sec-off' %}" id="cat-{{ slug }}">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">{{ c }}</div>
+        <h2>{{ c }}</h2>
+      </div>
+
+      {% if slug == 'success-story' %}
+      <!-- Success Story: thẻ có ô số liệu -->
+      <div class="feature-grid">
+        {% for post in posts_in_cat limit: 2 %}
+          <article class="article story-card {% if forloop.first %}large {% endif %}{{ post.card_class }}">
+            <div class="article-img">
+              <div class="story-visual">
+                <div class="story-kicker">{{ post.industry | upcase }}{% if post.target %} · {{ post.target | upcase }}{% endif %}</div>
+                <div class="story-number">{{ post.headline_stat }} <small>{{ post.headline_label }}</small></div>
+              </div>
             </div>
-            <a href="{{ post.url | relative_url }}" class="meta" style="display:inline-block; margin-top:15px; color:var(--purple); font-weight:700;">Đọc tiếp →</a>
-          </div>
-        </article>
+            <div class="story-body">
+              <div class="meta">{{ c | upcase }}{% if post.period %} · {{ post.period | upcase }}{% endif %}</div>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 34 }}</p>
+              {% if post.stats %}
+              <div class="story-stats">
+                {% for st in post.stats %}
+                  <div class="story-stat"><strong>{{ st.value }}</strong><span>{{ st.label }}</span></div>
+                {% endfor %}
+              </div>
+              {% endif %}
+              <a href="{{ post.url | relative_url }}" class="story-link">Xem chi tiết →</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
       {% else %}
-        <p>Đang cập nhật bài viết mới...</p>
-      {% endfor %}
-    </div>
-    {% if paginator.total_pages > 1 %}
-    <nav class="pager">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}">← Trước</a>
-      {% else %}
-        <span class="off">← Trước</span>
+      <!-- Chủ đề thường: lưới thẻ bài -->
+      <div class="article-list">
+        {% for post in posts_in_cat %}
+          <article class="article">
+            <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
+              <span>{{ c }}</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <div class="meta">{{ post.date | date: "%d/%m/%Y" }}</div>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 18 }}</p>
+              </div>
+              <a href="{{ post.url | relative_url }}" class="meta" style="display:inline-block;margin-top:15px;color:var(--purple);font-weight:700;">Đọc tiếp →</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
       {% endif %}
 
-      {% for p in (1..paginator.total_pages) %}
-        {% if p == paginator.page %}
-          <span class="on">{{ p }}</span>
-        {% elsif p == 1 %}
-          <a href="{{ '/tips-insights.html' | relative_url }}">{{ p }}</a>
-        {% else %}
-          <a href="{{ site.pagination.permalink | replace: ':num', p | prepend: '/tips-insights' | relative_url }}">{{ p }}</a>
-        {% endif %}
-      {% endfor %}
-
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}">Sau →</a>
-      {% else %}
-        <span class="off">Sau →</span>
-      {% endif %}
-    </nav>
-    {% endif %}
-  </div>
-</section>
-
-
-
-<section class="sec" id="stories">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow">Success stories</div>
-      <h2>Những thay đổi nhỏ tạo ra khác biệt trong tuyển dụng</h2>
-      <p>Những câu chuyện thực tế cho thấy doanh nghiệp có thể mở rộng nguồn ứng viên trẻ bằng cách thay đổi cách tiếp cận, nội dung và phân bổ tin tuyển dụng.</p>
     </div>
-    <div class="feature-grid">
-      {% assign stories = site.posts | where: "category", "Success Story" %}
-      {% for post in stories limit: 2 %}
-        <article class="article story-card {% if forloop.first %}large {% endif %}{{ post.card_class }}">
-          <div class="article-img">
-            <div class="story-visual">
-              <div class="story-kicker">{{ post.industry | upcase }}{% if post.target %} · {{ post.target | upcase }}{% endif %}</div>
-              <div class="story-number">{{ post.headline_stat }} <small>{{ post.headline_label }}</small></div>
-            </div>
-          </div>
-          <div class="story-body">
-            <div class="meta">SUCCESS STORY{% if post.period %} · {{ post.period | upcase }}{% endif %}</div>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 34 }}</p>
-            {% if post.stats %}
-            <div class="story-stats">
-              {% for s in post.stats %}
-                <div class="story-stat"><strong>{{ s.value }}</strong><span>{{ s.label }}</span></div>
-              {% endfor %}
-            </div>
-            {% endif %}
-            <a href="{{ post.url | relative_url }}" class="story-link">Xem success story →</a>
-          </div>
-        </article>
-      {% else %}
-        <p>Đang cập nhật success story...</p>
-      {% endfor %}
-    </div>
-
-  </div>
-</section>
+  </section>
+{% endfor %}
 
 <section class="sec sec-off" id="newsletter">
   <div class="wrap">
