@@ -20,28 +20,3 @@ pagination:
   trail:
     before: 2
     after: 2
-
-# ============================================================
-# TRANG DANH MUC TU SINH (autopages)
-# Moi gia tri `category` trong _posts se tu co mot trang rieng:
-#   /insights/tag/insight/
-#   /insights/tag/success-story/
-# Khong can tao file tay. Them tag moi -> trang moi tu xuat hien.
-# ============================================================
-autopages:
-  enabled: true
-
-  collections:
-    enabled: false
-
-  tags:
-    enabled: false
-
-  categories:
-    enabled: true
-    layout: "category.html"
-    title: ":cat"
-    permalink: "/insights/tag/:cat/"
-    slugify:
-      mode: "default"
-      cased: false
