@@ -1,0 +1,5 @@
+title: Blog Của Tôi
+description: Chia sẻ bài viết & kiến thức
+permalink: /dung/:title/
+paginate: 5
+paginate_path: "/dung/page:num/"

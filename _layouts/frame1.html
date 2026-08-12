@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }} | Upzi</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================================================
+       UPZI ARTICLE LAYOUT
+       JEKYLL SHARED LAYOUT
+    ========================================================= */
+
+    :root {
+      --purple: #9345FF;
+      --purple-dark: #551caf;
+      --purple-deep: #2E0F5C;
+      --purple-deeper: #1d0940;
+      --purple-tint: #F4EDFF;
+
+      --yellow: #E0E722;
+      --mint: #5FE0BB;
+      --gold: #FFD364;
+      --orange: #FF8F3C;
+      --coral: #FF968C;
+
+      --ink: #111111;
+      --body: #4b5563;
+      --white: #ffffff;
+      --off: #F7F5FB;
+
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-sub: 'Manrope', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+
+    /* =========================================================
+       NAV
+    ========================================================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+
+      border-bottom: 1px solid #efecf5;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 15px 28px;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+
+      color: var(--purple-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-cta {
+      background: var(--purple);
+      color: var(--white);
+
+      font-family: var(--font-sub);
+      font-weight: 700;
+      font-size: 14px;
+
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: none;
+
+      transition: transform .18s ease, background .2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--purple-dark);
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       ARTICLE HERO
+    ========================================================= */
+
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+
+      color: var(--white);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple) 0%,
+          #7B32E0 50%,
+          var(--purple-dark) 100%
+        );
+
+      padding: 90px 0 100px;
+    }
+
+    .article-hero::before {
+      content: "";
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      right: -180px;
+      top: -220px;
+
+      border: 80px solid rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .article-hero::after {
+      content: "";
+      position: absolute;
+
+      width: 360px;
+      height: 360px;
+
+      left: -180px;
+      bottom: -240px;
+
+      border: 65px solid rgba(224,231,34,0.08);
+      border-radius: 50%;
+    }
+
+    .article-hero-inner {
+      position: relative;
+      z-index: 2;
+
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      font-family: var(--font-sub);
+      font-size: 13px;
+      font-weight: 700;
+
+      color: rgba(255,255,255,0.72);
+
+      margin-bottom: 32px;
+
+      transition: color .2s ease, transform .2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--white);
+      transform: translateX(-3px);
+    }
+
+    .article-category {
+      display: inline-block;
+
+      font-family: var(--font-sub);
+      font-size: 12px;
+      font-weight: 700;
+
+      color: var(--purple-deep);
+      background: var(--yellow);
+
+      padding: 7px 15px;
+      border-radius: 999px;
+
+      margin-bottom: 22px;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+
+      font-weight: 700;
+      letter-spacing: -0.025em;
+
+      max-width: 900px;
+
+      margin-bottom: 24px;
+    }
+
+    .article-description {
+      max-width: 720px;
+
+      font-size: 18px;
+      line-height: 1.65;
+
+      color: rgba(255,255,255,0.78);
+
+      margin-bottom: 30px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      font-size: 13px;
+      color: rgba(255,255,255,0.62);
+    }
+
+    .meta-dot {
+      opacity: .5;
+    }
+
+
+    /* =========================================================
+       ARTICLE BODY
+    ========================================================= */
+
+    .article-section {
+      padding: 90px 0 120px;
+
+      background: var(--white);
+    }
+
+    .article-layout {
+      display: grid;
+
+      grid-template-columns: minmax(0, 760px) 250px;
+
+      gap: 70px;
+
+      align-items: start;
+
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       ARTICLE CONTENT
+    ========================================================= */
+
+    .article-content {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--body);
+    }
+
+    .article-content > *:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h2 {
+      font-family: var(--font-display);
+
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.18;
+
+      font-weight: 700;
+      letter-spacing: -0.02em;
+
+      color: var(--ink);
+
+      margin-top: 64px;
+      margin-bottom: 20px;
+    }
+
+    .article-content h3 {
+      font-family: var(--font-display);
+
+      font-size: 25px;
+      line-height: 1.25;
+
+      font-weight: 700;
+
+      color: var(--purple-deep);
+
+      margin-top: 42px;
+      margin-bottom: 14px;
+    }
+
+    .article-content h4 {
+      font-family: var(--font-sub);
+
+      font-size: 18px;
+      font-weight: 700;
+
+      color: var(--ink);
+
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .article-content p {
+      margin-bottom: 20px;
+    }
+
+    .article-content strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .article-content a {
+      color: var(--purple);
+      font-weight: 600;
+
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin: 20px 0 28px 24px;
+    }
+
+    .article-content li {
+      margin-bottom: 9px;
+      padding-left: 5px;
+    }
+
+    .article-content li::marker {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       HIGHLIGHT / BLOCKQUOTE
+    ========================================================= */
+
+    .article-content blockquote {
+      position: relative;
+
+      background: var(--purple-tint);
+
+      border-left: 5px solid var(--purple);
+
+      border-radius: 0 24px 24px 0;
+
+      padding: 26px 30px;
+
+      margin: 32px 0;
+
+      color: var(--purple-deep);
+
+      font-family: var(--font-sub);
+      font-size: 17px;
+      font-weight: 600;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       TABLE
+    ========================================================= */
+
+    .article-content table {
+      width: 100%;
+
+      border-collapse: separate;
+      border-spacing: 0;
+
+      margin: 32px 0;
+
+      overflow: hidden;
+
+      border: 1px solid #e9e3f2;
+
+      border-radius: 20px;
+    }
+
+    .article-content th {
+      background: var(--purple);
+
+      color: var(--white);
+
+      font-family: var(--font-sub);
+      font-weight: 700;
+
+      text-align: left;
+
+      padding: 15px 18px;
+    }
+
+    .article-content td {
+      padding: 15px 18px;
+
+      border-top: 1px solid #eeeaf4;
+
+      background: var(--white);
+    }
+
+    .article-content tr:nth-child(even) td {
+      background: #faf9fc;
+    }
+
+
+    /* =========================================================
+       IMAGE
+    ========================================================= */
+
+    .article-content img {
+      width: 100%;
+      height: auto;
+
+      border-radius: 26px;
+
+      margin: 34px 0;
+
+      box-shadow: 0 16px 40px rgba(46,15,92,0.08);
+    }
+
+    .article-content figure {
+      margin: 38px 0;
+    }
+
+    .article-content figcaption {
+      margin-top: 10px;
+
+      font-size: 13px;
+      line-height: 1.5;
+
+      color: #81798f;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       CODE
+    ========================================================= */
+
+    .article-content code {
+      background: var(--purple-tint);
+
+      color: var(--purple-deep);
+
+      padding: 3px 7px;
+
+      border-radius: 7px;
+
+      font-size: .9em;
+    }
+
+    .article-content pre {
+      overflow-x: auto;
+
+      background: var(--purple-deep);
+
+      color: var(--white);
+
+      padding: 24px;
+
+      border-radius: 20px;
+
+      margin: 28px 0;
+    }
+
+    .article-content pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+
+    /* =========================================================
+       SIDEBAR
+    ========================================================= */
+
+    .article-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-card {
+      background: var(--off);
+
+      border: 1px solid #ebe6f3;
+
+      border-radius: 24px;
+
+      padding: 24px;
+    }
+
+    .sidebar-label {
+      font-family: var(--font-sub);
+
+      font-size: 11px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: .06em;
+
+      color: var(--purple);
+
+      margin-bottom: 14px;
+    }
+
+    .sidebar-title {
+      font-family: var(--font-display);
+
+      font-size: 20px;
+      line-height: 1.25;
+
+      font-weight: 700;
+
+      color: var(--ink);
+
+      margin-bottom: 16px;
+    }
+
+    .sidebar-date {
+      font-size: 13px;
+
+      color: #777181;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       ARTICLE CTA
+    ========================================================= */
+
+    .article-cta {
+      background: var(--purple-deep);
+
+      color: var(--white);
+
+      padding: 76px 0;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      right: -150px;
+      top: -200px;
+
+      border: 70px solid rgba(147,69,255,0.35);
+
+      border-radius: 50%;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+
+      max-width: 780px;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    .cta-inner h2 {
+      font-family: var(--font-display);
+
+      font-size: clamp(30px, 4vw, 44px);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.02em;
+
+      margin-bottom: 16px;
+    }
+
+    .cta-inner p {
+      max-width: 600px;
+
+      margin: 0 auto 28px;
+
+      color: rgba(255,255,255,0.7);
+
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--yellow);
+
+      color: var(--purple-deep);
+
+      font-family: var(--font-sub);
+      font-weight: 700;
+
+      font-size: 15px;
+
+      padding: 15px 28px;
+
+      border-radius: 999px;
+
+      transition: transform .18s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: var(--off);
+
+      color: #7a7488;
+
+      padding: 42px 0 26px;
+
+      border-top: 1px solid #eae5f3;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+
+      font-weight: 700;
+      font-size: 21px;
+
+      color: var(--purple-dark);
+    }
+
+    .footer-copy {
+      font-size: 12.5px;
+
+      color: #a49db4;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .article-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+      .article-sidebar {
+        position: static;
+        order: -1;
+      }
+
+      .sidebar-card {
+        display: none;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .wrap {
+        padding: 0 20px;
+      }
+
+      .nav-inner {
+        padding: 14px 20px;
+      }
+
+      .nav-cta {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .article-hero {
+        padding: 62px 0 72px;
+      }
+
+      .article-hero h1 {
+        font-size: 38px;
+      }
+
+      .article-description {
+        font-size: 16px;
+      }
+
+      .article-section {
+        padding: 60px 0 80px;
+      }
+
+      .article-content {
+        font-size: 15.5px;
+      }
+
+      .article-content h2 {
+        margin-top: 46px;
+      }
+
+      .article-content h3 {
+        margin-top: 34px;
+      }
+
+      .article-content blockquote {
+        padding: 22px 22px;
+      }
+
+      .article-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .article-cta {
+        padding: 60px 0;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =======================================================
+       NAV
+  ======================================================== -->
+
+  <nav class="nav">
+    <div class="wrap nav-inner">
+
+      <a href="{{ '/' | relative_url }}" class="logo">
+        upzi
+      </a>
+
+      <a href="{{ '/' | relative_url }}" class="nav-cta">
+        Về Upzi
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =======================================================
+       ARTICLE HERO
+  ======================================================== -->
+
+  <header class="article-hero">
+
+    <div class="wrap article-hero-inner">
+
+      <a href="{{ '/' | relative_url }}" class="back-link">
+        ← Quay lại Upzi
+      </a>
+
+      {% if page.category %}
+        <div class="article-category">
+          {{ page.category }}
+        </div>
+      {% endif %}
+
+      <h1>
+        {{ page.title }}
+      </h1>
+
+      {% if page.description %}
+        <p class="article-description">
+          {{ page.description }}
+        </p>
+      {% endif %}
+
+      <div class="article-meta">
+
+        {% if page.date %}
+          <span>
+            Đăng ngày {{ page.date | date: "%d/%m/%Y" }}
+          </span>
+        {% endif %}
+
+        {% if page.author %}
+          <span class="meta-dot">·</span>
+          <span>
+            {{ page.author }}
+          </span>
+        {% endif %}
+
+        {% if page.read_time %}
+          <span class="meta-dot">·</span>
+          <span>
+            {{ page.read_time }} phút đọc
+          </span>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       ARTICLE CONTENT
+  ======================================================== -->
+
+  <main class="article-section">
+
+    <div class="wrap article-layout">
+
+
+      <!-- MAIN CONTENT -->
+
+      <article class="article-content">
+
+        {{ content }}
+
+      </article>
+
+
+      <!-- SIDEBAR -->
+
+      <aside class="article-sidebar">
+
+        <div class="sidebar-card">
+
+          <div class="sidebar-label">
+            Bài viết
+          </div>
+
+          <div class="sidebar-title">
+            {{ page.title }}
+          </div>
+
+          {% if page.date %}
+            <div class="sidebar-date">
+              Đăng ngày<br>
+              <strong>
+                {{ page.date | date: "%d/%m/%Y" }}
+              </strong>
+            </div>
+          {% endif %}
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+  <!-- =======================================================
+       CTA
+  ======================================================== -->
+
+  <section class="article-cta">
+
+    <div class="wrap cta-inner">
+
+      <h2>
+        Muốn tuyển Gen Z hiệu quả hơn?
+      </h2>
+
+      <p>
+        Khám phá cách Upzi giúp doanh nghiệp tiếp cận ứng viên trẻ
+        sớm hơn và xây dựng nguồn ứng viên ổn định.
+      </p>
+
+      <a
+        href="{{ '/' | relative_url }}"
+        class="cta-button"
+      >
+        Khám phá Upzi
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="wrap footer-inner">
+
+      <div class="footer-logo">
+        upzi
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Upzi — Member of Navigos Group. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
