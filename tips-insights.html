@@ -1,5 +1,9 @@
 ---
 layout: null
+
+pagination:
+  enabled: true
+  per_page: 12
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -20,7 +24,7 @@ layout: null
 .sec{padding:105px 0}.sec-off{background:var(--off)}.head{max-width:700px;margin-bottom:48px}.eyebrow{display:inline-block;background:var(--purple-tint);color:var(--purple);font-family:var(--font-sub);font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:16px}.head h2{font-family:var(--font-display);font-size:clamp(32px,4.2vw,48px);line-height:1.1;letter-spacing:-.025em}.head p{margin-top:15px;color:var(--body);font-size:16px;line-height:1.65}
 .feature-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}.article{background:#fff;border-radius:30px;overflow:hidden;border:1px solid #eeeaf5;transition:.3s;display:flex;flex-direction:column}.article:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(85,28,175,.1)}.article-img{height:250px;background:linear-gradient(135deg,#e8d9ff,#f4edff);background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:24px}.article.large .article-img{height:330px}.article-img span{background:var(--yellow);color:var(--purple-deep);padding:7px 12px;border-radius:999px;font:700 11px var(--font-sub);text-transform:uppercase}.article-body{padding:26px;flex:1;display:flex;flex-direction:column;justify-content:space-between}.article-body h3{font-family:var(--font-display);font-size:25px;line-height:1.2;margin:10px 0 12px}.article-body p{color:var(--body);font-size:14.5px;line-height:1.65}.meta{margin-top:20px;font-size:12px;color:#92899f;font-family:var(--font-sub);font-weight:600}
 .article-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.article-list .article-img{height:190px}.article-list .article-body h3{font-size:21px}
-.topic-band{background:var(--purple-deep);color:#fff;padding:70px 0}.topic-grid{display:grid;grid-template-columns:1fr 2fr;gap:55px;align-items:center}.topic-band h2{font-family:var(--font-display);font-size:38px;line-height:1.12}.topic-band h2 span{color:var(--yellow)}.topics{display:flex;flex-wrap:wrap;gap:12px}.topic{border:1px solid rgba(255,255,255,.2);padding:13px 18px;border-radius:999px;font:700 13px var(--font-sub);color:rgba(255,255,255,.86);transition:.2s}.topic:hover{background:var(--yellow);color:var(--purple-deep);border-color:var(--yellow)}.topic{cursor:pointer}.topic.is-active{background:var(--yellow);color:var(--purple-deep);border-color:var(--yellow)}
+.topic-band{background:var(--purple-deep);color:#fff;padding:70px 0}.topic-grid{display:grid;grid-template-columns:1fr 2fr;gap:55px;align-items:center}.topic-band h2{font-family:var(--font-display);font-size:38px;line-height:1.12}.topic-band h2 span{color:var(--yellow)}.topics{display:flex;flex-wrap:wrap;gap:12px}.topic{border:1px solid rgba(255,255,255,.2);padding:13px 18px;border-radius:999px;font:700 13px var(--font-sub);color:rgba(255,255,255,.86);transition:.2s}.topic:hover{background:var(--yellow);color:var(--purple-deep);border-color:var(--yellow)}.topic{cursor:pointer}.pager{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:44px;flex-wrap:wrap}.pager a,.pager span{min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;padding:0 12px;border-radius:999px;font:700 14px var(--font-sub);border:1px solid #e6dff2;color:#625c6e;transition:.2s}.pager a:hover{background:var(--purple);color:#fff;border-color:var(--purple)}.pager .on{background:var(--purple);color:#fff;border-color:var(--purple)}.pager .off{opacity:.35}.topic.is-active{background:var(--yellow);color:var(--purple-deep);border-color:var(--yellow)}
 .newsletter{background:var(--purple-tint);border-radius:36px;padding:55px;display:grid;grid-template-columns:1fr .8fr;gap:45px;align-items:center}.newsletter h2{font-family:var(--font-display);font-size:38px;line-height:1.12}.newsletter p{color:var(--body);line-height:1.6;margin-top:12px}.newsletter-form{display:flex;gap:10px}.newsletter-form input{flex:1;border:2px solid #e6ddf3;background:#fff;border-radius:999px;padding:15px 18px;font:14px var(--font-body)}.newsletter-form button{border:0;border-radius:999px;background:var(--purple);color:#fff;padding:0 22px;font:700 14px var(--font-sub);cursor:pointer}
 footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;color:#7a7488}.f-top{display:flex;justify-content:space-between;gap:35px;padding-bottom:28px;border-bottom:1px solid #e6e1ef}.f-logo{font:700 21px var(--font-display);color:var(--purple-dark);margin-bottom:10px}.f-col p{font-size:13px;line-height:1.7}.f-col h4{font:700 11px var(--font-sub);text-transform:uppercase;letter-spacing:.06em;color:#a49db4;margin-bottom:10px}.f-bot{padding-top:20px;font-size:12px;color:#a49db4;display:flex;justify-content:space-between}
 /* ===== success stories ===== */.story-card .article-img{position:relative;height:300px;padding:26px;display:flex;align-items:flex-end;overflow:hidden}.story-card .article-img::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.55),transparent 28%),linear-gradient(135deg,rgba(147,69,255,.16),transparent 52%);transform:rotate(-8deg)}.story-card .story-visual{position:relative;z-index:1;width:100%}.story-card .story-kicker{display:inline-block;background:rgba(255,255,255,.82);color:var(--purple-deep);padding:7px 12px;border-radius:999px;font:800 11px var(--font-sub);margin-bottom:12px}.story-card .story-number{font:700 64px/1 var(--font-display);color:var(--purple-deep);letter-spacing:-.05em}.story-card .story-number small{font:700 17px var(--font-sub);letter-spacing:0}.story-card .story-body{padding:28px}.story-card .story-body h3{font-size:25px;line-height:1.18;margin:9px 0 12px}.story-card .story-body p{color:var(--body);font-size:14.5px;line-height:1.65}.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}.story-stat{background:var(--off);border-radius:14px;padding:12px 11px}.story-stat strong{display:block;font:800 17px var(--font-display);color:var(--purple)}.story-stat span{display:block;margin-top:3px;font:600 10.5px/1.35 var(--font-sub);color:#81788e}.story-link{display:inline-block;margin-top:22px;font:800 13px var(--font-sub);color:var(--purple)}.story-card.retail .article-img{background:linear-gradient(135deg,#f1e7ff 0%,#e9f8f2 100%)}.story-card.construction .article-img{background:linear-gradient(135deg,#fff0df 0%,#f1e7ff 100%)}
@@ -104,7 +108,7 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
       <h2>Mới nhất từ Upzi</h2>
     </div>
     <div class="article-list">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
         <article class="article" data-cat="{{ post.category | default: 'Blog' | slugify }}">
           <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
             <span>{{ post.category | default: "BLOG" }}</span>
@@ -122,6 +126,32 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
         <p>Đang cập nhật bài viết mới...</p>
       {% endfor %}
     </div>
+    {% if paginator.total_pages > 1 %}
+    <nav class="pager">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">← Trước</a>
+      {% else %}
+        <span class="off">← Trước</span>
+      {% endif %}
+
+      {% for p in (1..paginator.total_pages) %}
+        {% if p == paginator.page %}
+          <span class="on">{{ p }}</span>
+        {% elsif p == 1 %}
+          <a href="{{ '/tips-insights.html' | relative_url }}">{{ p }}</a>
+        {% else %}
+          <a href="{{ site.pagination.permalink | replace: ':num', p | prepend: '/tips-insights' | relative_url }}">{{ p }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Sau →</a>
+      {% else %}
+        <span class="off">Sau →</span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
     <p id="no-result" style="display:none; color:var(--muted); padding:20px 0;">Chưa có bài viết nào trong chủ đề này.</p>
   </div>
 </section>

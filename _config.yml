@@ -1,5 +1,20 @@
 title: Bài viết của Upzi
 description: Chia sẻ bài viết & kiến thức
+
 permalink: /insights/:title/
-paginate: 5
-paginate_path: "/insights/page:num/"
+
+plugins:
+  - jekyll-paginate-v2
+
+# Phan trang (jekyll-paginate-v2)
+# Bat o tung trang bang khoi `pagination:` trong front matter.
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: "/page/:num/"
+  title: ":title — trang :num"
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
