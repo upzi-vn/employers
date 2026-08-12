@@ -104,8 +104,8 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
 <section class="sec sec-off" id="latest">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">Latest</div>
-      <h2>Mới nhất từ Upzi</h2>
+      <div class="eyebrow" id="latest-eyebrow">Latest</div>
+      <h2 id="latest-title">Mới nhất từ Upzi</h2>
     </div>
     <div class="article-list">
       {% for post in paginator.posts %}
@@ -152,7 +152,7 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
     </nav>
     {% endif %}
 
-    <p id="no-result" style="display:none; color:var(--muted); padding:20px 0;">Chưa có bài viết nào trong chủ đề này.</p>
+    <p id="no-result" style="display:none; color:var(--muted); padding:8px 0 4px;">Chưa có bài viết nào trong chủ đề này.</p>
   </div>
 </section>
 
@@ -160,10 +160,11 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   <div class="wrap topic-grid">
     <h2>Khám phá theo<br><span>chủ đề</span></h2>
     <div class="topics">
-      <a class="topic is-active" data-filter="all">Tất cả</a>
-      <a class="topic" data-filter="insight">Insight</a>
-      <a class="topic" data-filter="success-story">Success Story</a>
-      <a class="topic" data-filter="report">Report</a>
+      <a class="topic is-active" data-filter="all" data-label="Mới nhất từ Upzi">Tất cả</a>
+      {% assign cats = site.posts | map: "category" | compact | uniq | sort %}
+      {% for c in cats %}
+        <a class="topic" data-filter="{{ c | slugify }}" data-label="{{ c }}">{{ c }}</a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -278,7 +279,18 @@ chips.forEach(chip => {
       card.style.display = match ? '' : 'none';
       if (match) shown++;
     });
-    if (emptyMsg) emptyMsg.style.display = shown ? 'none' : 'block';
+
+    // Doi tieu de theo tag dang chon
+    const label = this.getAttribute('data-label') || this.textContent.trim();
+    const titleEl = document.getElementById('latest-title');
+    const eyebrowEl = document.getElementById('latest-eyebrow');
+    if (titleEl) titleEl.textContent = label;
+    if (eyebrowEl) eyebrowEl.textContent = (want === 'all') ? 'Latest' : 'Chủ đề';
+
+    if (emptyMsg) {
+      emptyMsg.textContent = 'Chưa có bài viết nào trong chủ đề "' + label + '".';
+      emptyMsg.style.display = shown ? 'none' : 'block';
+    }
 
     document.getElementById('latest').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
