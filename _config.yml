@@ -6,8 +6,10 @@ permalink: /insights/:title/
 plugins:
   - jekyll-paginate-v2
 
-# Phan trang (jekyll-paginate-v2)
+# ============================================================
+# PHAN TRANG (jekyll-paginate-v2)
 # Bat o tung trang bang khoi `pagination:` trong front matter.
+# ============================================================
 pagination:
   enabled: true
   per_page: 12
@@ -18,3 +20,28 @@ pagination:
   trail:
     before: 2
     after: 2
+
+# ============================================================
+# TRANG DANH MUC TU SINH (autopages)
+# Moi gia tri `category` trong _posts se tu co mot trang rieng:
+#   /insights/tag/insight/
+#   /insights/tag/success-story/
+# Khong can tao file tay. Them tag moi -> trang moi tu xuat hien.
+# ============================================================
+autopages:
+  enabled: true
+
+  collections:
+    enabled: false
+
+  tags:
+    enabled: false
+
+  categories:
+    enabled: true
+    layout: "category.html"
+    title: ":cat"
+    permalink: "/insights/tag/:cat/"
+    slugify:
+      mode: "default"
+      cased: false

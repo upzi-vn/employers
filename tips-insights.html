@@ -41,8 +41,8 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   <div class="wrap nav-inner">
     <div class="logo"><a href="{{ '/' | relative_url }}"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="logo-img"></a></div>
     <div class="nav-links">
-      <a data-scroll="insights">Insights</a>
-      <a data-scroll="latest">Mới nhất</a>
+      <a data-scroll="insights">Nổi bật</a>
+      <a data-scroll="latest">Tất cả bài viết</a>
       <a data-scroll="stories">Success Stories</a>
       <a data-scroll="topics">Chủ đề</a>
     </div>
@@ -74,12 +74,13 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
 <section class="sec" id="insights">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">Featured insights</div>
+      <div class="eyebrow">Nổi bật</div>
       <h2>Những điều doanh nghiệp cần biết về nhân sự trẻ</h2>
       <p>Chọn lọc những góc nhìn thực tế về hành vi ứng viên, Employer Branding và chiến lược tuyển dụng Gen Z.</p>
     </div>
     <div class="feature-grid">
-      {% for post in site.posts limit:2 %}
+      {% assign featured = site.posts | slice: 0, 2 %}
+      {% for post in featured %}
         <article class="article {% if forloop.first %}large{% endif %}">
           <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
             <span>{{ post.category | default: "INSIGHTS" }}</span>
@@ -104,11 +105,14 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
 <section class="sec sec-off" id="latest">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow" id="latest-eyebrow">Latest</div>
-      <h2 id="latest-title">Mới nhất từ Upzi</h2>
+      <div class="eyebrow">Tất cả bài viết</div>
+      <h2>Kho nội dung Upzi</h2>
+      <p>Toàn bộ bài viết, sắp xếp theo thời gian. Lọc theo chủ đề ở khu bên dưới.</p>
     </div>
     <div class="article-list">
+      {% assign pinned = site.posts | slice: 0, 2 %}
       {% for post in paginator.posts %}
+        {% if paginator.page == 1 and pinned contains post %}{% continue %}{% endif %}
         <article class="article" data-cat="{{ post.category | default: 'Blog' | slugify }}">
           <div class="article-img" {% if post.image %}style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
             <span>{{ post.category | default: "BLOG" }}</span>
@@ -151,8 +155,6 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
       {% endif %}
     </nav>
     {% endif %}
-
-    <p id="no-result" style="display:none; color:var(--muted); padding:8px 0 4px;">Chưa có bài viết nào trong chủ đề này.</p>
   </div>
 </section>
 
@@ -160,10 +162,9 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   <div class="wrap topic-grid">
     <h2>Khám phá theo<br><span>chủ đề</span></h2>
     <div class="topics">
-      <a class="topic is-active" data-filter="all" data-label="Mới nhất từ Upzi">Tất cả</a>
       {% assign cats = site.posts | map: "category" | compact | uniq | sort %}
       {% for c in cats %}
-        <a class="topic" data-filter="{{ c | slugify }}" data-label="{{ c }}">{{ c }}</a>
+        <a class="topic" href="{{ '/insights/tag/' | append: c | slugify | append: '/' | relative_url }}">{{ c }}</a>
       {% endfor %}
     </div>
   </div>
@@ -203,6 +204,10 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
       {% else %}
         <p>Đang cập nhật success story...</p>
       {% endfor %}
+    </div>
+    <div style="margin-top:32px;">
+      <a href="{{ '/insights/tag/success-story/' | relative_url }}"
+         style="font:800 14px var(--font-sub);color:var(--purple);">Xem tất cả success story →</a>
     </div>
   </div>
 </section>
@@ -262,39 +267,6 @@ document.querySelectorAll('[data-scroll]').forEach(trigger => {
   });
 });
 
-// Lọc bài viết theo tag
-const chips = document.querySelectorAll('.topic[data-filter]');
-const cards = document.querySelectorAll('#latest .article[data-cat]');
-const emptyMsg = document.getElementById('no-result');
-
-chips.forEach(chip => {
-  chip.addEventListener('click', function() {
-    const want = this.getAttribute('data-filter');
-    chips.forEach(c => c.classList.remove('is-active'));
-    this.classList.add('is-active');
-
-    let shown = 0;
-    cards.forEach(card => {
-      const match = (want === 'all') || (card.getAttribute('data-cat') === want);
-      card.style.display = match ? '' : 'none';
-      if (match) shown++;
-    });
-
-    // Doi tieu de theo tag dang chon
-    const label = this.getAttribute('data-label') || this.textContent.trim();
-    const titleEl = document.getElementById('latest-title');
-    const eyebrowEl = document.getElementById('latest-eyebrow');
-    if (titleEl) titleEl.textContent = label;
-    if (eyebrowEl) eyebrowEl.textContent = (want === 'all') ? 'Latest' : 'Chủ đề';
-
-    if (emptyMsg) {
-      emptyMsg.textContent = 'Chưa có bài viết nào trong chủ đề "' + label + '".';
-      emptyMsg.style.display = shown ? 'none' : 'block';
-    }
-
-    document.getElementById('latest').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
 </script>
 
 </body>
