@@ -147,29 +147,35 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
     <div class="head">
       <div class="eyebrow">Success stories</div>
       <h2>Những thay đổi nhỏ tạo ra khác biệt trong tuyển dụng</h2>
-      <p>Hai câu chuyện thực tế cho thấy doanh nghiệp có thể mở rộng nguồn ứng viên trẻ bằng cách thay đổi cách tiếp cận, nội dung và phân bổ tin tuyển dụng.</p>
+      <p>Những câu chuyện thực tế cho thấy doanh nghiệp có thể mở rộng nguồn ứng viên trẻ bằng cách thay đổi cách tiếp cận, nội dung và phân bổ tin tuyển dụng.</p>
     </div>
     <div class="feature-grid">
-      <article class="article story-card large retail">
-        <div class="article-img"><div class="story-visual"><div class="story-kicker">CHUỖI BÁN LẺ · PART-TIME</div><div class="story-number">1,9x <small>lượt xem</small></div></div></div>
-        <div class="story-body">
-          <div class="meta">SUCCESS STORY · GẦN 1 THÁNG TRIỂN KHAI</div>
-          <h3>Khi Facebook không còn đủ, doanh nghiệp mở rộng nguồn ứng viên bằng một cách tiếp cận khác</h3>
-          <p>Thay vì chỉ dùng một tin tuyển dụng cho toàn thành phố, doanh nghiệp cùng Upzi phân bổ tin theo khu vực và điều chỉnh JD theo góc nhìn ứng viên.</p>
-          <div class="story-stats"><div class="story-stat"><strong>1.290</strong><span>Lượt xem</span></div><div class="story-stat"><strong>34</strong><span>Hồ sơ ứng tuyển</span></div><div class="story-stat"><strong>150+</strong><span>Cửa hàng</span></div></div>
-          <a href="/success-stories.html" class="story-link">Xem success story →</a>
-        </div>
-      </article>
-      <article class="article story-card construction">
-        <div class="article-img"><div class="story-visual"><div class="story-kicker">XÂY DỰNG · FRESHER</div><div class="story-number">19 <small>hồ sơ</small></div></div></div>
-        <div class="story-body">
-          <div class="meta">SUCCESS STORY · THÁNG ĐẦU TRIỂN KHAI</div>
-          <h3>Khi cuộc đua lương ngày càng khốc liệt, doanh nghiệp bắt đầu xây dựng đội ngũ từ Fresher</h3>
-          <p>Doanh nghiệp mở thêm các vị trí Fresher và làm rõ đào tạo, mentor cùng lộ trình phát triển thay vì tiếp tục cạnh tranh trong nhóm ứng viên giàu kinh nghiệm.</p>
-          <div class="story-stats"><div class="story-stat"><strong>5</strong><span>Vị trí Fresher</span></div><div class="story-stat"><strong>790</strong><span>Lượt xem</span></div><div class="story-stat"><strong>19</strong><span>Hồ sơ ứng tuyển</span></div></div>
-          <a href="/success-stories.html" class="story-link">Xem success story →</a>
-        </div>
-      </article>
+      {% assign stories = site.posts | where: "category", "Success Story" %}
+      {% for post in stories limit: 2 %}
+        <article class="article story-card {% if forloop.first %}large {% endif %}{{ post.card_class }}">
+          <div class="article-img">
+            <div class="story-visual">
+              <div class="story-kicker">{{ post.industry | upcase }}{% if post.target %} · {{ post.target | upcase }}{% endif %}</div>
+              <div class="story-number">{{ post.headline_stat }} <small>{{ post.headline_label }}</small></div>
+            </div>
+          </div>
+          <div class="story-body">
+            <div class="meta">SUCCESS STORY{% if post.period %} · {{ post.period | upcase }}{% endif %}</div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 34 }}</p>
+            {% if post.stats %}
+            <div class="story-stats">
+              {% for s in post.stats %}
+                <div class="story-stat"><strong>{{ s.value }}</strong><span>{{ s.label }}</span></div>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <a href="{{ post.url | relative_url }}" class="story-link">Xem success story →</a>
+          </div>
+        </article>
+      {% else %}
+        <p>Đang cập nhật success story...</p>
+      {% endfor %}
     </div>
   </div>
 </section>
