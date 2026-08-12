@@ -15,6 +15,17 @@ target: "Fresher"
 market: "Việt Nam"
 period: "Tháng đầu tiên"
 
+card_class: "construction"
+headline_stat: "19"
+headline_label: "hồ sơ"
+stats:
+  - value: "5"
+    label: "Vị trí Fresher"
+  - value: "790"
+    label: "Lượt xem"
+  - value: "19"
+    label: "Hồ sơ ứng tuyển"
+
 date: 2026-08-10
 ---
 
