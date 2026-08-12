@@ -27,7 +27,6 @@ stats:
 
 date: 2026-08-06
 
-published: false
 ---
 
 <!--
