@@ -786,7 +786,11 @@
 
     }
 
-  </style>
+  
+    .logo-img{height:36px;width:auto;display:block}
+    .f-logo-img{height:80px;width:auto;display:block}
+    @media(max-width:560px){.logo-img{height:30px}.f-logo-img{height:70px}}
+</style>
 </head>
 
 
@@ -800,7 +804,7 @@
     <div class="wrap nav-inner">
 
       <a href="{{ '/' | relative_url }}" class="logo">
-        upzi
+        <img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="logo-img">
       </a>
 
       <a href="{{ '/' | relative_url }}" class="nav-cta">
@@ -956,7 +960,7 @@
     <div class="wrap footer-inner">
 
       <div class="footer-logo">
-        upzi
+        <img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="f-logo-img">
       </div>
 
       <div class="footer-copy">
