@@ -29,13 +29,17 @@ layout: null
 footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;color:#7a7488}.f-top{display:flex;justify-content:space-between;gap:35px;padding-bottom:28px;border-bottom:1px solid #e6e1ef}.f-logo{font:700 21px var(--font-display);color:var(--purple-dark);margin-bottom:10px}.f-col p{font-size:13px;line-height:1.7}.f-col h4{font:700 11px var(--font-sub);text-transform:uppercase;letter-spacing:.06em;color:#a49db4;margin-bottom:10px}.f-bot{padding-top:20px;font-size:12px;color:#a49db4;display:flex;justify-content:space-between}
 /* ===== success stories ===== */.story-card .article-img{position:relative;height:300px;padding:26px;display:flex;align-items:flex-end;overflow:hidden}.story-card .article-img::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.55),transparent 28%),linear-gradient(135deg,rgba(147,69,255,.16),transparent 52%);transform:rotate(-8deg)}.story-card .story-visual{position:relative;z-index:1;width:100%}.story-card .story-kicker{display:inline-block;background:rgba(255,255,255,.82);color:var(--purple-deep);padding:7px 12px;border-radius:999px;font:800 11px var(--font-sub);margin-bottom:12px}.story-card .story-number{font:700 64px/1 var(--font-display);color:var(--purple-deep);letter-spacing:-.05em}.story-card .story-number small{font:700 17px var(--font-sub);letter-spacing:0}.story-card .story-body{padding:28px}.story-card .story-body h3{font-size:25px;line-height:1.18;margin:9px 0 12px}.story-card .story-body p{color:var(--body);font-size:14.5px;line-height:1.65}.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}.story-stat{background:var(--off);border-radius:14px;padding:12px 11px}.story-stat strong{display:block;font:800 17px var(--font-display);color:var(--purple)}.story-stat span{display:block;margin-top:3px;font:600 10.5px/1.35 var(--font-sub);color:#81788e}.story-link{display:inline-block;margin-top:22px;font:800 13px var(--font-sub);color:var(--purple)}.story-card.retail .article-img{background:linear-gradient(135deg,#f1e7ff 0%,#e9f8f2 100%)}.story-card.construction .article-img{background:linear-gradient(135deg,#fff0df 0%,#f1e7ff 100%)}
 @media(max-width:850px){ .nav-links{display:none} .hero-grid,.feature-grid,.topic-grid,.newsletter{grid-template-columns:1fr} .article-list{grid-template-columns:1fr 1fr} .story-card .article-img{height:260px}}@media(max-width:540px){ .hero{padding:65px 0 75px} .sec{padding:70px 0} .article-list{grid-template-columns:1fr} .newsletter{padding:35px 25px} .newsletter-form{flex-direction:column} .newsletter-form button{height:48px} .f-top,.f-bot{flex-direction:column} .story-stats{grid-template-columns:1fr 1fr}}
+
+.logo-img{height:36px;width:auto;display:block}
+.f-logo-img{height:80px;width:auto;display:block}
+@media(max-width:560px){.logo-img{height:30px}.f-logo-img{height:70px}}
 </style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap nav-inner">
-    <div class="logo"><a href="{{ '/' | relative_url }}">upzi</a></div>
+    <div class="logo"><a href="{{ '/' | relative_url }}"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="logo-img"></a></div>
     <div class="nav-links">
       <a data-scroll="insights">Insights</a>
       <a data-scroll="latest">Mới nhất</a>
@@ -190,7 +194,7 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
   <div class="wrap">
     <div class="f-top">
       <div class="f-col" style="max-width:310px">
-        <div class="f-logo">upzi</div>
+        <div class="f-logo"><img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="f-logo-img"></div>
         <p>Một sản phẩm của Công Ty Cổ Phần Navigos Group Việt Nam.</p>
         <p style="margin-top:8px">Tầng 20, tòa nhà E.Town Central, 11 Đoàn Văn Bơ, TP.HCM.</p>
       </div>
