@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/activate-account-and-post-job", "destination": "/activate-account-and-post-job.html" }
+  ]
+}
