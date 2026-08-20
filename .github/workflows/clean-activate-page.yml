@@ -1,0 +1,91 @@
+name: Clean activate account page
+
+on:
+  push:
+    paths:
+      - '.github/workflows/clean-activate-page.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Externalize embedded images
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, re
+
+          html_path = Path('activate-account-and-post-job.html')
+          asset_dir = Path('images/activate-account-and-post-job')
+          asset_dir.mkdir(parents=True, exist_ok=True)
+
+          text = html_path.read_text(encoding='utf-8')
+          pattern = re.compile(r'data:image/(png|jpeg|jpg);base64,([A-Za-z0-9+/=]+)', re.I)
+
+          # Remove previously generated files so the folder exactly matches the HTML.
+          for p in asset_dir.iterdir():
+              if p.is_file():
+                  p.unlink()
+
+          seen = {}
+          counter = 0
+          total_refs = 0
+
+          def repl(match):
+              nonlocal_state[0] += 1
+              mime = match.group(1).lower()
+              raw = base64.b64decode(match.group(2))
+              digest = hashlib.sha256(raw).hexdigest()
+              ext = 'jpg' if mime in ('jpeg', 'jpg') else 'png'
+
+              if digest not in seen:
+                  nonlocal_state[1] += 1
+                  filename = f'asset-{nonlocal_state[1]:03d}-{digest[:8]}.{ext}'
+                  (asset_dir / filename).write_bytes(raw)
+                  seen[digest] = filename
+
+              return f'images/activate-account-and-post-job/{seen[digest]}'
+
+          nonlocal_state = [0, 0]  # total references, unique assets
+          cleaned = pattern.sub(repl, text)
+
+          if 'data:image/' in cleaned:
+              raise SystemExit('Embedded data:image URI remains after cleaning')
+
+          html_path.write_text(cleaned, encoding='utf-8')
+          print(f'Externalized {nonlocal_state[0]} image references into {nonlocal_state[1]} unique files')
+          print(f'Clean HTML size: {html_path.stat().st_size} bytes')
+          PY
+
+      - name: Validate generated assets
+        shell: bash
+        run: |
+          test -f activate-account-and-post-job.html
+          test -d images/activate-account-and-post-job
+          ! grep -q 'data:image/' activate-account-and-post-job.html
+          count=$(find images/activate-account-and-post-job -type f | wc -l)
+          echo "Generated assets: $count"
+          test "$count" -gt 0
+
+      - name: Commit cleaned page and assets
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add activate-account-and-post-job.html images/activate-account-and-post-job
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Clean activate page: externalize embedded images'
+          git push origin HEAD:main
