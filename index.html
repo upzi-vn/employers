@@ -25,7 +25,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   <title>Upzi — Kết nối Doanh nghiệp với nhân sự Gen Z</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=[...]
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --purple:#9345FF;
@@ -55,7 +55,306 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .wrap{max-width:1140px; margin:0 auto; padding:0 28px;}
 
     .reveal{opacity:0; transform:translateY(24px); transition:opacity .65s ease, transform .65s ease;}
-    .reveal.in{opacity:1; transform:translateY(0);}...
+    .reveal.in{opacity:1; transform:translateY(0);}
+    .stagger > *{opacity:0; transform:translateY(20px); transition:opacity .55s ease, transform .55s ease;}
+    .stagger.in > *{opacity:1; transform:translateY(0);}
+    .stagger.in > *:nth-child(1){transition-delay:.05s;}
+    .stagger.in > *:nth-child(2){transition-delay:.15s;}
+    .stagger.in > *:nth-child(3){transition-delay:.25s;}
+    .stagger.in > *:nth-child(4){transition-delay:.35s;}
+    @media (prefers-reduced-motion: reduce){
+      .reveal,.stagger > *{opacity:1; transform:none; transition:none;}
+      .hero-inner > *{opacity:1; transform:none; animation:none;}
+      .swoosh-1,.swoosh-2{animation:none;}
+      .j-node{opacity:1; transform:none; transition:none;}
+      .block .arw path{stroke-dashoffset:0; transition:none;}
+      html{scroll-behavior:auto;}
+    }
+
+    /* ===== nav ===== */
+    .nav{position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #efecf5;}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:15px 28px;}
+    .logo{font-family:var(--font-display); font-weight:700; font-size:22px; color:var(--purple-dark); letter-spacing:-0.02em;}
+    .nav-cta{
+      background:var(--purple); color:var(--white); font-family:var(--font-sub); font-weight:700; font-size:14px;
+      padding:11px 22px; border-radius:999px; border:none; transition:transform .18s ease, background .2s ease;
+    }
+    .nav-cta:hover{background:var(--purple-dark); transform:translateY(-1px);}
+
+    /* ===== hero ===== */
+    .hero{
+      position:relative; color:var(--white);
+      background:linear-gradient(135deg, var(--purple) 0%, #7B32E0 50%, var(--purple-dark) 100%);
+      padding:78px 0 96px; overflow:hidden;
+    }
+    .swoosh{position:absolute; pointer-events:none;}
+    .swoosh-1{top:-70px; right:-140px; width:600px; opacity:.16; animation:drift1 16s ease-in-out infinite;}
+    .swoosh-2{bottom:-60px; left:-120px; width:420px; opacity:.12; animation:drift2 20s ease-in-out infinite;}
+    @keyframes drift1{0%,100%{transform:translate(0,0) rotate(0deg);} 50%{transform:translate(-26px,18px) rotate(-4deg);}}
+    @keyframes drift2{0%,100%{transform:translate(0,0) rotate(0deg);} 50%{transform:translate(22px,-16px) rotate(5deg);}}
+
+    .hero-inner > *{opacity:0; transform:translateY(20px); animation:heroIn .8s cubic-bezier(.22,.61,.36,1) forwards;}
+    .hero-inner > *:nth-child(1){animation-delay:.1s;}
+    .hero-inner > *:nth-child(2){animation-delay:.22s;}
+    .hero-inner > *:nth-child(3){animation-delay:.34s;}
+    .hero-inner > *:nth-child(4){animation-delay:.46s;}
+    .hero-inner > *:nth-child(5){animation-delay:.58s;}
+    @keyframes heroIn{to{opacity:1; transform:translateY(0);}}
+    .hero-grid{position:relative; z-index:2; display:grid; grid-template-columns:1fr 1.05fr; gap:48px; align-items:center;}
+    .hero-inner{max-width:600px;}
+    .hero-visual{position:relative;}
+    .hero-visual img{
+      width:100%; display:block;
+      filter:drop-shadow(0 26px 54px rgba(20,5,50,0.38));
+      animation:floatUp 1s cubic-bezier(.22,.61,.36,1) .3s both;
+    }
+    @keyframes floatUp{from{opacity:0; transform:translateY(34px) scale(.97);} to{opacity:1; transform:none;}}
+    .tag{
+      display:inline-block; font-family:var(--font-sub); font-weight:700; font-size:13px;
+      color:var(--purple-deep); background:var(--yellow);
+      padding:8px 18px; border-radius:999px; margin-bottom:26px;
+    }
+    .hero h1{
+      font-family:var(--font-display); font-size:clamp(38px,6vw,68px); line-height:1.03;
+      font-weight:700; letter-spacing:-0.022em; margin-bottom:22px;
+    }
+    .hero h1 .hl{color:var(--yellow);}
+    .hero .lead{font-size:17.5px; line-height:1.65; color:rgba(255,255,255,0.76); max-width:580px; margin-bottom:36px;}
+    .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px;}
+    .btn-y{
+      background:var(--yellow); color:var(--purple-deep); font-family:var(--font-sub); font-weight:700; font-size:16px;
+      padding:17px 34px; border-radius:999px; border:none; transition:transform .18s ease;
+    }
+    .btn-y:hover{transform:translateY(-2px);}
+    .btn-ghost{
+      background:transparent; color:var(--white); font-family:var(--font-sub); font-weight:700; font-size:16px;
+      padding:16px 32px; border-radius:999px; border:1.5px solid rgba(255,255,255,0.4); transition:background .2s ease;
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,0.1);}
+    .hero-note{display:flex; align-items:center; gap:11px; font-size:14px; color:rgba(255,255,255,0.6);}
+    .hero-note .vsq{
+      width:26px; height:26px; border-radius:8px; background:rgba(255,255,255,0.15);
+      display:flex; align-items:center; justify-content:center; font-family:var(--font-sub); font-weight:700; font-size:12px; color:var(--white);
+    }
+
+    /* ===== section shells ===== */
+    .sec{padding:120px 0;}
+    .sec-flush{padding-bottom:0;}
+    .sec-white{background:var(--white);}
+    .sec-off{background:var(--off);}
+    .head{max-width:720px; margin-bottom:64px;}
+    .eyebrow{
+      display:inline-block; font-family:var(--font-sub); font-weight:700; font-size:12.5px; letter-spacing:0.06em;
+      text-transform:uppercase; color:var(--purple); background:var(--purple-tint);
+      padding:7px 15px; border-radius:999px; margin-bottom:18px;
+    }
+    .head h2{
+      font-family:var(--font-display); font-size:clamp(30px,4.2vw,46px); font-weight:700;
+      letter-spacing:-0.022em; line-height:1.15; color:var(--ink);
+    }
+    .head p{margin-top:16px; font-size:16.5px; line-height:1.65; color:var(--body);}
+
+    /* ===== signature: solid colour-block cards ===== */
+    .blocks{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:end;}
+    .block{
+      background:#F4EDFF; border-radius:40px 40px 0 0;
+      padding:40px 32px 34px; min-height:330px;
+      display:flex; flex-direction:column; position:relative;
+      transition:transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease;
+    }
+    .block .n{
+      font-family:var(--font-display); font-size:14px; font-weight:700;
+      color:var(--purple); opacity:.6; letter-spacing:0.04em; margin-bottom:14px;
+    }
+    .block h3{
+      font-family:var(--font-display); font-size:26px; font-weight:700; line-height:1.2;
+      letter-spacing:-0.015em; color:var(--purple); margin-bottom:14px;
+    }
+    .block p{font-size:14.5px; line-height:1.66; color:var(--body); margin-bottom:26px;}
+    .block .arw{margin-top:auto; align-self:flex-start;}
+    .block .arw svg{width:86px; height:auto; display:block;}
+    .block .arw path{
+      stroke-dasharray:220; stroke-dashoffset:220;
+      transition:stroke-dashoffset 1s cubic-bezier(.4,0,.2,1);
+    }
+    .blocks.in .block .arw path{stroke-dashoffset:0;}
+    .blocks.in .block:nth-child(1) .arw path{transition-delay:.35s;}
+    .blocks.in .block:nth-child(2) .arw path{transition-delay:.5s;}
+    .blocks.in .block:nth-child(3) .arw path{transition-delay:.65s;}
+    .block:hover{transform:translateY(-8px); box-shadow:0 22px 44px rgba(85,28,175,0.13);}
+
+    /* ===== journey ===== */
+    .j-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+    .j-step{
+      background:var(--white); border-radius:26px; padding:28px 24px 30px;
+      border:2px solid var(--purple-tint); display:flex; flex-direction:column;
+      transition:transform .28s ease, border-color .28s ease;
+    }
+    .j-step:hover{transform:translateY(-6px); border-color:var(--purple);}
+    .j-step.is-last{border-color:#e9e9ee; background:#fbfbfc;}
+    .j-node{
+      width:44px; height:44px; border-radius:14px; background:var(--purple); color:var(--white);
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--font-display); font-weight:700; font-size:17px; margin-bottom:20px;
+      transform:scale(.6); opacity:0; transition:transform .5s cubic-bezier(.34,1.56,.64,1), opacity .4s ease;
+    }
+    .j-grid.in .j-node{transform:scale(1); opacity:1;}
+    .j-grid.in .j-step:nth-child(1) .j-node{transition-delay:.15s;}
+    .j-grid.in .j-step:nth-child(2) .j-node{transition-delay:.28s;}
+    .j-grid.in .j-step:nth-child(3) .j-node{transition-delay:.41s;}
+    .j-grid.in .j-step:nth-child(4) .j-node{transition-delay:.54s;}
+    .j-step.is-last .j-node{background:#d6d6de; color:#8b8b96;}
+    .j-pill{
+      align-self:flex-start; font-family:var(--font-sub); font-weight:700; font-size:11.5px;
+      padding:5px 12px; border-radius:999px; background:var(--mint); color:var(--purple-deep); margin-bottom:12px;
+    }
+    .j-step.is-last .j-pill{background:#ececf1; color:#8b8b96;}
+    .j-step h3{font-family:var(--font-display); font-weight:700; font-size:19px; margin-bottom:8px; letter-spacing:-0.01em;}
+    .j-step p{font-size:14px; line-height:1.55; color:var(--body);}
+    .j-note{
+      margin-top:26px; background:var(--white); border-left:4px solid var(--coral);
+      border-radius:20px; padding:24px 28px;
+      font-size:15.5px; line-height:1.62; color:var(--body);
+    }
+    .j-note strong{color:var(--ink); font-family:var(--font-sub); font-weight:700;}
+
+    /* ===== stats band ===== */
+    .band{position:relative; background:#F4EDFF; color:var(--ink); padding:82px 0;}
+    .band-inner{position:relative; z-index:2;}
+    .band h2{
+      font-family:var(--font-display); font-size:clamp(24px,3.2vw,34px); font-weight:700;
+      letter-spacing:-0.02em; line-height:1.22; margin-bottom:40px; max-width:640px;
+    }
+    .band h2 .hl{color:var(--purple);}
+    .st-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+    .st{border-radius:26px; padding:30px 28px; background:var(--white); transition:transform .28s ease, box-shadow .28s ease;}
+    .st:hover{transform:translateY(-6px); box-shadow:0 18px 38px rgba(85,28,175,0.12);}
+    .st .num{font-family:var(--font-display); font-size:clamp(32px,4.2vw,44px); font-weight:700; color:var(--purple); letter-spacing:-0.02em;}
+    .st .lb{font-size:14.5px; line-height:1.5; color:var(--body); margin-top:10px;}
+    .band-src{font-size:12.5px; color:#787186; margin-top:24px;}
+
+    /* ===== real activity photo grid ===== */
+    .act-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+    .act{margin:0; position:relative; border-radius:24px; overflow:hidden; background:var(--purple-tint);}
+    .act-wide{grid-column:span 3; aspect-ratio:16/6;}
+    .act:not(.act-wide){aspect-ratio:4/3;}
+    .act img{width:100%; height:100%; object-fit:cover; transition:transform .5s cubic-bezier(.22,.61,.36,1);}
+    .act:hover img{transform:scale(1.05);}
+    .act figcaption{
+      position:absolute; left:0; right:0; bottom:0;
+      padding:26px 20px 16px; font-size:13.5px; font-weight:600; color:#fff;
+      background:linear-gradient(transparent, rgba(20,5,50,0.82));
+    }
+
+    /* ===== testimonial ===== */
+    .tcard{background:var(--purple-tint); border-radius:32px; padding:42px 40px; max-width:760px;}
+    .tquote{font-family:var(--font-sub); font-size:19px; line-height:1.6; font-weight:600; color:var(--purple-deep); margin-bottom:20px; transition:opacity .3s ease;}
+    .tmeta{font-size:13.5px; color:var(--body); transition:opacity .3s ease;}
+    .tcard.fading .tquote, .tcard.fading .tmeta{opacity:0;}
+    .tctrl{display:flex; align-items:center; gap:14px; margin-top:26px;}
+    .tdots{display:flex; gap:8px;}
+    .tdot{width:8px; height:8px; border-radius:50%; background:#d8cfe8; border:none; transition:background .2s ease, width .2s ease; cursor:pointer;}
+    .tdot.active{background:var(--purple); width:24px; border-radius:5px;}
+    .tarrow{
+      width:38px; height:38px; border-radius:50%; border:1.5px solid #ddd4ea; background:var(--white);
+      color:var(--purple-deep); font-size:16px; display:flex; align-items:center; justify-content:center; transition:background .2s ease;
+    }
+    .tarrow:hover{background:var(--purple-tint);}
+
+    /* ===== fit ===== */
+    .fit-grid{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center;}
+    .fit-list{display:flex; flex-direction:column; gap:14px;}
+    .fit-item{display:flex; gap:16px; align-items:flex-start; background:var(--white); border-radius:20px; padding:20px 22px; border:2px solid var(--purple-tint); transition:transform .25s ease, border-color .25s ease;}
+    .fit-item:hover{transform:translateX(6px); border-color:var(--mint);}
+    .fit-chk{
+      width:28px; height:28px; border-radius:9px; background:var(--mint); color:var(--purple-deep);
+      display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; flex-shrink:0;
+    }
+    .fit-item p{font-family:var(--font-sub); font-size:15px; font-weight:700; line-height:1.5; color:var(--ink);}
+    .fit-vis{margin:0; position:relative; border-radius:32px; overflow:hidden; min-height:340px; background:var(--purple-tint);}
+    .fit-vis img{width:100%; height:100%; min-height:340px; object-fit:cover; display:block;}
+    .fit-vis figcaption{
+      position:absolute; left:0; right:0; bottom:0; padding:44px 28px 24px;
+      background:linear-gradient(transparent, rgba(20,5,50,0.85));
+      color:#fff; font-size:15px; line-height:1.5;
+    }
+    .fit-vis figcaption strong{
+      display:block; font-family:var(--font-display); font-size:42px; font-weight:700;
+      color:var(--yellow); line-height:1; margin-bottom:6px; letter-spacing:-0.02em;
+    }
+
+    /* ===== form ===== */
+    .form-sec{position:relative; background:var(--purple-deep); padding:96px 0; overflow:hidden;}
+    .form-sec::before{
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(640px 440px at 12% 15%, rgba(147,69,255,0.5), transparent 68%);
+    }
+    .form-grid{position:relative; z-index:2; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+    .fcopy h2{font-family:var(--font-display); color:var(--white); font-size:clamp(26px,3.4vw,36px); font-weight:700; line-height:1.15; letter-spacing:-0.022em; margin-bottom:18px;}
+    .fcopy h2 .hl{color:var(--yellow);}
+    .fcopy > p{color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.65; margin-bottom:28px;}
+    .fcopy ul{list-style:none; display:flex; flex-direction:column; gap:13px;}
+    .fcopy li{display:flex; gap:12px; align-items:center; font-size:15px; color:rgba(255,255,255,0.82);}
+    .fcopy li span{
+      width:22px; height:22px; border-radius:7px; background:var(--yellow); color:var(--purple-deep);
+      display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0;
+    }
+    .fcard{background:var(--white); border-radius:32px; padding:38px 34px;}
+    .frow{margin-bottom:17px;}
+    .frow label{display:block; font-family:var(--font-sub); font-size:13px; font-weight:700; color:var(--ink); margin-bottom:7px;}
+    .frow input, .frow select{
+      width:100%; padding:13px 15px; border-radius:14px; border:2px solid #ece8f4;
+      font-size:15px; font-family:inherit; background:var(--off); color:var(--ink); transition:border-color .2s ease;
+    }
+    .frow input:focus, .frow select:focus{outline:none; border-color:var(--purple);}
+    .ftwo{display:grid; grid-template-columns:1fr 1fr; gap:13px;}
+    .fsubmit{
+      width:100%; background:var(--purple); color:var(--white); font-family:var(--font-sub); font-weight:700; font-size:16px;
+      padding:16px; border:none; border-radius:999px; margin-top:8px; transition:background .2s ease, transform .18s ease;
+    }
+    .fsubmit:hover{background:var(--purple-dark); transform:translateY(-1px);}
+    .fnote{font-size:12px; color:#9ca3af; margin-top:15px; text-align:center; line-height:1.5;}
+    .fsuccess{display:none; text-align:center; padding:26px 8px;}
+    .fsuccess .chk{
+      width:56px; height:56px; border-radius:18px; background:var(--mint); color:var(--purple-deep);
+      display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; margin:0 auto 16px;
+    }
+    .fsuccess h3{font-family:var(--font-display); font-weight:700; font-size:21px; margin-bottom:9px;}
+    .fsuccess p{font-size:14.5px; color:var(--body); line-height:1.55;}
+
+    /* ===== footer ===== */
+    footer{background:var(--off); color:#7a7488; padding:48px 0 28px; border-top:1px solid #eae5f3;}
+    .f-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:34px; padding-bottom:30px; border-bottom:1px solid #e6e1ef;}
+    .f-logo{font-family:var(--font-display); font-weight:700; font-size:21px; color:var(--purple-dark); margin-bottom:11px;}
+    .f-col p{font-size:13.5px; line-height:1.75;}
+    .f-col h4{font-family:var(--font-sub); font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:#a49db4; margin-bottom:10px;}
+    .f-bot{padding-top:22px; font-size:12.5px; color:#a49db4; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr; gap:36px;}
+      .hero-inner{max-width:none;}
+      .act-grid{grid-template-columns:repeat(2,1fr);}
+      .act-wide{grid-column:span 2; aspect-ratio:16/8;}
+      .blocks{grid-template-columns:1fr;}
+      .j-grid{grid-template-columns:repeat(2,1fr);}
+      .st-grid{grid-template-columns:1fr;}
+      .fit-grid{grid-template-columns:1fr; gap:32px;}
+      .form-grid{grid-template-columns:1fr; gap:38px;}
+      .f-top{flex-direction:column;}
+    }
+    @media (max-width: 540px){
+      .act-grid{grid-template-columns:1fr;}
+      .act-wide{grid-column:span 1; aspect-ratio:4/3;}
+      .j-grid{grid-template-columns:1fr;}
+      .ftwo{grid-template-columns:1fr;}
+      .hero{padding:60px 0 90px;}
+      .sec{padding:66px 0;}
+      .block{padding:30px 26px 34px; min-height:auto;}
+    }
+  
+.logo-img{height:36px;width:auto;display:block}
+.f-logo-img{height:80px;width:auto;display:block}
+@media(max-width:560px){.logo-img{height:30px}.f-logo-img{height:70px}}
 </style>
 </head>
 <body>
@@ -140,7 +439,309 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
-<!-- (trimmed for brevity in commit) -->
+<!-- JOURNEY -->
+<section class="sec sec-off" id="journey">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Hành trình tìm việc của Gen Z</div>
+      <h2>Gen Z tìm hiểu bạn từ rất lâu trước khi tìm việc</h2>
+      <p>4 giai đoạn trước khi ứng tuyển. Đa số doanh nghiệp chỉ xuất hiện ở giai đoạn cuối.</p>
+    </div>
+    <div class="j-grid stagger">
+      <div class="j-step">
+        <div class="j-node">1</div>
+        <div class="j-pill">Upzi có mặt</div>
+        <h3>Khám phá</h3>
+        <p>Theo dõi trang doanh nghiệp, xem review, quan sát văn hoá qua mạng xã hội.</p>
+      </div>
+      <div class="j-step">
+        <div class="j-node">2</div>
+        <div class="j-pill">Upzi có mặt</div>
+        <h3>Tìm hiểu</h3>
+        <p>Đào sâu về đãi ngộ, môi trường làm việc, câu chuyện nhân viên thật.</p>
+      </div>
+      <div class="j-step">
+        <div class="j-node">3</div>
+        <div class="j-pill">Upzi có mặt</div>
+        <h3>Chọn lọc</h3>
+        <p>Lập danh sách các doanh nghiệp muốn ứng tuyển khi có cơ hội.</p>
+      </div>
+      <div class="j-step is-last">
+        <div class="j-node">4</div>
+        <div class="j-pill">Job board mới xuất hiện</div>
+        <h3>Ứng tuyển</h3>
+        <p>Nộp đơn khi thấy tin tuyển dụng phù hợp — bước cuối, không phải bước đầu.</p>
+      </div>
+    </div>
+    <div class="j-note reveal">
+      <strong>Hệ quả:</strong> Nếu doanh nghiệp chỉ xuất hiện ở bước 4, ứng viên đã chọn nơi muốn làm từ trước — cơ hội mất ngay từ đầu, không phải vì tin đăng chưa tốt. Upzi giúp doanh nghiệp có mặt sớm hơn, từ bước 1.
+    </div>
+  </div>
+</section>
+
+<!-- REAL ACTIVITY -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Upzi có mặt ở đâu</div>
+      <h2>Upzi có mặt ngay trong trường</h2>
+      <p>Ngày hội việc làm, talkshow, hoạt động tại giảng đường — nơi doanh nghiệp gặp sinh viên trước khi họ tìm việc.</p>
+    </div>
+    <div class="act-grid stagger">
+      <figure class="act act-wide">
+        <img src="images/event-fpt.jpg" alt="Sinh viên FPT Polytechnic giơ tay tham gia hoạt động do Navigos Group và Upzi tổ chức" loading="lazy">
+        <figcaption>Hoạt động tại giảng đường — FPT Polytechnic</figcaption>
+      </figure>
+      <figure class="act">
+        <img src="images/jobfair-ftu.jpg" alt="Gian hàng Upzi tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy">
+        <figcaption>Ngày hội việc làm — ĐH Ngoại thương TP.HCM</figcaption>
+      </figure>
+      <figure class="act">
+        <img src="images/talkshow-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy">
+        <figcaption>Talkshow "Gấp Gap" — Upzi × Onboardy × Vietcetera</figcaption>
+      </figure>
+      <figure class="act">
+        <img src="images/mascot-ftu.jpg" alt="Linh vật Upzi giao lưu cùng sinh viên tại ngày hội việc làm" loading="lazy">
+        <figcaption>Giao lưu cùng sinh viên tại sự kiện</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="band">
+  <div class="wrap band-inner">
+    <h2 class="reveal">Một nền tảng <span class="hl">chuyên biệt</span> cho nhóm Intern &amp; dưới 2 năm kinh nghiệm</h2>
+    <div class="st-grid stagger">
+      <div class="st st-1">
+        <div class="num" data-count="150000" data-suffix="+">0</div>
+        <div class="lb">Ứng viên Gen Z trên nền tảng, tập trung độ tuổi 21–26</div>
+      </div>
+      <div class="st st-2">
+        <div class="num" data-count="30" data-suffix="+">0</div>
+        <div class="lb">Trường Đại học / Cao đẳng liên kết trực tiếp</div>
+      </div>
+      <div class="st st-3">
+        <div class="num" data-count="24" data-suffix=" năm">0</div>
+        <div class="lb">Kinh nghiệm hệ sinh thái tuyển dụng của Navigos Group</div>
+      </div>
+    </div>
+    <p class="band-src reveal">Số liệu nội bộ Upzi, cập nhật gần nhất — chi tiết có thể cung cấp khi Anh/Chị yêu cầu.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Khách hàng nói gì</div>
+      <h2>Trích từ khảo sát khách hàng Upzi</h2>
+    </div>
+    <div class="tcard reveal" id="tcard">
+      <div class="tquote" id="tq">"Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó."</div>
+      <div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật</div>
+    </div>
+    <div class="tctrl">
+      <button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button>
+      <div class="tdots" id="tdots"></div>
+      <button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="sec sec-off">
+  <div class="wrap fit-grid">
+    <div>
+      <div class="head reveal" style="margin-bottom:26px;">
+        <div class="eyebrow">Upzi phù hợp khi nào</div>
+        <h2>Đây có phải doanh nghiệp của Anh/Chị?</h2>
+      </div>
+      <div class="fit-list stagger">
+        <div class="fit-item"><div class="fit-chk">✓</div><p>Tuyển Intern, Fresher thường xuyên — không chỉ theo mùa</p></div>
+        <div class="fit-item"><div class="fit-chk">✓</div><p>Đang hoặc có kế hoạch xây dựng Employer Branding với Gen Z</p></div>
+        <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn nguồn ứng viên trẻ ổn định, dài hạn thay vì phụ thuộc job fair</p></div>
+      </div>
+    </div>
+    <figure class="fit-vis reveal">
+      <img src="images/jobfair-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại ngày hội việc làm Đại học Ngoại thương" loading="lazy">
+      <figcaption><strong>30+</strong> trường Đại học / Cao đẳng đối tác trực tiếp</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-sec" id="leadform">
+  <div class="wrap form-grid">
+    <div class="fcopy reveal">
+      <h2>Bắt đầu với <span class="hl">Upzi</span></h2>
+      <p>Để lại thông tin, đội ngũ Upzi sẽ liên hệ và đề xuất giải pháp theo đúng nhu cầu.</p>
+      <ul>
+        <li><span>✓</span>Tư vấn miễn phí, không ràng buộc</li>
+        <li><span>✓</span>Phản hồi trong vòng 24h làm việc</li>
+        <li><span>✓</span>Đề xuất theo đúng ngành và quy mô tuyển dụng</li>
+      </ul>
+    </div>
+    <div class="fcard reveal">
+      <form id="leadFormEl">
+        <div class="frow">
+          <label for="f-name">Họ và tên *</label>
+          <input type="text" id="f-name" required placeholder="Nguyễn Văn A">
+        </div>
+        <div class="ftwo">
+          <div class="frow">
+            <label for="f-company">Công ty *</label>
+            <input type="text" id="f-company" required placeholder="Tên công ty">
+          </div>
+          <div class="frow">
+            <label for="f-phone">Số điện thoại *</label>
+            <input type="tel" id="f-phone" required placeholder="09xx xxx xxx">
+          </div>
+        </div>
+        <div class="frow">
+          <label for="f-email">Email công việc *</label>
+          <input type="email" id="f-email" required placeholder="ban@congty.com">
+        </div>
+        <div class="frow">
+          <label for="f-volume">Nhu cầu tuyển dụng</label>
+          <select id="f-volume">
+            <option value="">Chọn số lượng dự kiến</option>
+            <option>1–5 vị trí / quý</option>
+            <option>6–15 vị trí / quý</option>
+            <option>16+ vị trí / quý</option>
+            <option>Chưa xác định, muốn tư vấn</option>
+          </select>
+        </div>
+        <button type="submit" class="fsubmit">Gửi yêu cầu tư vấn</button>
+        <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
+      </form>
+      <div class="fsuccess" id="fsuccess">
+        <div class="chk">✓</div>
+        <h3>Đã nhận thông tin</h3>
+        <p>Cảm ơn Anh/Chị. Đội ngũ Upzi sẽ liên hệ trong 24h làm việc tới.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-col" style="max-width:290px;">
+        <div class="f-logo"><img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="f-logo-img"></div>
+        <p>Một sản phẩm của Công Ty Cổ Phần Navigos Group Việt Nam.</p>
+        <p style="margin-top:10px;">Tầng 20, tòa nhà E.Town Central, 11 Đoàn Văn Bơ, Phường Xóm Chiếu, TP.HCM.</p>
+      </div>
+      <div class="f-col">
+        <h4>Liên hệ</h4>
+        <p>Hotline: 028 7305 8500</p>
+        <p>Zalo: 070 3377 017</p>
+        <p>Email: upzi-support@navigosgroup.com</p>
+      </div>
+      <div class="f-col">
+        <h4>Kết nối</h4>
+        <p><a href="https://facebook.com/UpziFanpage" target="_blank" rel="noopener">facebook.com/UpziFanpage</a></p>
+      </div>
+    </div>
+    <div class="f-bot">
+      <p>&copy; 2026 Upzi — Member of Navigos Group. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // Intersection Observer for Reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('in');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal, .stagger, .blocks, .j-grid').forEach(el => observer.observe(el));
+
+  // Count Up Animation for Stats Band
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        document.querySelectorAll('.st .num').forEach(numEl => {
+          const target = parseInt(numEl.getAttribute('data-count'));
+          const suffix = numEl.getAttribute('data-suffix') || '';
+          let count = 0;
+          const step = Math.ceil(target / 40);
+          const timer = setInterval(() => {
+            count += step;
+            if(count >= target) {
+              numEl.innerText = target.toLocaleString('vi-VN') + suffix;
+              clearInterval(timer);
+            } else {
+              numEl.innerText = count.toLocaleString('vi-VN') + suffix;
+            }
+          }, 30);
+        });
+        statsObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  const bandEl = document.querySelector('.band');
+  if(bandEl) statsObserver.observe(bandEl);
+
+  // Testimonials Slider Logic
+  const testimonials = [
+    {
+      quote: `"Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó."`,
+      meta: "Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật"
+    },
+    {
+      quote: `"Cộng đồng sinh viên trên Upzi tương tác rất chủ động. Thương hiệu tuyển dụng của công ty cải thiện rõ rệt chỉ sau vài tháng hợp tác."`,
+      meta: "Trưởng phòng Thu hút Nhân tài — Ngành Bán lẻ"
+    }
+  ];
+  let curT = 0;
+  
+  function initTestimonials() {
+    const dotsContainer = document.getElementById('tdots');
+    dotsContainer.innerHTML = '';
+    testimonials.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.className = `tdot ${i === curT ? 'active' : ''}`;
+      btn.onclick = () => setT(i);
+      dotsContainer.appendChild(btn);
+    });
+  }
+
+  function setT(index) {
+    const card = document.getElementById('tcard');
+    card.classList.add('fading');
+    setTimeout(() => {
+      curT = index;
+      document.getElementById('tq').innerText = testimonials[curT].quote;
+      document.getElementById('tm').innerText = testimonials[curT].meta;
+      initTestimonials();
+      card.classList.remove('fading');
+    }, 300);
+  }
+
+  function moveT(dir) {
+    let next = curT + dir;
+    if(next < 0) next = testimonials.length - 1;
+    if(next >= testimonials.length) next = 0;
+    setT(next);
+  }
+
+  initTestimonials();
+
+  // Form Submit Handling
+  document.getElementById('leadFormEl').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('fsuccess').style.display = 'block';
+  });
+</script>
 
 </body>
 </html>
