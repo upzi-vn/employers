@@ -148,6 +148,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .sec-white{background:var(--white);}
     .sec-off{background:var(--off);}
     .head{max-width:720px; margin-bottom:64px;}
+    .head-c{max-width:760px; margin-left:auto; margin-right:auto; text-align:center;}
     .eyebrow{
       display:inline-block; font-family:var(--font-sub); font-weight:700; font-size:12.5px; letter-spacing:0.06em;
       text-transform:uppercase; color:var(--purple); background:var(--purple-tint);
@@ -187,6 +188,22 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .blocks.in .block:nth-child(2) .arw path{transition-delay:.5s;}
     .blocks.in .block:nth-child(3) .arw path{transition-delay:.65s;}
     .block:hover{transform:translateY(-8px); box-shadow:0 22px 44px rgba(85,28,175,0.13);}
+
+    /* ===== behaviour cards (Gen Z insight) ===== */
+    .beh-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+    .beh{
+      background:var(--white); border:2px solid var(--purple-tint); border-radius:26px;
+      padding:32px 28px 30px; display:flex; flex-direction:column;
+      transition:transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+    }
+    .beh:hover{transform:translateY(-6px); border-color:var(--purple); box-shadow:0 18px 38px rgba(85,28,175,0.10);}
+    .beh-ico{
+      width:46px; height:46px; border-radius:14px; background:var(--purple-tint);
+      display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+    }
+    .beh-ico svg{width:24px; height:24px; display:block;}
+    .beh h3{font-family:var(--font-display); font-size:21px; font-weight:700; line-height:1.25; letter-spacing:-0.012em; color:var(--purple-dark); margin-bottom:11px;}
+    .beh p{font-size:14.5px; line-height:1.62; color:var(--body);}
 
     /* ===== journey ===== */
     .j-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
@@ -238,6 +255,14 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .st .lb{font-size:14.5px; line-height:1.5; color:var(--body); margin-top:10px;}
     .band-src{font-size:12.5px; color:#787186; margin-top:24px;}
 
+    /* ===== activity type chips ===== */
+    .act-types{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px;}
+    .act-type{
+      font-family:var(--font-sub); font-weight:700; font-size:13.5px;
+      color:var(--purple-dark); background:var(--purple-tint);
+      padding:9px 18px; border-radius:999px;
+    }
+
     /* ===== real activity photo grid ===== */
     .act-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
     .act{margin:0; position:relative; border-radius:24px; overflow:hidden; background:var(--purple-tint);}
@@ -250,6 +275,30 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       padding:26px 20px 16px; font-size:13.5px; font-weight:600; color:#fff;
       background:linear-gradient(transparent, rgba(20,5,50,0.82));
     }
+
+    /* ===== why it matters (3 rows next to activity) ===== */
+    .why-list{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:44px;}
+    .why{display:flex; gap:16px; align-items:flex-start;}
+    .why-ico{
+      width:44px; height:44px; border-radius:13px; background:var(--purple-tint); flex-shrink:0;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .why-ico svg{width:22px; height:22px;}
+    .why h3{font-family:var(--font-sub); font-weight:800; font-size:15.5px; line-height:1.35; margin-bottom:7px; color:var(--ink);}
+    .why p{font-size:14px; line-height:1.6; color:var(--body);}
+
+    /* ===== client logo wall ===== */
+    .logo-wall{
+      display:grid; grid-template-columns:repeat(5,1fr); gap:14px;
+    }
+    .logo-cell{
+      background:var(--white); border:1.5px solid #eee8f7; border-radius:18px;
+      height:96px; display:flex; align-items:center; justify-content:center; padding:18px 20px;
+      transition:border-color .25s ease, transform .25s ease;
+    }
+    .logo-cell:hover{border-color:var(--purple); transform:translateY(-4px);}
+    .logo-cell img{max-height:100%; max-width:100%; width:auto; object-fit:contain; filter:grayscale(1); opacity:.72; transition:filter .25s ease, opacity .25s ease;}
+    .logo-cell:hover img{filter:none; opacity:1;}
 
     /* ===== testimonial ===== */
     .tcard{background:var(--purple-tint); border-radius:32px; padding:42px 40px; max-width:760px;}
@@ -287,6 +336,11 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       display:block; font-family:var(--font-display); font-size:42px; font-weight:700;
       color:var(--yellow); line-height:1; margin-bottom:6px; letter-spacing:-0.02em;
     }
+    .fit-note{
+      margin-top:44px; background:var(--white); border:2px solid var(--purple-tint);
+      border-radius:24px; padding:26px 30px; text-align:center;
+      font-size:16px; line-height:1.62; color:var(--body);
+    }
 
     /* ===== form ===== */
     .form-sec{position:relative; background:var(--purple-deep); padding:96px 0; overflow:hidden;}
@@ -304,28 +358,10 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       width:22px; height:22px; border-radius:7px; background:var(--yellow); color:var(--purple-deep);
       display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0;
     }
-    .fcard{background:var(--white); border-radius:32px; padding:38px 34px;}
-    .frow{margin-bottom:17px;}
-    .frow label{display:block; font-family:var(--font-sub); font-size:13px; font-weight:700; color:var(--ink); margin-bottom:7px;}
-    .frow input, .frow select{
-      width:100%; padding:13px 15px; border-radius:14px; border:2px solid #ece8f4;
-      font-size:15px; font-family:inherit; background:var(--off); color:var(--ink); transition:border-color .2s ease;
-    }
-    .frow input:focus, .frow select:focus{outline:none; border-color:var(--purple);}
-    .ftwo{display:grid; grid-template-columns:1fr 1fr; gap:13px;}
-    .fsubmit{
-      width:100%; background:var(--purple); color:var(--white); font-family:var(--font-sub); font-weight:700; font-size:16px;
-      padding:16px; border:none; border-radius:999px; margin-top:8px; transition:background .2s ease, transform .18s ease;
-    }
-    .fsubmit:hover{background:var(--purple-dark); transform:translateY(-1px);}
+    .fcard{background:var(--white); border-radius:32px; padding:30px 26px;}
+    .fcard-t{font-family:var(--font-display); font-weight:700; font-size:20px; letter-spacing:-0.015em; margin-bottom:6px;}
+    .fcard-s{font-size:13.5px; color:var(--body); line-height:1.55; margin-bottom:18px;}
     .fnote{font-size:12px; color:#9ca3af; margin-top:15px; text-align:center; line-height:1.5;}
-    .fsuccess{display:none; text-align:center; padding:26px 8px;}
-    .fsuccess .chk{
-      width:56px; height:56px; border-radius:18px; background:var(--mint); color:var(--purple-deep);
-      display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; margin:0 auto 16px;
-    }
-    .fsuccess h3{font-family:var(--font-display); font-weight:700; font-size:21px; margin-bottom:9px;}
-    .fsuccess p{font-size:14.5px; color:var(--body); line-height:1.55;}
 
     /* ===== footer ===== */
     footer{background:var(--off); color:#7a7488; padding:48px 0 28px; border-top:1px solid #eae5f3;}
@@ -341,6 +377,9 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       .act-grid{grid-template-columns:repeat(2,1fr);}
       .act-wide{grid-column:span 2; aspect-ratio:16/8;}
       .blocks{grid-template-columns:1fr;}
+      .beh-grid{grid-template-columns:1fr;}
+      .why-list{grid-template-columns:1fr;}
+      .logo-wall{grid-template-columns:repeat(3,1fr);}
       .j-grid{grid-template-columns:repeat(2,1fr);}
       .st-grid{grid-template-columns:1fr;}
       .fit-grid{grid-template-columns:1fr; gap:32px;}
@@ -351,7 +390,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       .act-grid{grid-template-columns:1fr;}
       .act-wide{grid-column:span 1; aspect-ratio:4/3;}
       .j-grid{grid-template-columns:1fr;}
-      .ftwo{grid-template-columns:1fr;}
+      .logo-wall{grid-template-columns:repeat(2,1fr);}
       .hero{padding:60px 0 90px;}
       .sec{padding:66px 0;}
       .block{padding:30px 26px 34px; min-height:auto;}
@@ -444,6 +483,48 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
+<!-- GEN Z BEHAVIOUR -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Thay đổi trong hành vi ứng viên</div>
+      <h2>Gen Z không còn tiếp cận nghề nghiệp như các thế hệ trước</h2>
+      <p>Ba thay đổi khiến cách tuyển dụng cũ khó tiếp cận nhóm ứng viên này.</p>
+    </div>
+    <div class="beh-grid stagger">
+      <div class="beh">
+        <div class="beh-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="#9345FF" stroke-width="2"/>
+            <path d="M3.5 9h17M3.5 15h17M12 3c-2.5 3-2.5 15 0 18M12 3c2.5 3 2.5 15 0 18" stroke="#9345FF" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Không chỉ xem tin tuyển dụng</h3>
+        <p>Gen Z tiếp cận thương hiệu tuyển dụng qua nhiều nguồn và điểm chạm khác nhau trước khi ứng tuyển.</p>
+      </div>
+      <div class="beh">
+        <div class="beh-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="#9345FF" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke="#9345FF" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Chủ động quan sát từ sớm</h3>
+        <p>Văn hoá, môi trường và trải nghiệm tuyển dụng ảnh hưởng mạnh đến quyết định ứng tuyển.</p>
+      </div>
+      <div class="beh">
+        <div class="beh-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.5 3.5h11v17l-5.5-3.6-5.5 3.6v-17Z" stroke="#9345FF" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Chọn doanh nghiệp trước khi chọn vị trí</h3>
+        <p>Nhiều bạn trẻ đã có "wishlist" doanh nghiệp từ rất lâu trước khi bắt đầu tìm việc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- JOURNEY -->
 <section class="sec sec-off" id="journey">
   <div class="wrap">
@@ -490,7 +571,15 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     <div class="head reveal">
       <div class="eyebrow">Upzi có mặt ở đâu</div>
       <h2>Upzi có mặt ngay trong trường</h2>
-      <p>Ngày hội việc làm, talkshow, hoạt động tại giảng đường — nơi doanh nghiệp gặp sinh viên trước khi họ tìm việc.</p>
+      <p>Upzi xây dựng mạng lưới ứng viên Gen Z từ 30+ trường Đại học / Cao đẳng, qua các hoạt động diễn ra quanh năm.</p>
+    </div>
+    <div class="act-types reveal">
+      <span class="act-type">Job Fair</span>
+      <span class="act-type">Talkshow</span>
+      <span class="act-type">Career Day</span>
+      <span class="act-type">Office Tour</span>
+      <span class="act-type">Tài trợ CLB Sinh viên</span>
+      <span class="act-type">Tài trợ các cuộc thi lớn</span>
     </div>
     <div class="act-grid stagger">
       <figure class="act act-wide">
@@ -509,6 +598,44 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
         <img src="images/mascot-ftu.jpg" alt="Linh vật Upzi giao lưu cùng sinh viên tại ngày hội việc làm" loading="lazy">
         <figcaption>Giao lưu cùng sinh viên tại sự kiện</figcaption>
       </figure>
+    </div>
+
+    <div class="why-list stagger">
+      <div class="why">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/>
+            <path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Tiếp cận đúng tệp Fresher &amp; Gen Z</h3>
+          <p>Kết nối với cộng đồng sinh viên và ứng viên entry-level thông qua hệ sinh thái trường học đối tác.</p>
+        </div>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3.2 14.6 9l6.4.6-4.8 4.2 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.6 9.4 9 12 3.2Z" stroke="#9345FF" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Xây dựng hiện diện thương hiệu tuyển dụng</h3>
+          <p>Thương hiệu xuất hiện sớm hơn trong hành trình tìm việc và lựa chọn nhà tuyển dụng của Gen Z.</p>
+        </div>
+      </div>
+      <div class="why">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 18V9M10 18V4M16 18v-6M4 21h17" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Duy trì pipeline ứng viên liên tục</h3>
+          <p>Upzi xây dựng nguồn ứng viên trẻ liên tục cho nhu cầu tuyển dụng dài hạn, không theo mùa.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -535,6 +662,33 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
+<!--
+  ===== CLIENT LOGO WALL =====
+  TODO: bỏ file logo vào /images/clients/ rồi thay src bên dưới.
+  Chỉ dùng logo đã có sự đồng ý của khách hàng.
+  Nếu chưa xin được logo, xoá nguyên <section> này đi.
+-->
+<section class="sec sec-white" id="clients">
+  <div class="wrap">
+    <div class="head head-c reveal">
+      <div class="eyebrow">Khách hàng của Upzi</div>
+      <h2>Doanh nghiệp đang tuyển dụng cùng Upzi</h2>
+    </div>
+    <div class="logo-wall stagger">
+      <div class="logo-cell"><img src="/images/clients/client-01.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-02.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-03.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-04.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-05.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-06.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-07.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-08.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-09.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+      <div class="logo-cell"><img src="/images/clients/client-10.png" alt="Logo khách hàng Upzi" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIAL -->
 <section class="sec sec-white">
   <div class="wrap">
@@ -556,22 +710,27 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
 <!-- FIT -->
 <section class="sec sec-off">
-  <div class="wrap fit-grid">
-    <div>
-      <div class="head reveal" style="margin-bottom:26px;">
-        <div class="eyebrow">Upzi phù hợp khi nào</div>
-        <h2>Đây có phải doanh nghiệp của Anh/Chị?</h2>
+  <div class="wrap">
+    <div class="fit-grid">
+      <div>
+        <div class="head reveal" style="margin-bottom:26px;">
+          <div class="eyebrow">Upzi phù hợp khi nào</div>
+          <h2>Đây có phải doanh nghiệp của Anh/Chị?</h2>
+        </div>
+        <div class="fit-list stagger">
+          <div class="fit-item"><div class="fit-chk">✓</div><p>Tuyển Intern, Fresher thường xuyên — không chỉ theo mùa</p></div>
+          <div class="fit-item"><div class="fit-chk">✓</div><p>Đang hoặc có kế hoạch xây dựng Employer Branding với Gen Z</p></div>
+          <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn nguồn ứng viên trẻ ổn định, dài hạn thay vì phụ thuộc job fair</p></div>
+        </div>
       </div>
-      <div class="fit-list stagger">
-        <div class="fit-item"><div class="fit-chk">✓</div><p>Tuyển Intern, Fresher thường xuyên — không chỉ theo mùa</p></div>
-        <div class="fit-item"><div class="fit-chk">✓</div><p>Đang hoặc có kế hoạch xây dựng Employer Branding với Gen Z</p></div>
-        <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn nguồn ứng viên trẻ ổn định, dài hạn thay vì phụ thuộc job fair</p></div>
-      </div>
+      <figure class="fit-vis reveal">
+        <img src="images/jobfair-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại ngày hội việc làm Đại học Ngoại thương" loading="lazy">
+        <figcaption><strong>30+</strong> trường Đại học / Cao đẳng đối tác trực tiếp</figcaption>
+      </figure>
     </div>
-    <figure class="fit-vis reveal">
-      <img src="images/jobfair-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại ngày hội việc làm Đại học Ngoại thương" loading="lazy">
-      <figcaption><strong>30+</strong> trường Đại học / Cao đẳng đối tác trực tiếp</figcaption>
-    </figure>
+    <div class="fit-note reveal">
+      Mỗi doanh nghiệp đều có những thách thức tuyển dụng khác nhau. Upzi rất mong được lắng nghe nhu cầu và góc nhìn từ Anh/Chị để xây dựng chiến lược phù hợp.
+    </div>
   </div>
 </section>
 
@@ -588,43 +747,18 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       </ul>
     </div>
     <div class="fcard reveal">
-      <form id="leadFormEl">
-        <div class="frow">
-          <label for="f-name">Họ và tên *</label>
-          <input type="text" id="f-name" required placeholder="Nguyễn Văn A">
-        </div>
-        <div class="ftwo">
-          <div class="frow">
-            <label for="f-company">Công ty *</label>
-            <input type="text" id="f-company" required placeholder="Tên công ty">
-          </div>
-          <div class="frow">
-            <label for="f-phone">Số điện thoại *</label>
-            <input type="tel" id="f-phone" required placeholder="09xx xxx xxx">
-          </div>
-        </div>
-        <div class="frow">
-          <label for="f-email">Email công việc *</label>
-          <input type="email" id="f-email" required placeholder="ban@congty.com">
-        </div>
-        <div class="frow">
-          <label for="f-volume">Nhu cầu tuyển dụng</label>
-          <select id="f-volume">
-            <option value="">Chọn số lượng dự kiến</option>
-            <option>1–5 vị trí / quý</option>
-            <option>6–15 vị trí / quý</option>
-            <option>16+ vị trí / quý</option>
-            <option>Chưa xác định, muốn tư vấn</option>
-          </select>
-        </div>
-        <button type="submit" class="fsubmit">Gửi yêu cầu tư vấn</button>
-        <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
-      </form>
-      <div class="fsuccess" id="fsuccess">
-        <div class="chk">✓</div>
-        <h3>Đã nhận thông tin</h3>
-        <p>Cảm ơn Anh/Chị. Đội ngũ Upzi sẽ liên hệ trong 24h làm việc tới.</p>
-      </div>
+      <div class="fcard-t">Đăng ký nhận tư vấn</div>
+      <div class="fcard-s">Điền thông tin bên dưới, Upzi sẽ liên hệ lại trong 24h làm việc.</div>
+
+      <!-- BowNow form embed (sid_2668fbc399d537fb6aeb) -->
+      <script id="_bownow_cs_sid_2668fbc399d537fb6aeb">
+var _bownow_cs_sid_2668fbc399d537fb6aeb = document.createElement('script');
+_bownow_cs_sid_2668fbc399d537fb6aeb.charset = 'utf-8';
+_bownow_cs_sid_2668fbc399d537fb6aeb.src = 'https://contents.bownow.jp/forms/sid_2668fbc399d537fb6aeb/trace.js';
+document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_2668fbc399d537fb6aeb);
+</script>
+
+      <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
     </div>
   </div>
 </section>
@@ -702,8 +836,12 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       meta: "Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật"
     },
     {
-      quote: `"Cộng đồng sinh viên trên Upzi tương tác rất chủ động. Thương hiệu tuyển dụng của công ty cải thiện rõ rệt chỉ sau vài tháng hợp tác."`,
-      meta: "Trưởng phòng Thu hút Nhân tài — Ngành Bán lẻ"
+      quote: `"Điểm bên mình quan tâm là Upzi không chỉ hỗ trợ tuyển dụng mà còn giúp doanh nghiệp tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường đại học. Đây là hướng khá phù hợp với xu hướng tuyển dụng hiện tại."`,
+      meta: "Doanh nghiệp quan tâm tiếp cận sinh viên sớm · Danh tính ẩn theo thỏa thuận bảo mật"
+    },
+    {
+      quote: `"Gen Z bây giờ thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi apply, nên employer branding ngày càng quan trọng hơn. Upzi đang đi đúng hướng ở phần tiếp cận và xây hiện diện sớm với nhóm ứng viên trẻ."`,
+      meta: "Doanh nghiệp đang xây dựng Employer Branding · Danh tính ẩn theo thỏa thuận bảo mật"
     }
   ];
   let curT = 0;
@@ -739,13 +877,6 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   }
 
   initTestimonials();
-
-  // Form Submit Handling
-  document.getElementById('leadFormEl').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('fsuccess').style.display = 'block';
-  });
 </script>
 
 </body>
