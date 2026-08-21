@@ -348,25 +348,25 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .form-sec{position:relative; background:var(--purple-deep); padding:96px 0; overflow:hidden;}
     .form-sec::before{
       content:''; position:absolute; inset:0;
-      background:radial-gradient(640px 440px at 12% 15%, rgba(147,69,255,0.5), transparent 68%);
+      background:radial-gradient(820px 500px at 50% 0%, rgba(147,69,255,0.45), transparent 70%);
     }
-    .form-grid{position:relative; z-index:2; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
-    .fcopy h2{font-family:var(--font-display); color:var(--white); font-size:clamp(26px,3.4vw,36px); font-weight:700; line-height:1.15; letter-spacing:-0.022em; margin-bottom:18px;}
+    .form-inner{position:relative; z-index:2;}
+    .fcopy{text-align:center; max-width:740px; margin:0 auto 44px;}
+    .fcopy h2{font-family:var(--font-display); color:var(--white); font-size:clamp(28px,3.8vw,42px); font-weight:700; line-height:1.14; letter-spacing:-0.022em; margin-bottom:16px;}
     .fcopy h2 .hl{color:var(--yellow);}
-    .fcopy > p{color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.65; margin-bottom:28px;}
-    .fcopy ul{list-style:none; display:flex; flex-direction:column; gap:13px;}
-    .fcopy li{display:flex; gap:12px; align-items:center; font-size:15px; color:rgba(255,255,255,0.82);}
+    .fcopy > p{color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.65; margin-bottom:26px;}
+    .fcopy ul{list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:13px 28px;}
+    .fcopy li{display:flex; gap:10px; align-items:center; font-size:15px; color:rgba(255,255,255,0.82);}
     .fcopy li span{
       width:22px; height:22px; border-radius:7px; background:var(--yellow); color:var(--purple-deep);
       display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0;
     }
-    .fcard{background:var(--white); border-radius:32px; padding:30px 26px;}
-    .fcard-t{font-family:var(--font-display); font-weight:700; font-size:20px; letter-spacing:-0.015em; margin-bottom:6px;}
-    .fcard-s{font-size:13.5px; color:var(--body); line-height:1.55; margin-bottom:18px;}
-
-    /* BowNow form iframe */
-    .bn-wrap{background:transparent; overflow-x:auto; width:100%;}
-    .fnote{font-size:12px; color:#9ca3af; margin-top:15px; text-align:center; line-height:1.5;}
+    /* BowNow form — form vốn thiết kế cho nền tối, giữ nền trong suốt */
+    .bn-wrap{
+      background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.13);
+      border-radius:28px; padding:36px 34px; overflow-x:auto;
+    }
+    .fnote{font-size:12.5px; color:rgba(255,255,255,0.45); margin-top:18px; text-align:center; line-height:1.5;}
 
     /* ===== footer ===== */
     footer{background:var(--off); color:#7a7488; padding:48px 0 28px; border-top:1px solid #eae5f3;}
@@ -388,7 +388,6 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       .j-grid{grid-template-columns:repeat(2,1fr);}
       .st-grid{grid-template-columns:1fr;}
       .fit-grid{grid-template-columns:1fr; gap:32px;}
-      .form-grid{grid-template-columns:1fr; gap:38px;}
       .f-top{flex-direction:column;}
     }
     @media (max-width: 540px){
@@ -741,34 +740,30 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
 <!-- FORM -->
 <section class="form-sec" id="leadform">
-  <div class="wrap form-grid">
+  <div class="wrap form-inner">
     <div class="fcopy reveal">
       <h2>Bắt đầu với <span class="hl">Upzi</span></h2>
       <p>Để lại thông tin, đội ngũ Upzi sẽ liên hệ và đề xuất giải pháp theo đúng nhu cầu.</p>
       <ul>
-        <li><span>✓</span>Tư vấn miễn phí, không ràng buộc</li>
-        <li><span>✓</span>Phản hồi trong vòng 24h làm việc</li>
-        <li><span>✓</span>Đề xuất theo đúng ngành và quy mô tuyển dụng</li>
+        <li><span>&#10003;</span>Tư vấn miễn phí, không ràng buộc</li>
+        <li><span>&#10003;</span>Phản hồi trong vòng 24h làm việc</li>
+        <li><span>&#10003;</span>Đề xuất theo đúng ngành và quy mô tuyển dụng</li>
       </ul>
     </div>
-    <div class="fcard reveal">
-      <div class="fcard-t">Đăng ký nhận tư vấn</div>
-      <div class="fcard-s">Điền thông tin bên dưới, Upzi sẽ liên hệ lại trong 24h làm việc.</div>
 
-      <!-- BowNow form (sid_2668fbc399d537fb6aeb) -->
-      <div class="bn-wrap">
-        <iframe
-          src="https://contents.bownow.jp/forms/view?form_id=sid_2668fbc399d537fb6aeb"
-          width="100%"
-          height="800"
-          frameborder="0"
-          scrolling="yes"
-          style="display:block;border:none;min-width:100%"
-          title="Đăng ký nhận tư vấn Upzi">Loading form...</iframe>
-      </div>
-
-      <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
+    <!-- BowNow form (sid_2668fbc399d537fb6aeb) -->
+    <div class="bn-wrap reveal">
+      <iframe
+        src="https://contents.bownow.jp/forms/view?form_id=sid_2668fbc399d537fb6aeb"
+        width="100%"
+        height="800"
+        frameborder="0"
+        scrolling="yes"
+        style="display:block;border:none;min-width:100%"
+        title="Đăng ký nhận tư vấn Upzi">Loading form...</iframe>
     </div>
+
+    <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
   </div>
 </section>
 
