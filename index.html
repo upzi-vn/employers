@@ -112,6 +112,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .hero-visual{position:relative;}
     .hero-visual img{
       width:100%; display:block;
+      border-radius:18px;
       filter:drop-shadow(0 26px 54px rgba(20,5,50,0.38));
       animation:floatUp 1s cubic-bezier(.22,.61,.36,1) .3s both;
     }
@@ -180,15 +181,15 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     }
     .block p{font-size:14.5px; line-height:1.66; color:var(--body); margin-bottom:26px;}
     .block .arw{margin-top:auto; align-self:flex-start;}
-    .block .arw svg{width:86px; height:auto; display:block;}
-    .block .arw path{
-      stroke-dasharray:220; stroke-dashoffset:220;
-      transition:stroke-dashoffset 1s cubic-bezier(.4,0,.2,1);
+    .block .arw img{
+      width:92px; height:auto; display:block;
+      opacity:0; transform:translateY(10px) scale(.94);
+      transition:opacity .6s ease, transform .6s cubic-bezier(.34,1.4,.64,1);
     }
-    .blocks.in .block .arw path{stroke-dashoffset:0;}
-    .blocks.in .block:nth-child(1) .arw path{transition-delay:.35s;}
-    .blocks.in .block:nth-child(2) .arw path{transition-delay:.5s;}
-    .blocks.in .block:nth-child(3) .arw path{transition-delay:.65s;}
+    .blocks.in .block .arw img{opacity:1; transform:none;}
+    .blocks.in .block:nth-child(1) .arw img{transition-delay:.35s;}
+    .blocks.in .block:nth-child(2) .arw img{transition-delay:.5s;}
+    .blocks.in .block:nth-child(3) .arw img{transition-delay:.65s;}
     .block:hover{transform:translateY(-8px); box-shadow:0 22px 44px rgba(85,28,175,0.13);}
 
     /* ===== behaviour cards (Gen Z insight) ===== */
@@ -437,7 +438,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       </div>
     </div>
     <div class="hero-visual">
-      <img src="images/product-nto.png" alt="Giao diện nhà tuyển dụng Upzi: tạo JD bằng AI và danh sách ứng viên được AI xếp hạng">
+      <img src="images/product-talentone.png" alt="Giao diện Navigos Talent One: danh sách ứng viên ứng tuyển được AI xếp hạng theo tỉ lệ phù hợp">
     </div>
   </div>
 </section>
@@ -455,10 +456,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
         <h3>Đúng nhóm ứng viên</h3>
         <p>Kết nối trực tiếp cộng đồng sinh viên qua 30+ trường liên kết. Không quảng cáo đại trà.</p>
         <div class="arw">
-          <svg viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 54C22 54 30 22 48 22C60 22 60 42 72 42C88 42 96 18 112 12" stroke="#5FE0BB" stroke-width="7" stroke-linecap="round"/>
-            <path d="M92 8C101 9 109 10 113 11C112 16 110 23 108 31" stroke="#5FE0BB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="/images/arrow-mint.png" alt="Mũi tên trang trí màu mint" loading="lazy">
         </div>
       </div>
       <div class="block">
@@ -466,10 +464,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
         <h3>Hiện diện sớm hơn</h3>
         <p>Xây employer branding từ lúc Gen Z còn đang tìm hiểu, không đợi tới lúc đăng tin.</p>
         <div class="arw">
-          <svg viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 52C14 52 20 34 32 34C42 34 42 50 32 50C22 50 22 26 38 22C54 18 66 40 80 34C92 29 98 18 112 12" stroke="#E0E722" stroke-width="7" stroke-linecap="round"/>
-            <path d="M92 8C101 9 109 10 113 11C112 16 110 23 108 31" stroke="#E0E722" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="/images/arrow-yellow.png" alt="Mũi tên trang trí màu vàng chanh" loading="lazy">
         </div>
       </div>
       <div class="block">
@@ -477,10 +472,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
         <h3>Pipeline liên tục</h3>
         <p>Nguồn ứng viên trẻ ổn định quanh năm, không phụ thuộc job fair theo mùa.</p>
         <div class="arw">
-          <svg viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M34 46C16 46 8 34 14 24C21 12 44 12 52 26C60 40 82 42 90 30C97 19 88 8 74 10" stroke="#FF968C" stroke-width="7" stroke-linecap="round"/>
-            <path d="M84 4C77 7 71 9 68 11C71 15 75 20 79 26" stroke="#FF968C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="/images/arrow-gold.png" alt="Mũi tên trang trí màu vàng cam" loading="lazy">
         </div>
       </div>
     </div>
