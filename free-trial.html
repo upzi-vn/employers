@@ -243,21 +243,6 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       color:var(--purple-deep); font-size:16px; display:flex; align-items:center; justify-content:center; transition:background .2s ease;}
     .tarrow:hover{background:var(--purple-tint);}
 
-    /* plan */
-    .inc{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-    .inc-col{border-radius:26px; padding:34px 32px;}
-    .inc-yes{background:var(--purple-tint); border:2px solid #e3d5ff;}
-    .inc-no{background:var(--white); border:2px solid #eceaf1;}
-    .inc-col h3{font-family:var(--font-display); font-size:19px; font-weight:700; margin-bottom:10px; letter-spacing:-0.01em;}
-    .inc-yes h3{color:var(--purple-dark);}
-    .inc-no h3{color:#7a7488;}
-    .inc-col .ints{font-size:13.5px; line-height:1.55; color:var(--body); margin-bottom:8px;}
-    .inc-col li{display:flex; gap:12px; align-items:flex-start; font-size:15px; line-height:1.55;
-      color:var(--body); padding:9px 0;}
-    .inc-col li em{font-style:normal; font-weight:700; flex-shrink:0; width:20px;}
-    .inc-yes li em{color:var(--purple);}
-    .inc-no li em{color:#b3adc0;}
-
     /* fit */
     .fit-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:14px;}
     .fit-item{display:flex; gap:14px; align-items:flex-start; background:var(--white); border-radius:20px;
@@ -308,7 +293,6 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       .hero-grid{grid-template-columns:1fr; gap:36px;}
       .offer,.steps,.st-grid,.beh-grid,.why-list{grid-template-columns:1fr;}
       .obj-grid{grid-template-columns:1fr; gap:32px;}
-      .inc{grid-template-columns:1fr;}
       .act-grid{grid-template-columns:repeat(2,1fr);}
       .act-wide{grid-column:span 2; aspect-ratio:16/8;}
       .f-top{flex-direction:column;}
@@ -434,7 +418,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       <p>Nếu kết quả chưa đúng nhóm ứng viên mong muốn, đội ngũ Upzi có thể cùng Anh/Chị xem lại nội dung và tiêu chí của tin tuyển để tối ưu.</p>
     </div>
     <figure class="obj-vis reveal">
-      <img src="/images/product-talentone.png" alt="Hồ sơ ứng viên ứng tuyển kèm đánh giá mức độ phù hợp do AI phân tích" loading="lazy">
+      <img src="/images/activate-account-and-post-job/asset-002-a5c58f8f.png" alt="AI đánh giá độ phù hợp của ứng viên với vị trí tuyển dụng" loading="lazy">
     </figure>
   </div>
 </section>
@@ -595,7 +579,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     </div>
     <div class="tcard reveal" id="tcard">
       <div class="tquote" id="tq">"Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó."</div>
-      <div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên<br>Danh tính ẩn theo thỏa thuận bảo mật</div>
+      <div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div>
     </div>
     <div class="tctrl">
       <button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">&lsaquo;</button>
@@ -605,41 +589,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
-<!-- 8. GÓI MIỄN PHÍ CÓ GÌ -->
-<section class="sec sec-off">
-  <div class="wrap">
-    <div class="head head-c reveal">
-      <div class="eyebrow">Nói rõ ngay từ đầu</div>
-      <h2>Bắt đầu miễn phí. Chỉ nâng cấp khi doanh nghiệp cần nhiều hơn.</h2>
-      <p>Slot miễn phí được thiết kế để Anh/Chị có thể thử Upzi bằng một nhu cầu tuyển dụng thực tế trước khi cân nhắc gói lớn hơn.</p>
-    </div>
-    <div class="inc reveal">
-      <div class="inc-col inc-yes">
-        <h3>Với slot miễn phí</h3>
-        <ul>
-          <li><em>✓</em>1 tin tuyển dụng</li>
-          <li><em>✓</em>Xem hồ sơ ứng viên ứng tuyển vào tin</li>
-          <li><em>✓</em>AI hỗ trợ viết mô tả công việc</li>
-          <li><em>✓</em>AI đánh giá mức độ phù hợp của ứng viên</li>
-          <li><em>✓</em>Quản lý ứng viên theo quy trình tuyển dụng</li>
-        </ul>
-      </div>
-      <div class="inc-col inc-no">
-        <h3>Khi cần mở rộng tuyển dụng</h3>
-        <p class="ints">Các gói nâng cấp có thể bao gồm:</p>
-        <ul>
-          <li><em>—</em>Đăng nhiều vị trí cùng lúc</li>
-          <li><em>—</em>Chủ động tìm kiếm ứng viên</li>
-          <li><em>—</em>Tăng khả năng hiển thị tin tuyển</li>
-          <li><em>—</em>Trang thương hiệu tuyển dụng</li>
-          <li><em>—</em>Các hoạt động Employer Branding và kết nối sinh viên</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9. UPZI PHÙ HỢP VỚI DOANH NGHIỆP NÀO -->
+<!-- 8. UPZI PHÙ HỢP VỚI DOANH NGHIỆP NÀO -->
 <section class="sec sec-white">
   <div class="wrap">
     <div class="head head-c reveal">
@@ -656,7 +606,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
-<!-- 10. FAQ -->
+<!-- 9. FAQ -->
 <section class="sec sec-off">
   <div class="wrap-n">
     <div class="head head-c reveal">
@@ -695,7 +645,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
-<!-- 11. CTA CUỐI -->
+<!-- 10. CTA CUỐI -->
 <section class="final" id="dang-ky">
   <div class="wrap final-in">
     <h2>Thử Upzi bằng chính vị trí <span class="hl">Anh/Chị đang tuyển</span></h2>
@@ -739,11 +689,11 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
   const testimonials = [
     { quote: `"Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó."`,
-      meta: "Doanh nghiệp tuyển Fresher thường xuyên<br>Danh tính ẩn theo thỏa thuận bảo mật" },
+      meta: "Doanh nghiệp tuyển Fresher thường xuyên" },
     { quote: `"Điểm bên mình quan tâm là khả năng tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường Đại học. Đây là hướng phù hợp với nhu cầu xây nguồn ứng viên dài hạn."`,
-      meta: "Doanh nghiệp quan tâm tiếp cận sinh viên sớm<br>Danh tính ẩn theo thỏa thuận bảo mật" },
+      meta: "Doanh nghiệp quan tâm tiếp cận sinh viên sớm" },
     { quote: `"Gen Z thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi ứng tuyển, nên việc xây dựng hiện diện với ứng viên trẻ ngày càng quan trọng."`,
-      meta: "Doanh nghiệp đang xây dựng Employer Branding<br>Danh tính ẩn theo thỏa thuận bảo mật" }
+      meta: "Doanh nghiệp đang xây dựng Employer Branding" }
   ];
   let curT = 0;
   function initTestimonials(){
