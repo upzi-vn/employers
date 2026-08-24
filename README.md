@@ -1,3 +1,5 @@
 Main: https://upzi-vn.github.io/employers/
 Success Stories: https://upzi-vn.github.io/employers/success-stories
-Dung test blog: https://upzi-vn.github.io/employers/tips-insights-blog
+Writings: https://upzi-vn.github.io/employers/tips-insights
+Guidelines: https://upzi-employers.vercel.app/activate-account-and-post-job
+Free Trial: https://upzi-employers.vercel.app/free-trial
