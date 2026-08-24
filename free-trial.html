@@ -123,7 +123,8 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     @keyframes floatUp{from{opacity:0; transform:translateY(34px) scale(.97);} to{opacity:1; transform:none;}}
 
     /* sections */
-    .sec{padding:78px 0; position:relative; overflow:hidden;}
+    .sec{padding:78px 0; position:relative;}
+    .sec-clip{overflow:hidden;}
     .sec > .wrap, .sec > .wrap-n{position:relative; z-index:2;}
     .deco{position:absolute; pointer-events:none; z-index:1;}
     .deco-tr{top:-120px; right:-150px; width:420px; opacity:.055;}
@@ -140,20 +141,29 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
       letter-spacing:-0.024em; line-height:1.1; color:var(--ink);}
     .head p{margin-top:18px; font-size:19px; line-height:1.6; color:var(--body);}
 
-    /* offer cards — colour block */
-    .offer{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:end;}
-    .ocard{background:var(--purple-tint); border-radius:24px; padding:40px 36px 36px;
-      display:flex; flex-direction:column; overflow:hidden;
-      transition:transform .3s cubic-bezier(.4,0,.2,1);}
-    .ocard:hover{transform:translateY(-6px);}
+    /* offer cards — stacking on scroll */
+    .stack{position:relative;}
+    .stack-item{position:sticky; top:104px; padding-bottom:26px;}
+    .stack-item:nth-child(1){top:104px;}
+    .stack-item:nth-child(2){top:128px;}
+    .stack-item:nth-child(3){top:152px;}
+    .ocard{
+      background:var(--purple-tint); border-radius:24px; overflow:hidden;
+      display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;
+      padding:52px 48px; min-height:400px;
+      box-shadow:0 -2px 0 rgba(46,15,92,0.06);
+    }
     .ocard .on{font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--purple);
       opacity:.6; letter-spacing:0.04em; margin-bottom:14px;}
-    .ocard h3{font-family:var(--font-display); font-size:27px; font-weight:700; line-height:1.16;
-      letter-spacing:-0.018em; color:var(--purple); margin-bottom:14px;}
-    .ocard p{font-size:16px; line-height:1.62; color:var(--body); margin-bottom:26px;}
-    .ocard .shot{margin-top:auto; border-radius:12px; overflow:hidden; background:var(--white);}
+    .ocard h3{font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; line-height:1.14;
+      letter-spacing:-0.02em; color:var(--purple); margin-bottom:16px;}
+    .ocard p{font-size:17px; line-height:1.62; color:var(--body);}
+    .ocard .obar{width:56px; height:6px; border-radius:99px; margin-bottom:22px;}
+    .ocard:nth-child(1) .obar, .stack-item:nth-child(1) .obar{background:var(--mint);}
+    .stack-item:nth-child(2) .obar{background:var(--yellow);}
+    .stack-item:nth-child(3) .obar{background:var(--gold);}
+    .ocard .shot{border-radius:14px; overflow:hidden; background:var(--white);}
     .ocard .shot img{width:100%; display:block;}
-    .ocard .arw{position:absolute; right:18px; bottom:-6px; width:74px; opacity:.9; pointer-events:none;}
 
     /* stats */
     .st-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
@@ -295,7 +305,9 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr; gap:36px;}
-      .offer,.steps,.st-grid,.beh-grid,.why-list,.fit-list{grid-template-columns:1fr;}
+      .steps,.st-grid,.beh-grid,.why-list,.fit-list{grid-template-columns:1fr;}
+      .ocard{grid-template-columns:1fr; gap:28px; padding:36px 30px; min-height:0;}
+      .stack-item, .stack-item:nth-child(1), .stack-item:nth-child(2), .stack-item:nth-child(3){position:static; padding-bottom:18px;}
       .obj-grid{grid-template-columns:1fr; gap:32px;}
       .steps::before{display:none;}
       .act-grid{grid-template-columns:repeat(2,1fr);}
@@ -356,33 +368,45 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
 <!-- 2. ANH/CHỊ NHẬN ĐƯỢC GÌ -->
 <section class="sec sec-white">
-  <svg class="deco deco-tr" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M600 90C420 90 300 210 300 390C300 510 380 600 500 600" stroke="#9345FF" stroke-width="86" stroke-linecap="round"/>
-  </svg>
   <div class="wrap">
     <div class="head head-c reveal">
       <div class="eyebrow">Anh/Chị nhận được gì</div>
       <h2>Một tin tuyển miễn phí để kiểm chứng nguồn ứng viên Upzi</h2>
       <p>Không cần đánh giá Upzi qua lời giới thiệu hay số liệu tổng hợp. Hãy đăng chính vị trí doanh nghiệp đang cần tuyển và xem những hồ sơ thực tế ứng tuyển vào tin đó.</p>
     </div>
-    <div class="offer stagger">
-      <div class="ocard">
-        <div class="on">01</div>
-        <h3>1 tin tuyển dụng miễn phí</h3>
-        <p>Đăng một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm và tiếp cận cộng đồng ứng viên trẻ trên Upzi.</p>
-        <div class="shot"><img src="/images/ui-pipeline.png" alt="Giao diện quản lý tin tuyển dụng và các vòng tuyển trên Talent One" loading="lazy"></div>
+    <div class="stack">
+      <div class="stack-item">
+        <div class="ocard">
+          <div>
+            <div class="obar"></div>
+            <div class="on">01</div>
+            <h3>1 tin tuyển dụng miễn phí</h3>
+            <p>Đăng một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm và tiếp cận cộng đồng ứng viên trẻ trên Upzi.</p>
+          </div>
+          <div class="shot"><img src="/images/ui-pipeline.png" alt="Giao diện quản lý tin tuyển dụng và các vòng tuyển trên Talent One" loading="lazy"></div>
+        </div>
       </div>
-      <div class="ocard">
-        <div class="on">02</div>
-        <h3>Xem hồ sơ ứng viên thực tế</h3>
-        <p>Xem trực tiếp CV, trường, chuyên ngành, kinh nghiệm và thông tin liên quan của từng ứng viên ứng tuyển vào tin.</p>
-        <div class="shot"><img src="/images/ui-candidate.png" alt="Hồ sơ ứng viên với trường, chuyên ngành và kinh nghiệm" loading="lazy"></div>
+      <div class="stack-item">
+        <div class="ocard">
+          <div>
+            <div class="obar"></div>
+            <div class="on">02</div>
+            <h3>Xem hồ sơ ứng viên thực tế</h3>
+            <p>Xem trực tiếp CV, trường, chuyên ngành, kinh nghiệm và thông tin liên quan của từng ứng viên ứng tuyển vào tin.</p>
+          </div>
+          <div class="shot"><img src="/images/ui-candidate.png" alt="Hồ sơ ứng viên với trường, chuyên ngành và kinh nghiệm" loading="lazy"></div>
+        </div>
       </div>
-      <div class="ocard">
-        <div class="on">03</div>
-        <h3>AI hỗ trợ ưu tiên hồ sơ phù hợp</h3>
-        <p>Hệ thống đánh giá mức độ phù hợp của từng ứng viên với vị trí đang tuyển, kèm nhận định để Anh/Chị biết hồ sơ nào nên xem trước.</p>
-        <div class="shot"><img src="/images/ui-aimatch.png" alt="Tỉ lệ phù hợp do AI đánh giá kèm lý do cụ thể" loading="lazy"></div>
+      <div class="stack-item">
+        <div class="ocard">
+          <div>
+            <div class="obar"></div>
+            <div class="on">03</div>
+            <h3>AI hỗ trợ ưu tiên hồ sơ phù hợp</h3>
+            <p>Hệ thống đánh giá mức độ phù hợp của từng ứng viên với vị trí đang tuyển, kèm nhận định để Anh/Chị biết hồ sơ nào nên xem trước.</p>
+          </div>
+          <div class="shot"><img src="/images/ui-aimatch.png" alt="Tỉ lệ phù hợp do AI đánh giá kèm lý do cụ thể" loading="lazy"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -432,7 +456,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 </section>
 
 <!-- 5. CÁCH HOẠT ĐỘNG -->
-<section class="sec sec-off" id="cach-hoat-dong">
+<section class="sec sec-clip sec-off" id="cach-hoat-dong">
   <svg class="deco deco-bl" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M0 120C170 120 280 230 280 400C280 470 250 500 200 500" stroke="#551caf" stroke-width="72" stroke-linecap="round"/>
   </svg>
@@ -621,7 +645,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 </section>
 
 <!-- 9. FAQ -->
-<section class="sec sec-white">
+<section class="sec sec-clip sec-white">
   <svg class="deco deco-bl" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M0 120C170 120 280 230 280 400C280 470 250 500 200 500" stroke="#551caf" stroke-width="72" stroke-linecap="round"/>
   </svg>
