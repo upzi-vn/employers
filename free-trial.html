@@ -176,12 +176,11 @@
     /* activity */
     .act-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
     .act-type{font-size:13px;font-weight:700;color:var(--purple-dark);background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:100px}
-    .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .act{position:relative;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line);aspect-ratio:4/3}
-    .act-wide{grid-column:span 3;aspect-ratio:16/6}
+    .act-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .act{position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);aspect-ratio:3/2}
     .act img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
     .act:hover img{transform:scale(1.03)}
-    .act figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(25,21,39,.78));color:#fff;font-size:13px;font-weight:600}
+    .act figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(25,21,39,.82));color:#fff;font-size:11.5px;line-height:1.35;font-weight:600}
 
     /* why */
     .why-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
@@ -249,14 +248,13 @@
       .steps,.st-grid,.beh-grid,.why-list{grid-template-columns:1fr}
       .fit-list{grid-template-columns:1fr}
       .act-grid{grid-template-columns:repeat(2,1fr)}
-      .act-wide{grid-column:span 2;aspect-ratio:16/8}
     }
     @media(max-width:600px){
       .nav-cta{display:none}
       .hero{padding-top:36px}
       .hero-ctas .btn-primary,.hero-ctas .btn-secondary{width:100%}
-      .act-grid{grid-template-columns:1fr}
-      .act-wide{grid-column:span 1;aspect-ratio:4/3}
+      .act-grid{gap:10px}
+      .act figcaption{font-size:10.5px;padding:22px 9px 8px}
       .final-in{border-radius:22px}
     }
     @media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -401,10 +399,14 @@
       <div class="head reveal"><div class="eyebrow">Upzi có mặt ở đâu</div><h2>Tiếp cận Gen Z từ khi các bạn còn ở trong trường</h2><p>Upzi không chỉ xuất hiện khi ứng viên bắt đầu tìm việc. Thông qua mạng lưới trường Đại học / Cao đẳng và các hoạt động nghề nghiệp dành cho sinh viên, Upzi tiếp cận nhóm ứng viên trẻ ngay trong giai đoạn các bạn tìm hiểu ngành nghề, doanh nghiệp và cơ hội đầu tiên.</p></div>
       <div class="act-types reveal"><span class="act-type">Job Fair</span><span class="act-type">Career Day</span><span class="act-type">Talkshow</span><span class="act-type">Office Tour</span><span class="act-type">CLB Sinh viên</span><span class="act-type">Cuộc thi sinh viên</span></div>
       <div class="act-grid stagger">
-        <figure class="act act-wide"><img src="/images/event-fpt.jpg" alt="Sinh viên FPT Polytechnic tham gia hoạt động do Navigos Group và Upzi tổ chức" loading="lazy"><figcaption>Hoạt động tại giảng đường — FPT Polytechnic</figcaption></figure>
-        <figure class="act"><img src="/images/jobfair-ftu.jpg" alt="Gian hàng Upzi tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm — ĐH Ngoại thương TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/talkshow-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” — Upzi × Onboardy × Vietcetera</figcaption></figure>
-        <figure class="act"><img src="/images/mascot-ftu.jpg" alt="Linh vật Upzi giao lưu cùng sinh viên tại ngày hội việc làm" loading="lazy"><figcaption>Giao lưu cùng sinh viên tại sự kiện</figcaption></figure>
+        <figure class="act"><img src="/images/event-career-pathfinder.jpg" alt="Sự kiện Career Pathfinder của Upzi, tri ân các doanh nghiệp đối tác" loading="lazy"><figcaption>Career Pathfinder — Tri ân đối tác doanh nghiệp</figcaption></figure>
+        <figure class="act"><img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm — ĐH Ngoại thương TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-hub.jpg" alt="Career Day Fin-tastic Journey tại Đại học Ngân hàng TP.HCM với Upzi là đơn vị đồng hành" loading="lazy"><figcaption>Career Day “Fin-tastic Journey” — ĐH Ngân hàng TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmute.jpg" alt="Đại diện Upzi chia sẻ về tác động của AI tới nghề nghiệp trước sinh viên ĐH Sư phạm Kỹ thuật TP.HCM" loading="lazy"><figcaption>Chia sẻ về AI &amp; nghề nghiệp — ĐH Sư phạm Kỹ thuật TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-fpt-officetour.jpg" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group — FPT Polytechnic</figcaption></figure>
+        <figure class="act"><img src="/images/event-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” — Upzi × Onboardy × Vietcetera</figcaption></figure>
+        <figure class="act"><img src="/images/event-htkd.jpg" alt="Đêm chung kết cuộc thi Hành trình Kinh doanh dành cho sinh viên" loading="lazy"><figcaption>Chung kết cuộc thi “Hành trình Kinh doanh”</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmus.jpg" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp — ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
       </div>
       <div class="why-list stagger">
         <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/><path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Tiếp cận đúng tệp Fresher &amp; Gen Z</h3><p>Kết nối với cộng đồng sinh viên và ứng viên entry-level thông qua hệ sinh thái trường học đối tác.</p></div></div>
