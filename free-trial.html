@@ -148,22 +148,24 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     .stack-item:nth-child(2){top:128px;}
     .stack-item:nth-child(3){top:152px;}
     .ocard{
-      background:var(--purple-tint); border-radius:24px; overflow:hidden;
-      display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;
-      padding:52px 48px; min-height:400px;
-      box-shadow:0 -2px 0 rgba(46,15,92,0.06);
+      border-radius:24px; overflow:hidden;
+      display:grid; grid-template-columns:0.85fr 1.15fr; gap:40px; align-items:center;
+      padding:48px 44px; min-height:400px;
+      box-shadow:0 -14px 34px rgba(46,15,92,0.14);
     }
-    .ocard .on{font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--purple);
-      opacity:.6; letter-spacing:0.04em; margin-bottom:14px;}
+    .ocard .on{font-family:var(--font-display); font-size:14px; font-weight:700;
+      opacity:.55; letter-spacing:0.04em; margin-bottom:14px;}
     .ocard h3{font-family:var(--font-display); font-size:clamp(26px,3vw,34px); font-weight:700; line-height:1.14;
-      letter-spacing:-0.02em; color:var(--purple); margin-bottom:16px;}
-    .ocard p{font-size:17px; line-height:1.62; color:var(--body);}
-    .ocard .obar{width:56px; height:6px; border-radius:99px; margin-bottom:22px;}
-    .ocard:nth-child(1) .obar, .stack-item:nth-child(1) .obar{background:var(--mint);}
-    .stack-item:nth-child(2) .obar{background:var(--yellow);}
-    .stack-item:nth-child(3) .obar{background:var(--gold);}
-    .ocard .shot{border-radius:14px; overflow:hidden; background:var(--white);}
+      letter-spacing:-0.02em; margin-bottom:16px;}
+    .ocard p{font-size:17px; line-height:1.62; opacity:.82;}
+    .ocard .shot{border-radius:16px; overflow:hidden; background:var(--white);
+      box-shadow:0 14px 30px rgba(20,5,50,0.16);}
     .ocard .shot img{width:100%; display:block;}
+
+    /* mỗi thẻ một màu brand */
+    .oc-1{background:var(--purple-dark); color:var(--white);}
+    .oc-2{background:var(--mint); color:var(--purple-deep);}
+    .oc-3{background:var(--yellow); color:var(--purple-deep);}
 
     /* stats */
     .st-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
@@ -367,7 +369,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 </section>
 
 <!-- 2. ANH/CHỊ NHẬN ĐƯỢC GÌ -->
-<section class="sec sec-white">
+<section class="sec sec-off">
   <div class="wrap">
     <div class="head head-c reveal">
       <div class="eyebrow">Anh/Chị nhận được gì</div>
@@ -376,36 +378,33 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
     </div>
     <div class="stack">
       <div class="stack-item">
-        <div class="ocard">
+        <div class="ocard oc-1">
           <div>
-            <div class="obar"></div>
             <div class="on">01</div>
             <h3>1 tin tuyển dụng miễn phí</h3>
             <p>Đăng một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm và tiếp cận cộng đồng ứng viên trẻ trên Upzi.</p>
           </div>
-          <div class="shot"><img src="/images/ui-pipeline.png" alt="Giao diện quản lý tin tuyển dụng và các vòng tuyển trên Talent One" loading="lazy"></div>
+          <div class="shot"><img src="/images/feature-post-job.png" alt="Tạo thông tin tuyển dụng với Navigos AI, kèm đề xuất chỉnh sửa vị trí và khoảng lương" loading="lazy"></div>
         </div>
       </div>
       <div class="stack-item">
-        <div class="ocard">
+        <div class="ocard oc-2">
           <div>
-            <div class="obar"></div>
             <div class="on">02</div>
             <h3>Xem hồ sơ ứng viên thực tế</h3>
             <p>Xem trực tiếp CV, trường, chuyên ngành, kinh nghiệm và thông tin liên quan của từng ứng viên ứng tuyển vào tin.</p>
           </div>
-          <div class="shot"><img src="/images/ui-candidate.png" alt="Hồ sơ ứng viên với trường, chuyên ngành và kinh nghiệm" loading="lazy"></div>
+          <div class="shot"><img src="/images/feature-candidates.png" alt="Danh sách ứng viên ứng tuyển kèm tỉ lệ phù hợp và đánh giá tổng thể từ AI" loading="lazy"></div>
         </div>
       </div>
       <div class="stack-item">
-        <div class="ocard">
+        <div class="ocard oc-3">
           <div>
-            <div class="obar"></div>
             <div class="on">03</div>
             <h3>AI hỗ trợ ưu tiên hồ sơ phù hợp</h3>
             <p>Hệ thống đánh giá mức độ phù hợp của từng ứng viên với vị trí đang tuyển, kèm nhận định để Anh/Chị biết hồ sơ nào nên xem trước.</p>
           </div>
-          <div class="shot"><img src="/images/ui-aimatch.png" alt="Tỉ lệ phù hợp do AI đánh giá kèm lý do cụ thể" loading="lazy"></div>
+          <div class="shot"><img src="/images/feature-ai-score.png" alt="Đánh giá độ phù hợp 90% với chi tiết kỹ năng, kinh nghiệm, học vấn" loading="lazy"></div>
         </div>
       </div>
     </div>
