@@ -126,6 +126,7 @@
     .wf-vis{border-radius:24px;padding:clamp(16px,2.2vw,26px);background:linear-gradient(150deg,var(--lav-2) 0%,#EBE1FF 48%,#E4FAF3 100%);box-shadow:0 30px 64px -40px rgba(85,28,175,.55)}
     .wf-vis-inner{display:flex;align-items:center;justify-content:center;height:clamp(300px,33vw,430px);background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 14px 32px -24px rgba(85,28,175,.45)}
     .wf-vis img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:opacity .22s ease}
+    .wf-note{margin-top:11px;text-align:center;color:#8A829B;font-size:12.5px;font-style:italic}
     .wf-list{display:flex;flex-direction:column}
     .wf-item{appearance:none;border:0;background:none;font:inherit;text-align:left;cursor:pointer;padding:15px 0;border-bottom:1px solid var(--line)}
     .wf-item:last-child{border-bottom:0}
@@ -306,10 +307,13 @@
         <p>Upzi mang đến cho đội ngũ của Anh/Chị một quy trình hoàn chỉnh — từ tin tuyển đầu tiên đến khi doanh nghiệp trở thành nơi sinh viên chủ động muốn ứng tuyển.</p>
       </div>
       <div class="wf-grid reveal">
-        <div class="wf-vis">
-          <div class="wf-vis-inner">
-            <img id="wfImg" src="/images/product-post-job-ai.png" alt="Tạo thông tin tuyển dụng với Navigos AI, kèm đề xuất chỉnh sửa vị trí và khoảng lương">
+        <div class="wf-visw">
+          <div class="wf-vis">
+            <div class="wf-vis-inner">
+              <img id="wfImg" src="/images/product-post-job-ai.png" alt="Tạo thông tin tuyển dụng với Navigos AI, kèm đề xuất chỉnh sửa vị trí và khoảng lương">
+            </div>
           </div>
+          <p class="wf-note" id="wfNote" hidden></p>
         </div>
         <div class="wf-list" role="tablist" aria-label="Quy trình tuyển dụng trên Upzi">
           <button type="button" class="wf-item" role="tab" aria-selected="true"
@@ -321,21 +325,20 @@
           <button type="button" class="wf-item" role="tab" aria-selected="false"
                   data-img="/images/activate-account-and-post-job/asset-002-a5c58f8f.png"
                   data-alt="AI đánh giá độ phù hợp của ứng viên với vị trí tuyển dụng"
-            data-note="Ảnh mang tính chất minh họa.">
+                  data-note="Ảnh mang tính chất minh họa.">
             <h3>Sàng lọc</h3>
             <p>Xem trực tiếp CV, trường, chuyên ngành và kinh nghiệm của từng ứng viên. AI chấm mức độ phù hợp và chỉ ra hồ sơ nên xem trước.</p>
           </button>
           <button type="button" class="wf-item" role="tab" aria-selected="false"
                   data-img="/images/employer-branding-feed.jpg"
-                  data-alt="Bài đăng của Upzi trên feed Khám phá nghề nghiệp: sinh viên VGU tham quan văn phòng Navigos"
-            data-note="Ảnh mang tính chất minh họa.">
+                  data-alt="Bài đăng của Upzi trên feed Khám phá nghề nghiệp: sinh viên VGU tham quan văn phòng Navigos">
             <h3>Employer branding</h3>
             <p>Xuất hiện trước sinh viên qua nội dung trên feed Upzi, talkshow, ngày hội việc làm và tham quan doanh nghiệp.</p>
           </button>
           <button type="button" class="wf-item" role="tab" aria-selected="false"
                   data-img="/images/product-dashboard.png"
                   data-alt="Dashboard hiệu quả tuyển dụng: lượt xem, lượt ứng tuyển và tỉ lệ phù hợp"
-            data-note="Ảnh mang tính chất minh họa.">
+                  data-note="Ảnh mang tính chất minh họa.">
             <h3>Đo lường</h3>
             <p>Theo dõi lượt hiển thị, lượt ứng tuyển và tỉ lệ phù hợp của từng vị trí ngay trên dashboard.</p>
           </button>
@@ -479,17 +482,25 @@
     (function(){
       var items=[].slice.call(document.querySelectorAll('.wf-item'));
       var img=document.getElementById('wfImg');
+      var note=document.getElementById('wfNote');
       if(!items.length||!img)return;
+      function setNote(i){
+        if(!note)return;
+        var t=items[i].getAttribute('data-note')||'';
+        note.textContent=t;
+        note.hidden=!t;
+      }
       items.forEach(function(b){var p=new Image();p.src=b.getAttribute('data-img');});
       function set(i){
         items.forEach(function(b,j){b.setAttribute('aria-selected',j===i?'true':'false');});
         var src=items[i].getAttribute('data-img');
-        if(img.getAttribute('src')===src)return;
+        if(img.getAttribute('src')===src){setNote(i);return;}
         img.style.opacity='0';
         setTimeout(function(){
           img.src=src;
           img.alt=items[i].getAttribute('data-alt')||'';
           img.style.opacity='1';
+          setNote(i);
         },180);
       }
       items.forEach(function(b,i){b.addEventListener('click',function(){set(i);});});
