@@ -124,8 +124,8 @@
     /* workflow (stage tabs) */
     .wf-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4.5vw,64px);align-items:center}
     .wf-vis{border-radius:24px;padding:clamp(16px,2.2vw,26px);background:linear-gradient(150deg,var(--lav-2) 0%,#EBE1FF 48%,#E4FAF3 100%);box-shadow:0 30px 64px -40px rgba(85,28,175,.55)}
-    .wf-vis-inner{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 14px 32px -24px rgba(85,28,175,.45)}
-    .wf-vis img{display:block;width:100%;transition:opacity .22s ease}
+    .wf-vis-inner{display:flex;align-items:center;justify-content:center;height:clamp(300px,33vw,430px);background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 14px 32px -24px rgba(85,28,175,.45)}
+    .wf-vis img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:opacity .22s ease}
     .wf-list{display:flex;flex-direction:column}
     .wf-item{appearance:none;border:0;background:none;font:inherit;text-align:left;cursor:pointer;padding:15px 0;border-bottom:1px solid var(--line)}
     .wf-item:last-child{border-bottom:0}
@@ -325,9 +325,9 @@
             <p>Xem trực tiếp CV, trường, chuyên ngành và kinh nghiệm của từng ứng viên. AI chấm mức độ phù hợp và chỉ ra hồ sơ nên xem trước.</p>
           </button>
           <button type="button" class="wf-item" role="tab" aria-selected="false"
-                  data-img="/images/talkshow-gapgap.jpg"
-                  data-alt="Talkshow và hoạt động kết nối sinh viên do Upzi tổ chức">
-            <h3>Thương hiệu</h3>
+                  data-img="/images/employer-branding-feed.jpg"
+                  data-alt="Bài đăng của Upzi trên feed Khám phá nghề nghiệp: sinh viên VGU tham quan văn phòng Navigos">
+            <h3>Employer branding</h3>
             <p>Xuất hiện trước sinh viên qua nội dung trên feed Upzi, talkshow, ngày hội việc làm và tham quan doanh nghiệp.</p>
           </button>
           <button type="button" class="wf-item" role="tab" aria-selected="false"
