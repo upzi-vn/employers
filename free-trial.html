@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -109,9 +107,9 @@
 
     /* offer rows (giữ screenshot sản phẩm) */
     .offer{display:flex;flex-direction:column;gap:18px}
-    .ocard{position:relative;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(22px,3.5vw,44px);align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,3.4vw,38px);box-shadow:0 14px 36px -30px rgba(85,28,175,.5);transition:transform .2s ease,box-shadow .2s ease}
+    .ocard{position:relative;overflow:hidden;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(22px,3.5vw,44px);align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(30px,3.4vw,38px) clamp(26px,3.4vw,38px) clamp(26px,3.4vw,38px);box-shadow:0 14px 36px -30px rgba(85,28,175,.5);transition:transform .2s ease,box-shadow .2s ease}
     .ocard:hover{transform:translateY(-4px);box-shadow:0 22px 46px -28px rgba(85,28,175,.5)}
-    .ocard:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:18px 18px 0 0}
+    .ocard:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:0}
     .ocard:nth-child(1):before{background:var(--purple)}
     .ocard:nth-child(2):before{background:var(--mint)}
     .ocard:nth-child(3):before{background:var(--peach)}
