@@ -114,6 +114,7 @@
     .ocard:nth-child(2):before{background:var(--mint)}
     .ocard:nth-child(3):before{background:var(--peach)}
     .ocard:nth-child(even) .ocard-copy{order:2}
+    .ocard.ocard-solo{grid-template-columns:1fr}
     .ocard .on{width:42px;height:42px;border-radius:12px;background:var(--lav-2);color:var(--purple-dark);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-bottom:16px}
     .ocard h3{font-size:clamp(19px,2.2vw,24px);font-weight:800;margin-bottom:9px;line-height:1.2}
     .ocard p{font-size:15px;color:var(--sub)}
@@ -137,7 +138,8 @@
 
     /* steps */
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 12px 30px -28px rgba(85,28,175,.45)}
+    .step{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 12px 30px -28px rgba(85,28,175,.45)}
+    .step-arw{position:absolute;right:-14px;top:14px;width:70px;opacity:.5;pointer-events:none}
     .snode{width:42px;height:42px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;box-shadow:0 8px 18px -8px rgba(147,69,255,.55);margin-bottom:16px}
     .step h3{font-size:17.5px;font-weight:800;margin-bottom:6px}
     .step p{font-size:14.5px;color:var(--sub)}
@@ -286,13 +288,12 @@
         <p>Không cần đánh giá Upzi qua lời giới thiệu hay số liệu tổng hợp. Hãy đăng chính vị trí doanh nghiệp đang cần tuyển và xem những hồ sơ thực tế ứng tuyển vào tin đó.</p>
       </div>
       <div class="offer stagger">
-        <div class="ocard">
+        <div class="ocard ocard-solo">
           <div class="ocard-copy">
             <div class="on">01</div>
             <h3>1 tin tuyển dụng miễn phí</h3>
             <p>Đăng một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm và tiếp cận cộng đồng ứng viên trẻ trên Upzi.</p>
           </div>
-          <div class="shot"><img src="/images/feature-post-job.png" alt="Tạo thông tin tuyển dụng với Navigos AI, kèm đề xuất chỉnh sửa vị trí và khoảng lương" loading="lazy"></div>
         </div>
         <div class="ocard">
           <div class="ocard-copy">
@@ -300,7 +301,7 @@
             <h3>Xem hồ sơ ứng viên thực tế</h3>
             <p>Xem trực tiếp CV, trường, chuyên ngành, kinh nghiệm và thông tin liên quan của từng ứng viên ứng tuyển vào tin.</p>
           </div>
-          <div class="shot"><img src="/images/feature-candidates.png" alt="Danh sách ứng viên ứng tuyển kèm tỉ lệ phù hợp và đánh giá tổng thể từ AI" loading="lazy"></div>
+          <div class="shot"><img src="/images/product-talentone.png" alt="Danh sách ứng viên ứng tuyển kèm tỉ lệ phù hợp do AI đánh giá" loading="lazy"></div>
         </div>
         <div class="ocard">
           <div class="ocard-copy">
@@ -308,7 +309,7 @@
             <h3>AI hỗ trợ ưu tiên hồ sơ phù hợp</h3>
             <p>Hệ thống đánh giá mức độ phù hợp của từng ứng viên với vị trí đang tuyển, kèm nhận định để Anh/Chị biết hồ sơ nào nên xem trước.</p>
           </div>
-          <div class="shot"><img src="/images/feature-ai-score.png" alt="Đánh giá độ phù hợp 90% với chi tiết kỹ năng, kinh nghiệm, học vấn" loading="lazy"></div>
+          <div class="shot"><img src="/images/activate-account-and-post-job/asset-002-a5c58f8f.png" alt="AI đánh giá độ phù hợp của ứng viên với vị trí tuyển dụng" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -351,9 +352,9 @@
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Cách hoạt động</div><h2>Ba bước để bắt đầu</h2></div>
       <div class="steps stagger">
-        <div class="step"><div class="snode">1</div><h3>Tạo tài khoản</h3><p>Đăng ký bằng email công việc và thiết lập thông tin doanh nghiệp.</p><span class="stime">Khoảng 3 phút</span></div>
-        <div class="step"><div class="snode">2</div><h3>Đăng vị trí đang tuyển</h3><p>Nhập thông tin vị trí. Nếu chưa có JD hoàn chỉnh, AI có thể hỗ trợ tạo mô tả công việc để Anh/Chị chỉnh sửa trước khi đăng.</p><span class="stime">Khoảng 7 phút</span></div>
-        <div class="step"><div class="snode">3</div><h3>Nhận và sàng lọc ứng viên</h3><p>Hồ sơ ứng tuyển được tập trung trong tài khoản và AI hỗ trợ đánh giá mức độ phù hợp để Anh/Chị ưu tiên những ứng viên nên xem trước.</p><span class="stime">Theo dõi ngay trên hệ thống</span></div>
+        <div class="step"><img class="step-arw" src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">1</div><h3>Tạo tài khoản</h3><p>Đăng ký bằng email công việc và thiết lập thông tin doanh nghiệp.</p><span class="stime">Khoảng 3 phút</span></div>
+        <div class="step"><img class="step-arw" src="/images/arrow-yellow.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">2</div><h3>Đăng vị trí đang tuyển</h3><p>Nhập thông tin vị trí. Nếu chưa có JD hoàn chỉnh, AI có thể hỗ trợ tạo mô tả công việc để Anh/Chị chỉnh sửa trước khi đăng.</p><span class="stime">Khoảng 7 phút</span></div>
+        <div class="step"><img class="step-arw" src="/images/arrow-gold.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">3</div><h3>Nhận và sàng lọc ứng viên</h3><p>Hồ sơ ứng tuyển được tập trung trong tài khoản và AI hỗ trợ đánh giá mức độ phù hợp để Anh/Chị ưu tiên những ứng viên nên xem trước.</p><span class="stime">Theo dõi ngay trên hệ thống</span></div>
       </div>
     </div>
   </section>
