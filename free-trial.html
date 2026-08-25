@@ -227,8 +227,25 @@
     .final p{max-width:600px;margin:14px auto 26px;color:#E8E1F7;font-size:15.5px}
     .final .btn-primary{background:#fff;color:var(--purple-dark);box-shadow:none}
     .final .btn-primary:hover{background:#F3E8FF}
-    .final-alt{margin-top:16px!important;margin-bottom:0!important;font-size:13.5px!important;color:#D8CFED!important}
-    .final-alt a{color:var(--yellow);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+    /* floating contact */
+    .float-contact{position:fixed;right:20px;bottom:20px;z-index:999;display:flex;flex-direction:column;gap:12px}
+    .float-btn{position:relative;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.2);transition:transform .18s ease}
+    .float-btn:hover{transform:scale(1.08)}
+    .float-btn svg{width:27px;height:27px}
+    .float-hotline{background:var(--purple)}
+    .float-zalo{background:#0068FF}
+    .float-btn:before{content:'';position:absolute;inset:0;border-radius:50%;background:inherit;opacity:.45;animation:fpulse 2.4s ease-out infinite;z-index:-1}
+    @keyframes fpulse{0%{transform:scale(1);opacity:.45}70%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
+    .float-btn .flabel{position:absolute;right:64px;white-space:nowrap;background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:8px 14px;border-radius:8px;opacity:0;pointer-events:none;transform:translateX(6px);transition:opacity .18s ease,transform .18s ease}
+    .float-btn:hover .flabel{opacity:1;transform:translateX(0)}
+    @media(max-width:640px){
+      .float-contact{right:14px;bottom:14px;gap:10px}
+      .float-btn{width:50px;height:50px}
+      .float-btn svg{width:25px;height:25px}
+      .float-btn .flabel{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){.float-btn:before{animation:none}}
 
     /* footer */
     footer{background:var(--lav);border-top:1px solid var(--line);color:var(--sub);padding:40px 0 24px}
@@ -263,7 +280,7 @@
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a href="/"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi - Empowered by VietnamWorks" class="logo-img"></a>
+      <a href="/"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="logo-img"></a>
       <a class="nav-cta" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản miễn phí</a>
     </div>
   </header>
@@ -399,14 +416,14 @@
       <div class="head reveal"><div class="eyebrow">Upzi có mặt ở đâu</div><h2>Tiếp cận Gen Z từ khi các bạn còn ở trong trường</h2><p>Upzi không chỉ xuất hiện khi ứng viên bắt đầu tìm việc. Thông qua mạng lưới trường Đại học / Cao đẳng và các hoạt động nghề nghiệp dành cho sinh viên, Upzi tiếp cận nhóm ứng viên trẻ ngay trong giai đoạn các bạn tìm hiểu ngành nghề, doanh nghiệp và cơ hội đầu tiên.</p></div>
       <div class="act-types reveal"><span class="act-type">Job Fair</span><span class="act-type">Career Day</span><span class="act-type">Talkshow</span><span class="act-type">Office Tour</span><span class="act-type">CLB Sinh viên</span><span class="act-type">Cuộc thi sinh viên</span></div>
       <div class="act-grid stagger">
-        <figure class="act"><img src="/images/event-career-pathfinder.jpg" alt="Sự kiện Career Pathfinder của Upzi, tri ân các doanh nghiệp đối tác" loading="lazy"><figcaption>Career Pathfinder - Tri ân đối tác doanh nghiệp</figcaption></figure>
-        <figure class="act"><img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm - ĐH Ngoại thương TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/event-hub.jpg" alt="Career Day Fin-tastic Journey tại Đại học Ngân hàng TP.HCM với Upzi là đơn vị đồng hành" loading="lazy"><figcaption>Career Day “Fin-tastic Journey” - ĐH Ngân hàng TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/event-hcmute.jpg" alt="Đại diện Upzi chia sẻ về tác động của AI tới nghề nghiệp trước sinh viên ĐH Sư phạm Kỹ thuật TP.HCM" loading="lazy"><figcaption>Chia sẻ về AI &amp; nghề nghiệp - ĐH Sư phạm Kỹ thuật TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/event-fpt-officetour.png" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group - FPT Polytechnic</figcaption></figure>
-        <figure class="act"><img src="/images/event-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” - Upzi × Onboardy × Vietcetera</figcaption></figure>
+        <figure class="act"><img src="/images/event-career-pathfinder.jpg" alt="Sự kiện Career Pathfinder của Upzi, tri ân các doanh nghiệp đối tác" loading="lazy"><figcaption>Career Pathfinder — Tri ân đối tác doanh nghiệp</figcaption></figure>
+        <figure class="act"><img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm — ĐH Ngoại thương TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-hub.jpg" alt="Career Day Fin-tastic Journey tại Đại học Ngân hàng TP.HCM với Upzi là đơn vị đồng hành" loading="lazy"><figcaption>Career Day “Fin-tastic Journey” — ĐH Ngân hàng TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmute.jpg" alt="Đại diện Upzi chia sẻ về tác động của AI tới nghề nghiệp trước sinh viên ĐH Sư phạm Kỹ thuật TP.HCM" loading="lazy"><figcaption>Chia sẻ về AI &amp; nghề nghiệp — ĐH Sư phạm Kỹ thuật TP.HCM</figcaption></figure>
+        <figure class="act"><img src="/images/event-fpt-officetour.jpg" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group — FPT Polytechnic</figcaption></figure>
+        <figure class="act"><img src="/images/event-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” — Upzi × Onboardy × Vietcetera</figcaption></figure>
         <figure class="act"><img src="/images/event-htkd.jpg" alt="Đêm chung kết cuộc thi Hành trình Kinh doanh dành cho sinh viên" loading="lazy"><figcaption>Chung kết cuộc thi “Hành trình Kinh doanh”</figcaption></figure>
-        <figure class="act"><img src="/images/event-hcmus.JPG" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp - ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmus.jpg" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp — ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
       </div>
       <div class="why-list stagger">
         <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/><path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Tiếp cận đúng tệp Fresher &amp; Gen Z</h3><p>Kết nối với cộng đồng sinh viên và ứng viên entry-level thông qua hệ sinh thái trường học đối tác.</p></div></div>
@@ -420,7 +437,7 @@
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Góc nhìn từ doanh nghiệp</div><h2>Trích từ khảo sát khách hàng Upzi</h2></div>
-      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div></div>
+      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật</div></div>
       <div class="tctrl"><button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button><div class="tdots" id="tdots"></div><button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button></div>
     </div>
   </section>
@@ -454,17 +471,33 @@
   </section>
 
   <!-- 11. CTA CUỐI -->
-  <section class="final" id="dang-ky"><div class="wrap"><div class="final-in"><h2>Thử Upzi bằng chính vị trí <span class="hl">Anh/Chị đang tuyển</span></h2><p>Tạo tài khoản, đăng 1 tin miễn phí và xem hồ sơ ứng viên thực tế trước khi quyết định có tiếp tục sử dụng Upzi.</p><a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản &amp; đăng tin miễn phí</a><p class="final-alt">Muốn trao đổi trước khi bắt đầu? <a href="/#leadform">Đặt lịch với đội ngũ Upzi</a></p></div></div></section>
+  <section class="final" id="dang-ky"><div class="wrap"><div class="final-in"><h2>Thử Upzi bằng chính vị trí <span class="hl">Anh/Chị đang tuyển</span></h2><p>Tạo tài khoản, đăng 1 tin miễn phí và xem hồ sơ ứng viên thực tế trước khi quyết định có tiếp tục sử dụng Upzi.</p><a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản &amp; đăng tin miễn phí</a></div></div></section>
 
-  <footer><div class="wrap"><div class="f-top"><div class="f-col"><img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi - Empowered by VietnamWorks" class="f-logo-img"><p>Một sản phẩm của Công Ty Cổ Phần Navigos Group Việt Nam.</p><p style="margin-top:8px">Tầng 20, tòa nhà E.Town Central, 11 Đoàn Văn Bơ, Phường Xóm Chiếu, TP.HCM.</p></div><div class="f-col"><h4>Liên hệ</h4><p>Hotline: 028 7305 8500</p><p>Zalo: 070 3377 017</p><p>Email: upzi-support@navigosgroup.com</p></div><div class="f-col"><h4>Kết nối</h4><p><a href="https://facebook.com/UpziFanpage" target="_blank" rel="noopener">facebook.com/UpziFanpage</a></p></div></div><div class="f-bot">© 2026 Upzi - Member of Navigos Group. All rights reserved.</div></div></footer>
+  <footer><div class="wrap"><div class="f-top"><div class="f-col"><img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi — Empowered by VietnamWorks" class="f-logo-img"><p>Một sản phẩm của Công Ty Cổ Phần Navigos Group Việt Nam.</p><p style="margin-top:8px">Tầng 20, tòa nhà E.Town Central, 11 Đoàn Văn Bơ, Phường Xóm Chiếu, TP.HCM.</p></div><div class="f-col"><h4>Liên hệ</h4><p>Hotline: 028 7305 8500</p><p>Zalo: 070 3377 017</p><p>Email: upzi-support@navigosgroup.com</p></div><div class="f-col"><h4>Kết nối</h4><p><a href="https://facebook.com/UpziFanpage" target="_blank" rel="noopener">facebook.com/UpziFanpage</a></p></div></div><div class="f-bot">© 2026 Upzi — Member of Navigos Group. All rights reserved.</div></div></footer>
+
+  <div class="float-contact">
+    <a class="float-btn float-hotline" href="tel:02873058500" aria-label="Gọi hotline 028 7305 8500">
+      <span class="flabel">Hotline: 028 7305 8500</span>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="#fff"/>
+      </svg>
+    </a>
+    <a class="float-btn float-zalo" href="https://zalo.me/0703377017" target="_blank" rel="noopener" aria-label="Nhắn Zalo 070 3377 017">
+      <span class="flabel">Zalo: 070 3377 017</span>
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 6C13.5 6 5 13.4 5 22.6c0 5.2 2.7 9.9 7 13-.3 2.6-1.3 5-2.6 6.6-.4.5 0 1.2.6 1.1 3.9-.6 6.9-2.3 8.8-3.6 1.7.4 3.4.6 5.2.6 10.5 0 19-7.4 19-16.6S34.5 6 24 6z" fill="#fff"/>
+        <text x="24" y="28" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#0068FF" text-anchor="middle">Zalo</text>
+      </svg>
+    </a>
+  </div>
 
   <script>
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('in'); }); }, { threshold: 0.12 });
     document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
     const testimonials = [
-      {quote:'“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên'},
-      {quote:'“Điểm bên mình quan tâm là khả năng tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường Đại học. Đây là hướng phù hợp với nhu cầu xây nguồn ứng viên dài hạn.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm'},
-      {quote:'“Gen Z thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi ứng tuyển, nên việc xây dựng hiện diện với ứng viên trẻ ngày càng quan trọng.”',meta:'Doanh nghiệp đang xây dựng Employer Branding'}
+      {quote:'“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật'},
+      {quote:'“Điểm bên mình quan tâm là khả năng tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường Đại học. Đây là hướng phù hợp với nhu cầu xây nguồn ứng viên dài hạn.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm · Danh tính ẩn theo thỏa thuận bảo mật'},
+      {quote:'“Gen Z thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi ứng tuyển, nên việc xây dựng hiện diện với ứng viên trẻ ngày càng quan trọng.”',meta:'Doanh nghiệp đang xây dựng Employer Branding · Danh tính ẩn theo thỏa thuận bảo mật'}
     ];
     let curT = 0;
     function initTestimonials(){const c=document.getElementById('tdots');c.innerHTML='';testimonials.forEach((_,i)=>{const b=document.createElement('button');b.className='tdot'+(i===curT?' active':'');b.setAttribute('aria-label','Xem testimonial '+(i+1));b.onclick=()=>setT(i);c.appendChild(b);});}
