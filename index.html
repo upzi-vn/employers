@@ -20,8 +20,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upzi - Kết nối Doanh nghiệp với nhân sự Gen Z</title>
-  <meta name="description" content="Upzi giúp doanh nghiệp tiếp cận ứng viên Intern, Fresher và nhân sự dưới 2 năm kinh nghiệm từ mạng lưới 20+ trường Đại học / Cao đẳng.">
+  <title>Upzi - Tuyển Intern, Fresher &amp; nhân sự Gen Z</title>
+  <meta name="description" content="Tiếp cận ứng viên Intern, Fresher và nhân sự dưới 2 năm kinh nghiệm qua nền tảng Upzi và mạng lưới 20+ trường Đại học / Cao đẳng.">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
@@ -84,7 +84,7 @@
     .tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--purple-dark);font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:7px 14px;border-radius:100px;box-shadow:0 4px 14px -8px rgba(85,28,175,.35);margin-bottom:18px}
     .tag:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--yellow-green)}
     .hero h1{font-size:clamp(35px,5vw,55px);line-height:1.08;font-weight:800;margin-bottom:18px}
-    .hero h1 .hl{color:inherit;background:linear-gradient(180deg,transparent 60%,rgba(224,231,34,.78) 60%);padding:0 4px;white-space:nowrap}
+    .hero h1 .hl{color:inherit;background:linear-gradient(180deg,transparent 60%,rgba(224,231,34,.78) 60%);padding:0 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
     .hero .lead{font-size:clamp(15.5px,1.6vw,18px);color:var(--sub);max-width:500px;margin-bottom:26px}
     .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
     .hero-note{display:flex;align-items:center;gap:10px;padding-top:22px;border-top:1px solid var(--line);color:var(--sub);font-size:13.5px}
@@ -254,7 +254,7 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a href="/"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi - Empowered by VietnamWorks" class="logo-img"></a>
-      <button class="nav-cta" onclick="document.getElementById('leadform').scrollIntoView({behavior:'smooth'})">Tư vấn miễn phí</button>
+      <button class="nav-cta" onclick="document.getElementById('leadform').scrollIntoView({behavior:'smooth'})">Nhận tư vấn</button>
     </div>
   </header>
 
@@ -262,14 +262,14 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="tag">Dành cho doanh nghiệp tuyển Intern &amp; dưới 2 năm kinh nghiệm</div>
-        <h1>Tuyển Gen Z, <span class="hl">sớm hơn đối thủ.</span></h1>
-        <p class="lead">Ứng viên trẻ đã chọn nơi muốn làm từ lâu trước khi đọc tin tuyển dụng. Upzi đưa doanh nghiệp xuất hiện ngay từ giai đoạn đó.</p>
+        <div class="tag">Dành cho doanh nghiệp tuyển Intern, Fresher &amp; nhân sự dưới 2 năm kinh nghiệm</div>
+        <h1>Tiếp cận Gen Z <span class="hl">sớm hơn trong hành trình nghề nghiệp</span></h1>
+        <p class="lead">Upzi giúp doanh nghiệp xây dựng hiện diện với ứng viên trẻ từ khi họ còn ở trường, tạo nguồn ứng viên và kết nối sớm hơn trong hành trình nghề nghiệp.</p>
         <div class="hero-ctas">
           <button class="btn-primary" onclick="document.getElementById('leadform').scrollIntoView({behavior:'smooth'})">Nhận tư vấn tuyển dụng</button>
-          <button class="btn-secondary" onclick="document.getElementById('journey').scrollIntoView({behavior:'smooth'})">Xem cách hoạt động</button>
+          <button class="btn-secondary" onclick="document.getElementById('journey').scrollIntoView({behavior:'smooth'})">Upzi hoạt động như thế nào?</button>
         </div>
-        <div class="hero-note"><span class="vsq">V</span>Trực thuộc Navigos Group - đơn vị sở hữu VietnamWorks</div>
+        <div class="hero-note"><span class="vsq">V</span>Một sản phẩm thuộc Navigos Group - đơn vị sở hữu VietnamWorks</div>
       </div>
       <div class="hero-visual">
         <img src="/images/product-talentone.png" alt="Giao diện Navigos Talent One: danh sách ứng viên ứng tuyển được AI xếp hạng theo tỉ lệ phù hợp">
@@ -281,26 +281,26 @@
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head reveal">
-        <div class="eyebrow">Vì sao doanh nghiệp chọn Upzi</div>
-        <h2>Ba điều <span class="u">job board</span> không làm được</h2>
+        <div class="eyebrow">Vì sao chọn Upzi</div>
+        <h2>Ba lợi thế khi tuyển Gen Z cùng Upzi</h2>
       </div>
       <div class="blocks stagger">
         <div class="block">
           <div class="n">01</div>
           <h3>Đúng nhóm ứng viên</h3>
-          <p>Kết nối trực tiếp cộng đồng sinh viên qua 20+ trường liên kết. Không quảng cáo đại trà.</p>
+          <p>Tập trung vào Intern, Fresher và nhân sự dưới 2 năm kinh nghiệm, kết nối cùng cộng đồng sinh viên tại 20+ trường Đại học / Cao đẳng.</p>
           <div class="arw"><img src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"></div>
         </div>
         <div class="block">
           <div class="n">02</div>
-          <h3>Hiện diện sớm hơn</h3>
-          <p>Xây Employer Branding từ lúc Gen Z còn đang tìm hiểu, không đợi tới lúc đăng tin.</p>
+          <h3>Tiếp cận từ sớm</h3>
+          <p>Đưa thương hiệu tuyển dụng đến gần ứng viên ngay từ khi họ bắt đầu tìm hiểu về ngành nghề và doanh nghiệp.</p>
           <div class="arw"><img src="/images/arrow-yellow.png" alt="" aria-hidden="true" loading="lazy"></div>
         </div>
         <div class="block">
           <div class="n">03</div>
-          <h3>Pipeline liên tục</h3>
-          <p>Nguồn ứng viên trẻ ổn định quanh năm, không phụ thuộc job fair theo mùa.</p>
+          <h3>Xây nguồn ứng viên dài hạn</h3>
+          <p>Duy trì kết nối với ứng viên trẻ quanh năm, phục vụ cả nhu cầu tuyển ngay và kế hoạch nhân sự trong tương lai.</p>
           <div class="arw"><img src="/images/arrow-gold.png" alt="" aria-hidden="true" loading="lazy"></div>
         </div>
       </div>
@@ -311,14 +311,14 @@
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head reveal">
-        <div class="eyebrow">Thay đổi trong hành vi ứng viên</div>
-        <h2>Gen Z không còn tiếp cận nghề nghiệp như các thế hệ trước</h2>
-        <p>Ba thay đổi khiến cách tuyển dụng cũ khó tiếp cận nhóm ứng viên này.</p>
+        <div class="eyebrow">Hành vi ứng viên đang thay đổi</div>
+        <h2>Quyết định ứng tuyển bắt đầu trước khi ứng viên thấy một tin tuyển dụng</h2>
+        <p>Với Gen Z, hành trình nghề nghiệp diễn ra qua nhiều điểm chạm. Một tin tuyển dụng thường chỉ là một phần trong quá trình họ tìm hiểu và lựa chọn nơi làm việc.</p>
       </div>
       <div class="beh-grid stagger">
-        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#5FE0BB" stroke-width="2"/><path d="M3.5 9h17M3.5 15h17M12 3c-2.5 3-2.5 15 0 18M12 3c2.5 3 2.5 15 0 18" stroke="#5FE0BB" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Không chỉ xem tin tuyển dụng</h3><p>Gen Z tiếp cận thương hiệu tuyển dụng qua nhiều nguồn và điểm chạm khác nhau trước khi ứng tuyển.</p></div>
-        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="#E0E722" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="#E0E722" stroke-width="2"/></svg></div><h3>Chủ động quan sát từ sớm</h3><p>Văn hoá, môi trường và trải nghiệm tuyển dụng ảnh hưởng mạnh đến quyết định ứng tuyển.</p></div>
-        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3.5h11v17l-5.5-3.6-5.5 3.6v-17Z" stroke="#FF8F3C" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Chọn doanh nghiệp trước khi chọn vị trí</h3><p>Nhiều bạn trẻ đã có danh sách doanh nghiệp muốn ứng tuyển từ rất lâu trước khi bắt đầu tìm việc.</p></div>
+        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#5FE0BB" stroke-width="2"/><path d="M3.5 9h17M3.5 15h17M12 3c-2.5 3-2.5 15 0 18M12 3c2.5 3 2.5 15 0 18" stroke="#5FE0BB" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Tìm hiểu qua nhiều kênh</h3><p>Mạng xã hội, cộng đồng, sự kiện nghề nghiệp và nội dung từ doanh nghiệp đều góp phần hình thành nhận biết về nhà tuyển dụng.</p></div>
+        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="#E0E722" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="#E0E722" stroke-width="2"/></svg></div><h3>Quan tâm đến trải nghiệm làm việc</h3><p>Văn hoá, môi trường, cơ hội phát triển và câu chuyện từ người đang làm việc ngày càng ảnh hưởng đến quyết định ứng tuyển.</p></div>
+        <div class="beh"><div class="beh-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3.5h11v17l-5.5-3.6-5.5 3.6v-17Z" stroke="#FF8F3C" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Hình thành lựa chọn từ sớm</h3><p>Nhiều ứng viên trẻ bắt đầu chú ý và ghi nhớ những doanh nghiệp phù hợp trước khi chính thức bước vào giai đoạn tìm việc.</p></div>
       </div>
     </div>
   </section>
@@ -327,17 +327,17 @@
   <section class="sec sec-off" id="journey">
     <div class="wrap">
       <div class="head reveal">
-        <div class="eyebrow">Hành trình tìm việc của Gen Z</div>
-        <h2>Gen Z tìm hiểu doanh nghiệp từ rất lâu trước khi tìm việc</h2>
-        <p>Bốn giai đoạn trước khi ứng tuyển. Đa số doanh nghiệp chỉ xuất hiện ở giai đoạn cuối.</p>
+        <div class="eyebrow">Hành trình nghề nghiệp của Gen Z</div>
+        <h2>Từ biết đến doanh nghiệp đến quyết định ứng tuyển</h2>
+        <p>Upzi giúp doanh nghiệp tham gia vào nhiều giai đoạn hơn trong hành trình của ứng viên, thay vì chỉ gặp nhau tại thời điểm có nhu cầu tuyển dụng.</p>
       </div>
       <div class="j-grid stagger">
-        <div class="j-step"><div class="j-node">1</div><div class="j-pill">Upzi có mặt</div><h3>Khám phá</h3><p>Theo dõi trang doanh nghiệp, xem review, quan sát văn hoá qua mạng xã hội.</p></div>
-        <div class="j-step"><div class="j-node">2</div><div class="j-pill">Upzi có mặt</div><h3>Tìm hiểu</h3><p>Đào sâu về đãi ngộ, môi trường làm việc, câu chuyện nhân viên thật.</p></div>
-        <div class="j-step"><div class="j-node">3</div><div class="j-pill">Upzi có mặt</div><h3>Chọn lọc</h3><p>Lập danh sách các doanh nghiệp muốn ứng tuyển khi có cơ hội.</p></div>
-        <div class="j-step is-last"><div class="j-node">4</div><div class="j-pill">Job board mới xuất hiện</div><h3>Ứng tuyển</h3><p>Nộp đơn khi thấy tin tuyển dụng phù hợp - bước cuối, không phải bước đầu.</p></div>
+        <div class="j-step"><div class="j-node">1</div><div class="j-pill">Upzi đồng hành</div><h3>Khám phá</h3><p>Ứng viên bắt đầu biết đến ngành nghề, môi trường làm việc và các doanh nghiệp mình quan tâm.</p></div>
+        <div class="j-step"><div class="j-node">2</div><div class="j-pill">Upzi đồng hành</div><h3>Tìm hiểu</h3><p>Chủ động tìm hiểu sâu hơn về văn hoá, cơ hội phát triển, công việc và trải nghiệm nhân viên.</p></div>
+        <div class="j-step"><div class="j-node">3</div><div class="j-pill">Upzi đồng hành</div><h3>Cân nhắc</h3><p>Hình thành nhóm doanh nghiệp và cơ hội nghề nghiệp phù hợp với định hướng cá nhân.</p></div>
+        <div class="j-step is-last"><div class="j-node">4</div><div class="j-pill">Nhu cầu tuyển dụng xuất hiện</div><h3>Ứng tuyển</h3><p>Ứng viên lựa chọn và nộp hồ sơ cho những cơ hội phù hợp.</p></div>
       </div>
-      <div class="j-note reveal"><strong>Hệ quả:</strong> Nếu doanh nghiệp chỉ xuất hiện ở bước 4, ứng viên đã chọn nơi muốn làm từ trước - cơ hội mất ngay từ đầu, không phải vì tin đăng chưa tốt. Upzi giúp doanh nghiệp có mặt sớm hơn, từ bước 1.</div>
+      <div class="j-note reveal"><strong>Upzi giúp doanh nghiệp xuất hiện sớm hơn trong hành trình này</strong> - từ lúc ứng viên bắt đầu khám phá nghề nghiệp, tìm hiểu doanh nghiệp cho đến khi sẵn sàng ứng tuyển.</div>
     </div>
   </section>
 
@@ -345,9 +345,9 @@
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head reveal">
-        <div class="eyebrow">Upzi có mặt ở đâu</div>
-        <h2>Upzi có mặt ngay trong trường</h2>
-        <p>Upzi xây dựng mạng lưới ứng viên Gen Z từ 20+ trường Đại học / Cao đẳng, qua các hoạt động diễn ra quanh năm.</p>
+        <div class="eyebrow">Mạng lưới Upzi</div>
+        <h2>Kết nối với Gen Z ngay từ môi trường Đại học / Cao đẳng</h2>
+        <p>Upzi xây dựng cộng đồng ứng viên trẻ thông qua mạng lưới 20+ trường Đại học / Cao đẳng và các hoạt động nghề nghiệp diễn ra xuyên suốt năm.</p>
       </div>
       <div class="act-types reveal"><span class="act-type">Job Fair</span><span class="act-type">Career Day</span><span class="act-type">Talkshow</span><span class="act-type">Office Tour</span><span class="act-type">CLB Sinh viên</span><span class="act-type">Cuộc thi sinh viên</span></div>
       <div class="act-grid stagger">
@@ -355,15 +355,15 @@
         <figure class="act"><img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm - ĐH Ngoại thương TP.HCM</figcaption></figure>
         <figure class="act"><img src="/images/event-hub.jpg" alt="Career Day Fin-tastic Journey tại Đại học Ngân hàng TP.HCM với Upzi là đơn vị đồng hành" loading="lazy"><figcaption>Career Day “Fin-tastic Journey” - ĐH Ngân hàng TP.HCM</figcaption></figure>
         <figure class="act"><img src="/images/event-hcmute.jpg" alt="Đại diện Upzi chia sẻ về tác động của AI tới nghề nghiệp trước sinh viên ĐH Sư phạm Kỹ thuật TP.HCM" loading="lazy"><figcaption>Chia sẻ về AI &amp; nghề nghiệp - ĐH Sư phạm Kỹ thuật TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/event-fpt-officetour.png" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group - FPT Polytechnic</figcaption></figure>
+        <figure class="act"><img src="/images/event-fpt-officetour.jpg" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group - FPT Polytechnic</figcaption></figure>
         <figure class="act"><img src="/images/event-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” - Upzi × Onboardy × Vietcetera</figcaption></figure>
         <figure class="act"><img src="/images/event-htkd.jpg" alt="Đêm chung kết cuộc thi Hành trình Kinh doanh dành cho sinh viên" loading="lazy"><figcaption>Chung kết cuộc thi “Hành trình Kinh doanh”</figcaption></figure>
-        <figure class="act"><img src="/images/event-hcmus.JPG" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp - ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmus.jpg" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp - ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
       </div>
       <div class="why-list stagger">
-        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/><path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Tiếp cận đúng tệp Fresher &amp; Gen Z</h3><p>Kết nối với cộng đồng sinh viên và ứng viên entry-level thông qua hệ sinh thái trường học đối tác.</p></div></div>
-        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2 14.6 9l6.4.6-4.8 4.2 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.6 9.4 9 12 3.2Z" stroke="#9345FF" stroke-width="2" stroke-linejoin="round"/></svg></div><div><h3>Xây dựng hiện diện thương hiệu tuyển dụng</h3><p>Thương hiệu xuất hiện sớm hơn trong hành trình tìm việc và lựa chọn nhà tuyển dụng của Gen Z.</p></div></div>
-        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9M10 18V4M16 18v-6M4 21h17" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Duy trì pipeline ứng viên liên tục</h3><p>Nguồn ứng viên trẻ được xây dựng liên tục cho nhu cầu tuyển dụng dài hạn, không phụ thuộc mùa vụ.</p></div></div>
+        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/><path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Tiếp cận đúng tệp ứng viên trẻ</h3><p>Kết nối với sinh viên, Intern, Fresher và ứng viên entry-level thông qua nền tảng Upzi và hệ sinh thái trường học đối tác.</p></div></div>
+        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.2 14.6 9l6.4.6-4.8 4.2 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.6 9.4 9 12 3.2Z" stroke="#9345FF" stroke-width="2" stroke-linejoin="round"/></svg></div><div><h3>Xây hiện diện với Gen Z từ sớm</h3><p>Đưa thương hiệu tuyển dụng đến gần ứng viên ngay từ giai đoạn họ đang khám phá nghề nghiệp và tìm hiểu doanh nghiệp.</p></div></div>
+        <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9M10 18V4M16 18v-6M4 21h17" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Phát triển nguồn ứng viên dài hạn</h3><p>Duy trì cộng đồng ứng viên trẻ cho nhu cầu tuyển dụng hiện tại và kế hoạch nhân sự trong tương lai.</p></div></div>
       </div>
     </div>
   </section>
@@ -373,10 +373,10 @@
     <div class="wrap">
       <div class="head head-c reveal">
         <div class="eyebrow">Nguồn ứng viên Upzi</div>
-        <h2>Một nền tảng <span class="u">chuyên biệt</span> cho nhóm Intern &amp; dưới 2 năm kinh nghiệm</h2>
+        <h2>Tập trung vào Intern, Fresher &amp; nhân sự dưới 2 năm kinh nghiệm</h2>
       </div>
       <div class="st-grid stagger">
-        <div class="st"><div class="num" data-count="200000" data-suffix="+">200.000+</div><div class="lb">Ứng viên Gen Z trên nền tảng. Tăng trưởng trung bình 30.000+ users mỗi tháng</div></div>
+        <div class="st"><div class="num" data-count="200000" data-suffix="+">200.000+</div><div class="lb">Ứng viên Gen Z trên nền tảng, tăng trưởng trung bình 30.000+ users mỗi tháng</div></div>
         <div class="st"><div class="num" data-count="20" data-suffix="+">20+</div><div class="lb">Trường Đại học / Cao đẳng trong mạng lưới kết nối của Upzi</div></div>
         <div class="st"><div class="num" data-count="24" data-suffix=" năm">24 năm</div><div class="lb">Kinh nghiệm từ hệ sinh thái tuyển dụng Navigos Group</div></div>
       </div>
@@ -387,8 +387,8 @@
   <!-- TESTIMONIAL -->
   <section class="sec sec-white">
     <div class="wrap">
-      <div class="head head-c reveal"><div class="eyebrow">Khách hàng nói gì</div><h2>Trích từ khảo sát khách hàng Upzi</h2></div>
-      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật</div></div>
+      <div class="head head-c reveal"><div class="eyebrow">Góc nhìn từ khách hàng</div><h2>Doanh nghiệp đang nhìn nhận bài toán tuyển Gen Z như thế nào?</h2></div>
+      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div></div>
       <div class="tctrl"><button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button><div class="tdots" id="tdots"></div><button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button></div>
     </div>
   </section>
@@ -399,21 +399,22 @@
       <div class="fit-grid">
         <div>
           <div class="head reveal" style="margin-bottom:24px">
-            <div class="eyebrow">Upzi phù hợp khi nào</div>
-            <h2>Đây có phải doanh nghiệp của Anh/Chị?</h2>
+            <div class="eyebrow">Upzi dành cho ai?</div>
+            <h2>Upzi phù hợp nếu doanh nghiệp đang:</h2>
           </div>
           <div class="fit-list stagger">
-            <div class="fit-item"><div class="fit-chk">✓</div><p>Tuyển Intern, Fresher thường xuyên - không chỉ theo mùa</p></div>
-            <div class="fit-item"><div class="fit-chk">✓</div><p>Đang hoặc có kế hoạch xây dựng Employer Branding với Gen Z</p></div>
-            <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn nguồn ứng viên trẻ ổn định, dài hạn thay vì phụ thuộc job fair</p></div>
+            <div class="fit-item"><div class="fit-chk">✓</div><p>Tuyển Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm</p></div>
+            <div class="fit-item"><div class="fit-chk">✓</div><p>Có nhu cầu tuyển ứng viên trẻ thường xuyên hoặc theo nhiều đợt trong năm</p></div>
+            <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn xây dựng Employer Branding với sinh viên và Gen Z</p></div>
+            <div class="fit-item"><div class="fit-chk">✓</div><p>Muốn phát triển nguồn ứng viên từ sớm cho các kế hoạch tuyển dụng sắp tới</p></div>
           </div>
         </div>
         <figure class="fit-vis reveal">
           <img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy">
-          <figcaption><strong>20+</strong> trường Đại học / Cao đẳng đối tác trực tiếp</figcaption>
+          <figcaption><strong>20+</strong> trường Đại học / Cao đẳng trong mạng lưới kết nối của Upzi</figcaption>
         </figure>
       </div>
-      <div class="fit-note reveal">Mỗi doanh nghiệp đều có những thách thức tuyển dụng khác nhau. Upzi rất mong được lắng nghe nhu cầu và góc nhìn từ Anh/Chị để xây dựng chiến lược phù hợp.</div>
+      <div class="fit-note reveal">Nhu cầu tuyển dụng của mỗi doanh nghiệp là khác nhau. Đội ngũ Upzi sẽ cùng Anh/Chị trao đổi về nhóm vị trí cần tuyển, nguồn ứng viên và mục tiêu Employer Branding để đề xuất cách tiếp cận phù hợp.</div>
     </div>
   </section>
 
@@ -421,12 +422,12 @@
   <section class="form-sec" id="leadform">
     <div class="wrap form-inner">
       <div class="fcopy reveal">
-        <h2>Bắt đầu với <span class="hl">Upzi</span></h2>
-        <p>Để lại thông tin, đội ngũ Upzi sẽ liên hệ và đề xuất giải pháp theo đúng nhu cầu.</p>
+        <h2>Bắt đầu cùng <span class="hl">Upzi</span></h2>
+        <p>Chia sẻ nhu cầu tuyển dụng của doanh nghiệp. Đội ngũ Upzi sẽ liên hệ để tư vấn cách tiếp cận ứng viên phù hợp.</p>
         <ul>
           <li><span>&#10003;</span>Tư vấn miễn phí, không ràng buộc</li>
           <li><span>&#10003;</span>Phản hồi trong vòng 24h làm việc</li>
-          <li><span>&#10003;</span>Đề xuất theo đúng ngành và quy mô tuyển dụng</li>
+          <li><span>&#10003;</span>Đề xuất dựa trên nhu cầu tuyển dụng thực tế</li>
         </ul>
       </div>
       <!-- BowNow form (sid_2668fbc399d537fb6aeb) -->
@@ -504,9 +505,9 @@
 
     /* testimonial */
     const testimonials = [
-      {quote:'“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật'},
-      {quote:'“Điểm bên mình quan tâm là Upzi không chỉ hỗ trợ tuyển dụng mà còn giúp doanh nghiệp tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường đại học. Đây là hướng khá phù hợp với xu hướng tuyển dụng hiện tại.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm · Danh tính ẩn theo thỏa thuận bảo mật'},
-      {quote:'“Gen Z bây giờ thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi apply, nên Employer Branding ngày càng quan trọng hơn. Upzi đang đi đúng hướng ở phần tiếp cận và xây hiện diện sớm với nhóm ứng viên trẻ.”',meta:'Doanh nghiệp đang xây dựng Employer Branding · Danh tính ẩn theo thỏa thuận bảo mật'}
+      {quote:'“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên · '},
+      {quote:'“Điểm bên mình quan tâm là Upzi không chỉ hỗ trợ tuyển dụng mà còn giúp doanh nghiệp tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường đại học. Đây là hướng khá phù hợp với xu hướng tuyển dụng hiện tại.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm · '},
+      {quote:'“Gen Z bây giờ thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi apply, nên Employer Branding ngày càng quan trọng hơn. Upzi đang đi đúng hướng ở phần tiếp cận và xây hiện diện sớm với nhóm ứng viên trẻ.”',meta:'Doanh nghiệp đang xây dựng Employer Branding · '}
     ];
     let curT = 0;
     function initTestimonials(){const c=document.getElementById('tdots');c.innerHTML='';testimonials.forEach((_,i)=>{const b=document.createElement('button');b.className='tdot'+(i===curT?' active':'');b.setAttribute('aria-label','Xem testimonial '+(i+1));b.onclick=()=>setT(i);c.appendChild(b);});}
