@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -437,7 +439,7 @@
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Góc nhìn từ doanh nghiệp</div><h2>Trích từ khảo sát khách hàng Upzi</h2></div>
-      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật</div></div>
+      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div></div>
       <div class="tctrl"><button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button><div class="tdots" id="tdots"></div><button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button></div>
     </div>
   </section>
@@ -495,9 +497,9 @@
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('in'); }); }, { threshold: 0.12 });
     document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
     const testimonials = [
-      {quote:'“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên · Danh tính ẩn theo thỏa thuận bảo mật'},
-      {quote:'“Điểm bên mình quan tâm là khả năng tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường Đại học. Đây là hướng phù hợp với nhu cầu xây nguồn ứng viên dài hạn.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm · Danh tính ẩn theo thỏa thuận bảo mật'},
-      {quote:'“Gen Z thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi ứng tuyển, nên việc xây dựng hiện diện với ứng viên trẻ ngày càng quan trọng.”',meta:'Doanh nghiệp đang xây dựng Employer Branding · Danh tính ẩn theo thỏa thuận bảo mật'}
+      {quote:'“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên'},
+      {quote:'“Điểm bên mình quan tâm là khả năng tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường Đại học. Đây là hướng phù hợp với nhu cầu xây nguồn ứng viên dài hạn.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm'},
+      {quote:'“Gen Z thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi ứng tuyển, nên việc xây dựng hiện diện với ứng viên trẻ ngày càng quan trọng.”',meta:'Doanh nghiệp đang xây dựng Employer Branding'}
     ];
     let curT = 0;
     function initTestimonials(){const c=document.getElementById('tdots');c.innerHTML='';testimonials.forEach((_,i)=>{const b=document.createElement('button');b.className='tdot'+(i===curT?' active':'');b.setAttribute('aria-label','Xem testimonial '+(i+1));b.onclick=()=>setT(i);c.appendChild(b);});}
