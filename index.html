@@ -130,11 +130,8 @@
     .j-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .j-step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 12px 30px -28px rgba(85,28,175,.45);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
     .j-step:hover{transform:translateY(-4px);box-shadow:0 20px 42px -30px rgba(85,28,175,.5)}
-    .j-step.is-last{background:#FAFAFB;border-color:#E7E5EC}
     .j-node{width:42px;height:42px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;box-shadow:0 8px 18px -8px rgba(147,69,255,.55);margin-bottom:15px}
-    .j-step.is-last .j-node{background:#D3D0DA;color:#7C7688;box-shadow:none}
-    .j-pill{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.4px;padding:5px 11px;border-radius:100px;background:#E4FBF3;color:#2FA383;margin-bottom:11px}
-    .j-step.is-last .j-pill{background:#EFEDF2;color:#8B8496}
+    .j-pill{align-self:flex-start;white-space:nowrap;font-size:10.5px;font-weight:800;letter-spacing:.2px;padding:5px 10px;border-radius:100px;background:#E4FBF3;color:#2FA383;margin-bottom:11px}
     .j-step h3{font-size:17.5px;font-weight:800;margin-bottom:6px}
     .j-step p{font-size:14px;color:var(--sub)}
     .j-note{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--peach);border-radius:0 14px 14px 0;padding:18px 22px;font-size:15px;color:var(--sub)}
@@ -188,7 +185,7 @@
     .fit-vis figcaption strong{display:block;font-family:var(--font-display);font-size:38px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:6px}
     .fit-note{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 28px;text-align:center;font-size:15.5px;color:var(--sub)}
 
-    /* form - giữ nền tối vì form BowNow vốn thiết kế cho nền tối */
+    /* form — giữ nền tối vì form BowNow vốn thiết kế cho nền tối */
     .form-sec{position:relative;overflow:hidden;background:var(--purple-deep);padding:clamp(54px,7vw,88px) 0}
     .form-sec:before{content:'';position:absolute;inset:0;background:radial-gradient(820px 500px at 50% 0%,rgba(147,69,255,.45),transparent 70%)}
     .form-inner{position:relative;z-index:2}
@@ -335,7 +332,7 @@
         <div class="j-step"><div class="j-node">1</div><div class="j-pill">Upzi đồng hành</div><h3>Khám phá</h3><p>Ứng viên bắt đầu biết đến ngành nghề, môi trường làm việc và các doanh nghiệp mình quan tâm.</p></div>
         <div class="j-step"><div class="j-node">2</div><div class="j-pill">Upzi đồng hành</div><h3>Tìm hiểu</h3><p>Chủ động tìm hiểu sâu hơn về văn hoá, cơ hội phát triển, công việc và trải nghiệm nhân viên.</p></div>
         <div class="j-step"><div class="j-node">3</div><div class="j-pill">Upzi đồng hành</div><h3>Cân nhắc</h3><p>Hình thành nhóm doanh nghiệp và cơ hội nghề nghiệp phù hợp với định hướng cá nhân.</p></div>
-        <div class="j-step is-last"><div class="j-node">4</div><div class="j-pill">Nhu cầu tuyển dụng xuất hiện</div><h3>Ứng tuyển</h3><p>Ứng viên lựa chọn và nộp hồ sơ cho những cơ hội phù hợp.</p></div>
+        <div class="j-step"><div class="j-node">4</div><div class="j-pill">Nhu cầu tuyển dụng xuất hiện</div><h3>Ứng tuyển</h3><p>Ứng viên lựa chọn và nộp hồ sơ cho những cơ hội phù hợp.</p></div>
       </div>
       <div class="j-note reveal"><strong>Upzi giúp doanh nghiệp xuất hiện sớm hơn trong hành trình này</strong> - từ lúc ứng viên bắt đầu khám phá nghề nghiệp, tìm hiểu doanh nghiệp cho đến khi sẵn sàng ứng tuyển.</div>
     </div>
@@ -505,9 +502,9 @@
 
     /* testimonial */
     const testimonials = [
-      {quote:'“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên · '},
-      {quote:'“Điểm bên mình quan tâm là Upzi không chỉ hỗ trợ tuyển dụng mà còn giúp doanh nghiệp tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường đại học. Đây là hướng khá phù hợp với xu hướng tuyển dụng hiện tại.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm · '},
-      {quote:'“Gen Z bây giờ thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi apply, nên Employer Branding ngày càng quan trọng hơn. Upzi đang đi đúng hướng ở phần tiếp cận và xây hiện diện sớm với nhóm ứng viên trẻ.”',meta:'Doanh nghiệp đang xây dựng Employer Branding · '}
+      {quote:'“Bên mình tuyển liên tục cho các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”',meta:'Doanh nghiệp tuyển Fresher thường xuyên'},
+      {quote:'“Điểm bên mình quan tâm là Upzi không chỉ hỗ trợ tuyển dụng mà còn giúp doanh nghiệp tiếp cận sinh viên và Gen Z sớm hơn thông qua hệ sinh thái trường đại học. Đây là hướng khá phù hợp với xu hướng tuyển dụng hiện tại.”',meta:'Doanh nghiệp quan tâm tiếp cận sinh viên sớm'},
+      {quote:'“Gen Z bây giờ thường tìm hiểu doanh nghiệp qua mạng xã hội và cộng đồng trước khi apply, nên Employer Branding ngày càng quan trọng hơn. Upzi đang đi đúng hướng ở phần tiếp cận và xây hiện diện sớm với nhóm ứng viên trẻ.”',meta:'Doanh nghiệp đang xây dựng Employer Branding'}
     ];
     let curT = 0;
     function initTestimonials(){const c=document.getElementById('tdots');c.innerHTML='';testimonials.forEach((_,i)=>{const b=document.createElement('button');b.className='tdot'+(i===curT?' active':'');b.setAttribute('aria-label','Xem testimonial '+(i+1));b.onclick=()=>setT(i);c.appendChild(b);});}
