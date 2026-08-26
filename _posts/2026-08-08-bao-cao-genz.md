@@ -1,9 +1,22 @@
 ---
-layout: post
-title: Báo cáo xu hướng hành vi ứng viên 2026
+layout: frame2
+title: "Báo cáo xu hướng hành vi ứng viên 2026"
 category: "Report"
+
+description: >
+  Tổng hợp các con số nổi bật về hành vi ứng tuyển của ứng viên trẻ,
+  dùng làm dữ liệu tham chiếu cho kế hoạch tuyển dụng early-career.
+
+read_time: "03 phút đọc"
+
+# TAM AN: than bai moi chi la ban nhap ("Noi dung chi tiet cua bao cao...")
+# va 2 con so 78% / 3.5x chua ghi nguon. Xoa dong duoi khi noi dung da xong.
+published: false
 ---
 
+<section class="story-section white">
+  <div class="wrap">
+    <div class="section-head">
 Dưới đây là các con số quan trọng nổi bật:
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0;">
@@ -18,3 +31,6 @@ Dưới đây là các con số quan trọng nổi bật:
 </div>
 
 Nội dung chi tiết của báo cáo...
+    </div>
+  </div>
+</section>
