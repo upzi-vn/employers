@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  {% include head-tracking.html %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }} | Upzi</title>
+
+  {%- assign desc = page.description | strip_newlines | strip -%}
+  {%- assign cover = page.cover | default: '/images/writings/fresher-xay-dung.jpg' -%}
+  <meta name="description" content="{{ desc }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Upzi">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ cover | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ desc }}">
+  <meta name="twitter:image" content="{{ cover | absolute_url }}">
+
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  <meta name="theme-color" content="#9345FF">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/writings.css' | relative_url }}">
+</head>
+
+<body>
+
+  {% include writings-nav.html %}
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+  <section class="story-hero">
+    <div class="wrap">
+      <div class="story-hero-grid">
+
+        <div class="reveal">
+          <div class="tag">{{ page.category | default: "Success Story" }}{% if page.industry %} · {{ page.industry }}{% endif %}</div>
+
+          <h1>{{ page.title }}</h1>
+
+          {% if page.description %}
+          <p class="hero-lead">{{ page.description }}</p>
+          {% endif %}
+
+          <div class="meta">
+            {% if page.industry %}<span>Ngành: {{ page.industry }}</span>{% endif %}
+            {% if page.target %}<span>Đối tượng: {{ page.target }}</span>{% endif %}
+            {% if page.market %}<span>Thị trường: {{ page.market }}</span>{% endif %}
+            {% if page.period %}<span>Thời gian: {{ page.period }}</span>{% endif %}
+          </div>
+        </div>
+
+        {% if page.cover %}
+        <figure class="story-cover reveal">
+          <picture>
+            {% if page.cover_webp %}<source srcset="{{ page.cover_webp | relative_url }}" type="image/webp">{% endif %}
+            <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title }}" width="1600" height="900">
+          </picture>
+          {% if page.cover_caption %}<figcaption><i></i>{{ page.cover_caption }}</figcaption>{% endif %}
+        </figure>
+        {% endif %}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       NỘI DUNG BÀI
+  ===================================================== -->
+  <main class="story-content">
+    {{ content }}
+  </main>
+
+  <!-- =====================================================
+       CTA CUỐI BÀI — hai lối ra
+  ===================================================== -->
+  <section class="cta-end">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <div class="eyebrow">Bước tiếp theo</div>
+        <h2>{{ page.cta_heading | default: "Bắt đầu với một tin tuyển dụng miễn phí." }}</h2>
+        <p>{{ page.cta_lead | default: "Đăng tin tuyển Intern, Fresher hoặc Part-time và tiếp cận mạng lưới ứng viên trẻ của Upzi." }}</p>
+        <div class="cta-actions">
+          <a class="button" href="{{ '/free-trial' | relative_url }}">Nhận 1 slot đăng tin miễn phí</a>
+          <a class="button ghost" href="{{ '/' | relative_url }}">Tìm hiểu Upzi cho nhà tuyển dụng</a>
+        </div>
+        <p class="cta-note">Không cần thẻ thanh toán. Đội ngũ Upzi hỗ trợ bạn viết tin và phân bổ tiếp cận.</p>
+      </div>
+    </div>
+  </section>
+
+  {% include writings-footer.html %}
+
+</body>
+</html>
