@@ -232,9 +232,12 @@
     .fcopy li{display:flex;gap:9px;align-items:center;font-size:14.5px;color:#E8E1F7}
     .fcopy li span{width:21px;height:21px;border-radius:7px;flex:none;background:var(--yellow);color:var(--purple-deep);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
     .bn-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:clamp(20px,3vw,34px);overflow-x:auto}
-    .bn-alt{margin-top:18px;text-align:center;font-size:14.5px;line-height:1.8;color:#D8CFED}
-    .bn-alt a{color:var(--yellow);font-weight:600}
-    .bn-alt a:hover{text-decoration:underline}
+    /* BowNow tu do style form theo mac dinh cua no (chu dam tren nen sang).
+       Khoi trang nay dam bao form luon doc duoc du nam trong section nen tim dam. */
+    .bn-form{background:#fff;border-radius:14px;padding:clamp(16px,2.4vw,28px);color:var(--ink)}
+    .bn-form a{color:var(--purple)}
+    .bn-fallback{font-size:15.5px;line-height:1.8;color:var(--sub);text-align:center;padding:22px 0}
+    .bn-fallback b{color:var(--ink)}
     .fnote{font-size:12.5px;color:rgba(255,255,255,.45);margin-top:16px;text-align:center}
 
     /* floating contact */
@@ -527,29 +530,55 @@
         </ul>
       </div>
       <!-- ================================================================
-           FORM BOWNOW
+           FORM BOWNOW (sid_2668fbc399d537fb6aeb)
 
-           Doi form => chi doi chuoi form_id ben duoi, khong doi gi khac.
-           Dinh dang URL dung: /forms/view?form_id=sid_...
+           DUNG DOI SANG IFRAME. BowNow nhung form bang script chen tai cho,
+           khong co endpoint /forms/view?form_id=. Dung iframe kieu do thi
+           BowNow tra ve trang 404 tieng Nhat ngay giua trang chu.
 
-           LUU Y: form_id KHAC voi ma tracking form.
-             form_id     dung o /forms/view?form_id=sid_...  -> hien form
-             ma tracking dung o /forms/sid_.../trace.js      -> chi do luot gui
-           Lay nham loai se ra trang 404 tieng Nhat giua trang chu.
+           Doan script duoi day lay nguyen tu man hinh quan tri BowNow.
+           Khi doi form, thay ca 4 cho co chuoi sid_... trong doan nay.
       ================================================================= -->
       <div class="bn-wrap reveal">
-        <iframe src="https://contents.bownow.jp/forms/view?form_id=sid_2668fbc399d537fb6aeb" width="100%" height="800" frameborder="0" scrolling="yes" style="display:block;border:none;min-width:100%" title="Đăng ký nhận tư vấn Upzi">Loading form...</iframe>
-      </div>
+        <div class="bn-form">
+          <script id="_bownow_cs_sid_2668fbc399d537fb6aeb">
+            var _bownow_cs_sid_2668fbc399d537fb6aeb = document.createElement('script');
+            _bownow_cs_sid_2668fbc399d537fb6aeb.charset = 'utf-8';
+            _bownow_cs_sid_2668fbc399d537fb6aeb.src = 'https://contents.bownow.jp/forms/sid_2668fbc399d537fb6aeb/trace.js';
+            document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_2668fbc399d537fb6aeb);
+          </script>
 
-      <!-- Duong lien he du phong. Luon hien, khong phu thuoc vao form.
-           Ly do: iframe khac domain nen trinh duyet khong bao cho trang cha biet
-           khi ben trong la trang loi. Khong the tu dong phat hien de hien canh bao.
-           De san mot dong lien he thi du form co van de, khach van lien lac duoc. -->
-      <div class="bn-alt">
-        Hoặc liên hệ trực tiếp:
-        <a href="tel:02873058500">028 7305 8500</a> ·
-        <a href="https://zalo.me/0703377017" target="_blank" rel="noopener">Zalo 070 3377 017</a> ·
-        <a href="mailto:upzi-support@navigosgroup.com">upzi-support@navigosgroup.com</a>
+          <!-- Du phong: hien san. Neu BowNow chen duoc form thi khoi nay tu an.
+               Neu BowNow chet (404, chan mang, tat JS) thi khach van co duong lien he,
+               thay vi nhin mot o trang tron. -->
+          <div class="bn-fallback" id="bnFallback">
+            <p><b>Anh/Chị có thể liên hệ trực tiếp với đội ngũ Upzi:</b></p>
+            <p>
+              Hotline <a href="tel:02873058500">028 7305 8500</a><br>
+              Zalo <a href="https://zalo.me/0703377017" target="_blank" rel="noopener">070 3377 017</a><br>
+              Email <a href="mailto:upzi-support@navigosgroup.com">upzi-support@navigosgroup.com</a>
+            </p>
+          </div>
+
+          <script>
+            // BowNow chen form bang script. Doi no render roi moi an khoi du phong.
+            (function(){
+              var box = document.querySelector('.bn-form');
+              var fb  = document.getElementById('bnFallback');
+              if (!box || !fb) return;
+              var tries = 0;
+              var timer = setInterval(function(){
+                tries++;
+                if (box.querySelector('form, input, iframe')) {
+                  fb.style.display = 'none';
+                  clearInterval(timer);
+                } else if (tries > 20) {   // ~10 giay
+                  clearInterval(timer);
+                }
+              }, 500);
+            })();
+          </script>
+        </div>
       </div>
       <div class="fnote">Bằng việc gửi form, Anh/Chị đồng ý để Upzi liên hệ tư vấn.</div>
     </div>
