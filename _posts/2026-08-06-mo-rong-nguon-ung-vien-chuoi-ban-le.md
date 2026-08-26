@@ -11,79 +11,452 @@ description: >
 
 industry: "Chuỗi bán lẻ"
 target: "Part-time"
-market: "Việt Nam"
+market: "TP.HCM"
 period: "Gần 1 tháng triển khai"
 
 card_class: "retail"
-headline_stat: "1,9x"
-headline_label: "lượt xem"
-stats:
-  - value: "1.290"
-    label: "Lượt xem"
-  - value: "34"
-    label: "Hồ sơ ứng tuyển"
-  - value: "150+"
-    label: "Cửa hàng"
+
+
+cta_heading: "Bạn cũng đang tuyển Part-time trên nhiều khu vực?"
+cta_lead: >
+  Đăng tin theo từng khu vực và theo dõi hiệu quả từng nơi.
 
 date: 2026-08-06
 
 ---
 
-<!--
-  ================================================================
-  BÀI NÀY ĐANG ẨN (published: false).
-  Phần front matter ở trên đã đầy đủ — lấy nguyên từ thẻ card cũ
-  trong tips-insights.html, không phải số bịa.
-
-  CẦN LÀM TRƯỚC KHI CHO HIỆN:
-  1. Viết nội dung bài bên dưới
-  2. Xin phép khách hàng nếu nêu tên công ty
-  3. Xoá dòng `published: false` ở trên
-  ================================================================
--->
-
 <section class="story-section white">
+
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow-light">Bài toán</div>
-      <h2>Tiêu đề phần bài toán</h2>
-      <p>Nội dung phần bài toán.</p>
+
+    <div class="section-grid">
+
+      <div>
+
+        <div class="eyebrow-light">
+          Bối cảnh
+        </div>
+
+        <h2>
+          Khi quy mô tuyển dụng tăng,
+          <span class="accent">một kênh tuyển dụng không còn đủ.</span>
+        </h2>
+
+        <p>
+          Cùng với việc mở rộng hệ thống cửa hàng, nhu cầu tuyển mới
+          và thay thế nhân sự Part-time cũng tăng nhanh. Facebook vẫn
+          mang lại ứng viên, nhưng doanh nghiệp bắt đầu gặp khó khăn
+          trong việc tiếp cận đủ ứng viên ở nhiều khu vực khác nhau.
+        </p>
+
+      </div>
+
+
+      <div class="challenge-card">
+
+        <h3>
+          Khoảng trống tiếp cận
+        </h3>
+
+        <ul>
+
+          <li>
+            <span class="check">✓</span>
+
+            <span>
+              Hệ thống mở rộng kéo theo nhu cầu tuyển mới
+              và thay thế Part-time nhanh hơn.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+
+            <span>
+              Khó tiếp cận đủ ứng viên ở các khu vực khác nhau
+              chỉ bằng một nguồn tuyển.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+
+            <span>
+              Khoảng cách di chuyển có thể quyết định
+              một sinh viên có ứng tuyển hay không.
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <section class="story-section off">
+
   <div class="wrap">
+
     <div class="section-head">
-      <div class="eyebrow-light">Cách làm</div>
-      <h2>Tiêu đề phần cách làm</h2>
-      <p>Nội dung phần cách làm.</p>
+
+      <div class="eyebrow-light">
+        Bài toán
+      </div>
+
+      <h2>
+        Từ “có thêm ứng viên” sang
+        <span class="accent">“có đúng ứng viên ở đúng khu vực”.</span>
+      </h2>
+
+      <p>
+        Bài toán không nằm ở tổng số hồ sơ, mà ở việc hồ sơ đến từ đâu.
+        Một ứng viên phù hợp nhưng ở quá xa cửa hàng sẽ khó gắn bó,
+        và một khu vực thiếu ứng viên sẽ kéo dài thời gian lấp đầy ca làm.
+      </p>
+
     </div>
+
   </div>
+
 </section>
 
-<section class="results-section">
+
+
+<section class="story-section white">
+
   <div class="wrap">
-    <div class="results-title">
-      <h2>Kết quả</h2>
-      <p>Dẫn dắt phần kết quả.</p>
+
+    <div class="section-head">
+
+      <div class="eyebrow-light">
+        Giải pháp
+      </div>
+
+      <h2>
+        Mở rộng nguồn ứng viên bằng cách
+        tiếp cận đúng người, đúng khu vực
+      </h2>
+
+      <p>
+        Cùng Upzi, doanh nghiệp thực hiện bốn điều chỉnh trong cách viết
+        và phân bổ tin tuyển dụng ngay trong quá trình triển khai.
+      </p>
+
     </div>
-    <div class="results">
-      <div class="result featured">
-        <div class="big">1.290</div>
-        <h3>Lượt xem</h3>
-        <p>Mô tả con số này.</p>
+
+
+    <div class="solution-grid">
+
+      <div class="solution">
+
+        <div class="solution-number">
+          01
+        </div>
+
+        <h3>
+          Viết JD theo góc nhìn ứng viên
+        </h3>
+
+        <p>
+          Làm rõ giá trị công việc trước khi ứng viên đưa ra quyết định,
+          thay vì chỉ mô tả đầu việc.
+        </p>
+
       </div>
-      <div class="result">
-        <div class="big">34</div>
-        <h3>Hồ sơ ứng tuyển</h3>
-        <p>Mô tả con số này.</p>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          02
+        </div>
+
+        <h3>
+          Làm rõ giá trị công việc
+        </h3>
+
+        <p>
+          Thông tin về ca làm linh hoạt, thu nhập minh bạch
+          và cơ hội phát triển được đưa vào nội dung tuyển dụng.
+        </p>
+
       </div>
-      <div class="result">
-        <div class="big">150+</div>
-        <h3>Cửa hàng</h3>
-        <p>Mô tả con số này.</p>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          03
+        </div>
+
+        <h3>
+          Phân bổ tin theo từng khu vực
+        </h3>
+
+        <p>
+          Thay vì dùng một tin cho toàn thành phố, tin tuyển dụng được
+          tổ chức theo khu vực để ứng viên dễ tìm việc gần nơi ở.
+        </p>
+
       </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          04
+        </div>
+
+        <h3>
+          Liên tục tối ưu bằng dữ liệu
+        </h3>
+
+        <p>
+          Theo dõi hiệu quả từng tin theo khu vực để kịp thời điều chỉnh
+          nội dung và phân bổ trong quá trình triển khai.
+        </p>
+
+      </div>
+
     </div>
+
   </div>
+
+</section>
+
+
+
+<section class="results-section">
+
+  <div class="wrap">
+
+    <div class="results-title">
+
+      <div class="eyebrow-light">
+        Tín hiệu ghi nhận
+      </div>
+
+      <h2>
+        Doanh nghiệp bắt đầu nhìn thấy ứng viên đến từ đâu
+      </h2>
+
+      <p>
+        Mục tiêu của giai đoạn này không phải tuyển đủ số lượng, mà là
+        kiểm chứng cách viết và phân bổ tin theo khu vực có tạo ra
+        khác biệt hay không.
+      </p>
+
+    </div>
+
+
+    <div class="solution-grid">
+
+      <div class="solution">
+
+        <div class="solution-number">
+          Hiệu quả phân bổ
+        </div>
+
+        <h3>
+          Tin theo khu vực vượt tin chung
+        </h3>
+
+        <p>
+          Tin đăng cho một khu vực cụ thể thu hút tốt hơn hẳn
+          tin đăng chung cho toàn thành phố.
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          Bản đồ nguồn lực
+        </div>
+
+        <h3>
+          Biết khu vực nào đang mạnh
+        </h3>
+
+        <p>
+          Dữ liệu theo khu vực cho thấy nơi nào đang thu hút ứng viên
+          tốt hơn, để ưu tiên nguồn lực đúng chỗ.
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          Chất lượng nội dung
+        </div>
+
+        <h3>
+          JD rõ ràng làm giảm ma sát
+        </h3>
+
+        <p>
+          Nêu rõ ca làm, thu nhập và địa điểm ngay trong tin
+          giúp ứng viên quyết định nhanh hơn.
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          Khả năng nhân rộng
+        </div>
+
+        <h3>
+          Áp dụng cho đợt tuyển sau
+        </h3>
+
+        <p>
+          Cách tổ chức tin theo khu vực có thể lặp lại cho các đợt tuyển
+          và nhóm vị trí khác.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="story-section off">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow-light">
+        Góc nhìn ứng viên
+      </div>
+
+      <h2>
+        Ứng viên Part-time thực sự quan tâm điều gì?
+      </h2>
+
+      <p>
+        Ứng viên Part-time hiếm khi bắt đầu bằng câu hỏi “Doanh nghiệp này
+        có nổi tiếng không?”. Điều họ quan tâm trước tiên thường là
+        những yếu tố rất thực tế.
+      </p>
+
+    </div>
+
+
+    <div class="solution-grid">
+
+      <div class="solution">
+
+        <div class="solution-number">
+          01
+        </div>
+
+        <h3>
+          Địa điểm
+        </h3>
+
+        <p>
+          Công việc có gần nơi mình sống hoặc học tập không?
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          02
+        </div>
+
+        <h3>
+          Thời gian
+        </h3>
+
+        <p>
+          Ca làm có phù hợp với lịch học không?
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          03
+        </div>
+
+        <h3>
+          Thu nhập
+        </h3>
+
+        <p>
+          Thu nhập có rõ ràng không?
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          04
+        </div>
+
+        <h3>
+          Giá trị công việc
+        </h3>
+
+        <p>
+          Công việc này giúp mình tích lũy được điều gì?
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="quote-section">
+
+  <div class="wrap">
+
+    <div class="quote-wrap">
+
+      <div class="eyebrow-light">
+        Một quan sát từ chiến dịch
+      </div>
+
+      <div class="quote">
+        “Khi doanh nghiệp trả lời rõ những câu hỏi của ứng viên
+        ngay từ tin tuyển dụng, rào cản ứng tuyển sẽ giảm đi đáng kể.”
+      </div>
+
+      <div class="source">
+        Success Story · Upzi
+      </div>
+
+    </div>
+
+  </div>
+
 </section>

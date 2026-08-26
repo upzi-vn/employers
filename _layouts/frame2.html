@@ -8,6 +8,24 @@
 
   <title>{{ page.title }} | Upzi</title>
 
+  {%- assign desc = page.description | strip_newlines | strip -%}
+  <meta name="description" content="{{ desc }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- The chia se mang xa hoi: khong co thi dan link len Facebook/LinkedIn/Zalo
+       se ra mot o trang, khong anh khong tieu de. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Upzi">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {% if page.og_image %}<meta property="og:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+  <meta name="twitter:card" content="{% if page.og_image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ desc }}">
+  {% if page.og_image %}<meta name="twitter:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
@@ -744,6 +762,47 @@
       transform: translateY(-2px);
     }
 
+    /* Nut phu ben canh .btn trong khoi CTA cuoi bai.
+       Nen CTA la mau tim dam nen nut phu dung vien trang, khong nen. */
+    .btn-ghost {
+      display: inline-block;
+
+      margin-left: 12px;
+
+      background: transparent;
+      color: var(--white);
+
+      font-family: var(--font-sub);
+
+      font-size: 15px;
+      font-weight: 700;
+
+      padding: 15px 28px;
+
+      border: 1.5px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+
+      transition: .2s ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 560px) {
+      .btn,
+      .btn-ghost {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .btn-ghost {
+        margin-top: 12px;
+      }
+    }
+
 
     /* =====================================================
        FOOTER
@@ -915,10 +974,10 @@
       </a>
 
       <a
-        href="{{ '/' | relative_url }}#leadform"
+        href="{{ '/free-trial' | relative_url }}"
         class="nav-cta"
       >
-        Tư vấn miễn phí
+        Nhận 1 slot miễn phí
       </a>
 
     </div>
@@ -1010,20 +1069,25 @@
       <div class="cta-inner">
 
         <h2>
-          Đang gặp bài toán tuyển Fresher
-          hoặc nhân sự trẻ?
+          {{ page.cta_heading | default: "Đang gặp bài toán tuyển Fresher hoặc nhân sự trẻ?" }}
         </h2>
 
         <p>
-          Khám phá cách Upzi có thể giúp doanh nghiệp
-          tiếp cận nguồn ứng viên trẻ phù hợp hơn.
+          {{ page.cta_lead | default: "Đăng tin tuyển Intern, Fresher hoặc Part-time và tiếp cận mạng lưới ứng viên trẻ của Upzi." }}
         </p>
 
         <a
           class="btn"
-          href="{{ '/' | relative_url }}#leadform"
+          href="{{ '/free-trial' | relative_url }}"
         >
-          Trao đổi với Upzi
+          Nhận 1 slot đăng tin miễn phí
+        </a>
+
+        <a
+          class="btn-ghost"
+          href="{{ '/' | relative_url }}"
+        >
+          Tìm hiểu Upzi cho nhà tuyển dụng
         </a>
 
       </div>
