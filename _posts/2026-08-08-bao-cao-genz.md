@@ -65,6 +65,7 @@ description: >
     <div class="section-label">What it means</div>
     <div class="report-copy">
       <h2>Điều này thay đổi cách Doanh nghiệp tiếp cận ứng viên như thế nào?</h2>
+      <figure style="margin:32px 0 34px"><img src="/images/resources/reports/hanh-vi-ung-vien-2026/inline-01.svg" alt="Nhóm ứng viên trẻ trao đổi cùng nhau quanh laptop" style="display:block;width:100%;border-radius:20px"><figcaption style="font-size:13px;line-height:1.5;color:#77707F;margin-top:10px">Hành vi tìm hiểu cơ hội của ứng viên trẻ diễn ra qua nhiều điểm chạm, thiết bị và định dạng nội dung.</figcaption></figure>
       <p>Thông tin tuyển dụng cần dễ đọc, dễ hiểu và thuận tiện để hành động trên mobile. Đồng thời, doanh nghiệp có thể cân nhắc nhiều định dạng nội dung hơn thay vì chỉ phụ thuộc vào một JD dạng text.</p>
       <p>Với nhóm Intern, Fresher và nhân sự ở giai đoạn đầu sự nghiệp, việc xuất hiện đúng kênh và giảm rào cản trong hành trình ứng tuyển có thể tạo khác biệt đáng kể.</p>
     </div>
