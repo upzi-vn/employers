@@ -4,6 +4,7 @@ content_type: success-story
 permalink: /resources/success-stories/tuyen-fresher-vuot-qua-canh-tranh-nhan-su/
 title: "Tránh cuộc đua tăng lương bằng cách tuyển Fresher"
 category: "Success Story"
+image: /images/resources/success-stories/tuyen-fresher-xay-dung/cover.svg
 description: >
   Một công ty xây dựng Nhật Bản tại Việt Nam chuyển hướng
   từ tuyển ứng viên giàu kinh nghiệm sang tiếp cận Fresher
