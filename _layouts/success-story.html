@@ -2,4 +2,11 @@
 layout: frame2
 ---
 
+{% if page.image %}
+<style>
+.story-cover{max-width:1120px;margin:42px auto 18px;padding:0 24px}.story-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:22px;box-shadow:0 20px 50px -34px rgba(46,15,92,.35)}@media(max-width:640px){.story-cover{margin-top:28px;padding:0 16px}.story-cover img{border-radius:16px}}
+</style>
+<div class="story-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></div>
+{% endif %}
+
 {{ content }}
