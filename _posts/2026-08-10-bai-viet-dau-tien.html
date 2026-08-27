@@ -10,6 +10,9 @@ description: >
 ---
 
 <style>
+/* This article renders its own editorial header instead of frame2's landing-style hero. */
+.story-hero{display:none}
+
 .article-page{
   --purple:#9345FF;
   --purple-dark:#551CAF;
@@ -50,8 +53,6 @@ description: >
 .article-stat{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:start;padding:10px 0}
 .article-stat b{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1;color:var(--purple-dark)}
 .article-stat span{font-size:17px;line-height:1.45;color:var(--body)}
-.article-source{margin-top:58px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--muted)}
-.article-source a{color:var(--purple-dark);font-weight:700;text-decoration:none}
 .article-cta{border-top:1px solid var(--line);padding:52px 0 76px}
 .article-cta-inner{width:min(720px,calc(100% - 48px));margin:0 auto}
 .article-cta h2{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1.1;letter-spacing:-.025em;margin:0 0 12px}
@@ -116,7 +117,7 @@ description: >
 
       <h2>Gen Z quan tâm đến trải nghiệm phía sau công việc</h2>
 
-      <p>Trong bài viết của VnExpress được Upzi tham khảo, các yếu tố liên quan đến trải nghiệm làm việc xuất hiện nổi bật trong kỳ vọng của Gen Z. Không chỉ là “có việc”, người trẻ còn quan tâm nơi đó có giúp họ phát triển hay không và môi trường có phù hợp với mình hay không.</p>
+      <p>Các yếu tố liên quan đến trải nghiệm làm việc xuất hiện nổi bật trong kỳ vọng của Gen Z. Không chỉ là “có việc”, người trẻ còn quan tâm nơi đó có giúp họ phát triển hay không và môi trường có phù hợp với mình hay không.</p>
 
       <div class="article-stats">
         <div class="article-stat"><b>60%</b><span>ưu tiên cơ hội học hỏi và phát triển.</span></div>
@@ -138,7 +139,7 @@ description: >
 
       <p>Gen Z có thể chủ động tìm hiểu rất nhiều, nhưng họ chỉ có thể đánh giá dựa trên những thông tin họ nhìn thấy. Nếu doanh nghiệp nói nhiều về vị trí tuyển dụng nhưng ít cho thấy môi trường, cơ hội phát triển hay trải nghiệm làm việc, một phần quan trọng trong quyết định của ứng viên vẫn còn bỏ ngỏ.</p>
 
-      <p>Nguồn tham khảo cũng chỉ ra một khoảng cách đáng chú ý: đào tạo kỹ năng mềm và kỹ năng số được người trẻ coi trọng, trong khi chỉ 9% doanh nghiệp ưu tiên triển khai hoạt động này; 7% doanh nghiệp chưa có chiến lược cụ thể.</p>
+      <p>Một khoảng cách đáng chú ý nằm ở đào tạo kỹ năng mềm và kỹ năng số: đây là yếu tố người trẻ coi trọng, trong khi chỉ 9% doanh nghiệp ưu tiên triển khai hoạt động này; 7% doanh nghiệp chưa có chiến lược cụ thể.</p>
 
       <p><strong>Khoảng cách này không chỉ là bài toán truyền thông. Nó là khoảng cách giữa điều ứng viên cần để ra quyết định và điều họ thực sự có thể nhìn thấy về doanh nghiệp.</strong></p>
 
@@ -153,10 +154,6 @@ description: >
       </ul>
 
       <div class="article-quote">Ứng viên không chỉ đánh giá một công việc. Họ đang đánh giá doanh nghiệp trước khi quyết định liệu có muốn làm việc ở đó hay không.</div>
-
-      <div class="article-source">
-        Nguồn tham khảo: <a href="https://vnexpress.net/gen-z-dan-khien-nha-tuyen-dung-thay-doi-5013490.html" target="_blank" rel="noopener">VnExpress — “Gen Z dần khiến nhà tuyển dụng thay đổi”</a>.
-      </div>
     </article>
   </main>
 
