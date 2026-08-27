@@ -3,5 +3,16 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/activate-account-and-post-job", "destination": "/activate-account-and-post-job.html" }
+  ],
+  "redirects": [
+    { "source": "/writings", "destination": "/resources", "permanent": true },
+    { "source": "/writings.html", "destination": "/resources", "permanent": true },
+    { "source": "/tips-insights", "destination": "/resources", "permanent": true },
+    { "source": "/tips-insights.html", "destination": "/resources", "permanent": true },
+    { "source": "/insights/bai-viet-dau-tien", "destination": "/resources/insights/gen-z-tim-hieu-doanh-nghiep", "permanent": true },
+    { "source": "/insights/xu-huong-tuyen-dung-2026", "destination": "/resources/insights/xu-huong-tuyen-dung-2026", "permanent": true },
+    { "source": "/insights/tuyen-fresher-vuot-qua-canh-tranh-nhan-su", "destination": "/resources/success-stories/tuyen-fresher-vuot-qua-canh-tranh-nhan-su", "permanent": true },
+    { "source": "/insights/mo-rong-nguon-ung-vien-chuoi-ban-le", "destination": "/resources/success-stories/mo-rong-nguon-ung-vien-chuoi-ban-le", "permanent": true },
+    { "source": "/insights/bao-cao-genz", "destination": "/resources/reports/bao-cao-xu-huong-hanh-vi-ung-vien-2026", "permanent": true }
   ]
 }
