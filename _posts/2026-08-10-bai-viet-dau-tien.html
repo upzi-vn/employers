@@ -13,141 +13,158 @@ description: >
 .article-page{
   --purple:#9345FF;
   --purple-dark:#551CAF;
-  --purple-soft:#F5F0FF;
-  --yellow:#E0E722;
   --ink:#191527;
-  --body:#4F485C;
-  --muted:#8C849A;
-  --line:#EAE4F5;
-  --off:#FAF9FC;
+  --body:#38333F;
+  --muted:#77707F;
+  --line:#E8E4EC;
+  --soft:#F7F5FA;
   font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   color:var(--ink);
   background:#fff;
 }
 .article-page *{box-sizing:border-box}
-.article-shell{width:min(920px,calc(100% - 40px));margin:0 auto}
-.article-body{width:min(720px,calc(100% - 40px));margin:0 auto}
-.article-back{padding:28px 0 0}
-.article-back a{font-size:14px;color:var(--purple-dark);text-decoration:none;font-weight:600}
-.article-head{padding:58px 0 42px;border-bottom:1px solid var(--line)}
-.article-kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);margin-bottom:18px}
-.article-head h1{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.035em;margin:0 0 22px;max-width:900px}
-.article-dek{font-size:20px;line-height:1.65;color:var(--body);max-width:780px;margin:0 0 24px}
-.article-meta{font-size:13.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
-.article-hero{margin:42px auto 0;width:min(920px,calc(100% - 40px));background:linear-gradient(135deg,#2E0F5C,#6D2BDA);border-radius:24px;padding:48px;min-height:320px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
-.article-hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,255,255,.16);right:-70px;top:-80px}
-.article-hero p{position:relative;z-index:1;color:#fff;font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:clamp(28px,4vw,42px);line-height:1.18;font-weight:700;max-width:640px;margin:0}
-.article-hero strong{color:var(--yellow)}
-.article-content{padding:62px 0 76px}
-.article-content p{font-size:17px;line-height:1.85;color:var(--body);margin:0 0 24px}
-.article-content h2{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1.2;letter-spacing:-.02em;margin:52px 0 18px;color:var(--ink)}
-.article-content h3{font-size:20px;line-height:1.35;margin:32px 0 10px;color:var(--ink)}
-.article-content ul{padding-left:22px;margin:0 0 28px}
-.article-content li{font-size:16.5px;line-height:1.75;color:var(--body);margin:8px 0}
-.article-pullquote{margin:46px 0;padding:30px 32px;background:var(--purple-soft);border-left:4px solid var(--purple);border-radius:0 16px 16px 0}
-.article-pullquote p{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:25px;line-height:1.45;font-weight:700;color:var(--purple-dark);margin:0}
-.article-data{margin:40px 0;background:var(--off);border:1px solid var(--line);border-radius:18px;padding:28px}
-.article-data h3{margin:0 0 16px}
-.article-data-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.article-data-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
-.article-data-item strong{display:block;font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:28px;color:var(--purple-dark);margin-bottom:4px}
-.article-data-item span{font-size:14px;line-height:1.5;color:var(--body)}
-.article-source{margin-top:52px;padding-top:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.article-wide{width:min(1120px,calc(100% - 48px));margin:0 auto}
+.article-back{padding:26px 0 0}
+.article-back a{font-size:14px;font-weight:600;color:var(--purple-dark);text-decoration:none}
+.article-header{padding:76px 0 64px;border-bottom:1px solid var(--line)}
+.article-category{font-size:13px;font-weight:700;color:var(--purple-dark);margin-bottom:22px}
+.article-header h1{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:clamp(46px,7vw,78px);line-height:.98;letter-spacing:-.045em;font-weight:700;max-width:1040px;margin:0 0 28px}
+.article-dek{font-size:21px;line-height:1.5;letter-spacing:-.01em;color:var(--body);max-width:790px;margin:0 0 26px}
+.article-meta{display:flex;gap:9px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.article-layout{display:grid;grid-template-columns:220px minmax(0,720px);gap:72px;justify-content:center;padding:68px 0 94px}
+.article-aside{font-size:13.5px;color:var(--muted);line-height:1.55}
+.article-aside-inner{position:sticky;top:110px}
+.article-aside strong{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.article-aside .rule{height:1px;background:var(--line);margin:20px 0}
+.article-aside a{color:var(--purple-dark);text-decoration:none;font-weight:600}
+.article-content{min-width:0}
+.article-content .lead{font-size:22px;line-height:1.5;letter-spacing:-.015em;color:var(--ink);margin:0 0 34px}
+.article-content p{font-size:18px;line-height:1.48;letter-spacing:-.012em;color:var(--body);margin:0 0 18px}
+.article-content h2{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:36px;line-height:1.08;letter-spacing:-.035em;font-weight:600;margin:58px 0 22px;color:var(--ink)}
+.article-content h3{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:28px;line-height:1.12;letter-spacing:-.025em;font-weight:600;margin:42px 0 16px;color:var(--ink)}
+.article-content strong{color:var(--ink);font-weight:700}
+.article-content ul{margin:28px 0 30px;padding-left:24px}
+.article-content li{font-size:18px;line-height:1.48;color:var(--body);margin:13px 0;padding-left:3px}
+.article-quote{margin:48px 0;font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1.25;letter-spacing:-.025em;font-weight:600;color:var(--ink);padding-left:24px;border-left:4px solid var(--purple)}
+.article-stats{margin:34px 0 38px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.article-stat{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:start;padding:10px 0}
+.article-stat b{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1;color:var(--purple-dark)}
+.article-stat span{font-size:17px;line-height:1.45;color:var(--body)}
+.article-source{margin-top:58px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--muted)}
 .article-source a{color:var(--purple-dark);font-weight:700;text-decoration:none}
-.article-cta{margin:0 auto 80px;width:min(720px,calc(100% - 40px));background:var(--purple-soft);border:1px solid var(--line);border-radius:20px;padding:30px 32px}
-.article-cta h2{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:26px;line-height:1.2;margin:0 0 10px}
-.article-cta p{font-size:15.5px;line-height:1.65;color:var(--body);margin:0 0 18px}
-.article-cta a{display:inline-flex;background:var(--purple);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px}
+.article-cta{border-top:1px solid var(--line);padding:52px 0 76px}
+.article-cta-inner{width:min(720px,calc(100% - 48px));margin:0 auto}
+.article-cta h2{font-family:"Bricolage Grotesque",Inter,sans-serif;font-size:30px;line-height:1.1;letter-spacing:-.025em;margin:0 0 12px}
+.article-cta p{font-size:16px;line-height:1.55;color:var(--body);margin:0 0 18px}
+.article-cta a{font-size:15px;font-weight:700;color:var(--purple-dark);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+@media(max-width:900px){
+  .article-layout{grid-template-columns:minmax(0,720px);gap:28px}
+  .article-aside-inner{position:static;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .article-aside .rule{display:none}
+}
 @media(max-width:640px){
-  .article-head{padding-top:42px}
+  .article-wide{width:min(100% - 32px,1120px)}
+  .article-header{padding:54px 0 44px}
+  .article-header h1{font-size:44px}
   .article-dek{font-size:18px}
-  .article-hero{padding:32px;min-height:260px;border-radius:18px}
-  .article-content{padding-top:48px}
-  .article-content h2{font-size:26px;margin-top:42px}
-  .article-data-grid{grid-template-columns:1fr}
-  .article-pullquote{padding:24px}
-  .article-pullquote p{font-size:22px}
+  .article-layout{padding:46px 16px 68px}
+  .article-content .lead{font-size:20px}
+  .article-content p,.article-content li{font-size:17px;line-height:1.55}
+  .article-content h2{font-size:30px;margin-top:48px}
+  .article-content h3{font-size:25px}
+  .article-quote{font-size:25px;margin:38px 0}
+  .article-stat{grid-template-columns:72px 1fr}
+  .article-stat b{font-size:26px}
 }
 </style>
 
 <div class="article-page">
-  <div class="article-shell article-back">
-    <a href="/tips-insights.html">← Quay lại Insights</a>
+  <div class="article-wide article-back">
+    <a href="/tips-insights.html">← Insights</a>
   </div>
 
-  <header class="article-shell article-head">
-    <div class="article-kicker">Insight · Employer Branding</div>
+  <header class="article-wide article-header">
+    <div class="article-category">Employer Branding</div>
     <h1>Gen Z tìm hiểu doanh nghiệp từ rất lâu trước khi tìm việc</h1>
     <p class="article-dek">Với Gen Z, hành trình ứng tuyển không bắt đầu ở một tin tuyển dụng. Văn hóa, môi trường làm việc và trải nghiệm của nhân viên có thể đã định hình cách họ nhìn về doanh nghiệp từ trước đó.</p>
-    <div class="article-meta"><span>Upzi</span><span>·</span><span>10/08/2026</span></div>
+    <div class="article-meta"><span>Upzi</span><span>·</span><span>10/08/2026</span><span>·</span><span>5 phút đọc</span></div>
   </header>
 
-  <div class="article-hero">
-    <p>Hành trình ứng tuyển có thể bắt đầu <strong>trước cả hành trình tìm việc.</strong></p>
-  </div>
-
-  <article class="article-body article-content">
-    <p>Khi Gen Z bắt đầu cân nhắc một công việc, họ không chỉ nhìn vào vị trí đang tuyển hay mức lương. Những gì họ đã biết về doanh nghiệp — cách doanh nghiệp vận hành, văn hóa, môi trường và trải nghiệm của nhân viên — cũng góp phần hình thành quyết định có ứng tuyển hay không.</p>
-
-    <p>Điều đó khiến Employer Brand không chỉ là một hoạt động truyền thông đi kèm tuyển dụng. Nó trở thành một phần của trải nghiệm ứng viên từ rất sớm, kể cả ở thời điểm doanh nghiệp chưa có một tin tuyển dụng cụ thể.</p>
-
-    <h2>Ứng viên có thể đã biết về doanh nghiệp trước khi nhìn thấy JD</h2>
-    <p>Người trẻ có nhiều điểm chạm để quan sát doanh nghiệp: nội dung trên mạng xã hội, câu chuyện của nhân viên, hoạt động tại trường, cộng đồng nghề nghiệp hay đơn giản là những gì họ nghe được từ bạn bè và người quen.</p>
-
-    <p>Vì vậy, đến lúc một JD xuất hiện, ứng viên không nhất thiết bắt đầu đánh giá doanh nghiệp từ con số 0. Họ có thể đã có một hình dung ban đầu — tích cực, trung tính hoặc tiêu cực — trước khi đọc mô tả công việc.</p>
-
-    <div class="article-pullquote">
-      <p>Những gì doanh nghiệp thể hiện ra bên ngoài có thể tác động đến nguồn ứng viên ngay cả khi doanh nghiệp chưa đăng tin tuyển dụng.</p>
-    </div>
-
-    <h2>Gen Z quan tâm đến trải nghiệm phía sau công việc</h2>
-    <p>Trong bài viết của VnExpress được Upzi tham khảo, các yếu tố liên quan đến trải nghiệm làm việc xuất hiện nổi bật trong kỳ vọng của Gen Z. Không chỉ là “có việc”, người trẻ còn quan tâm nơi đó có giúp họ phát triển hay không và môi trường có phù hợp với mình hay không.</p>
-
-    <div class="article-data">
-      <h3>Một số dữ liệu được đề cập trong nguồn tham khảo</h3>
-      <div class="article-data-grid">
-        <div class="article-data-item"><strong>60%</strong><span>ưu tiên cơ hội học hỏi và phát triển</span></div>
-        <div class="article-data-item"><strong>50%</strong><span>đề cao môi trường làm việc thân thiện</span></div>
-        <div class="article-data-item"><strong>62%</strong><span>quan tâm văn hóa cởi mở và tôn trọng khác biệt</span></div>
-        <div class="article-data-item"><strong>46%</strong><span>quan tâm lộ trình phát triển nghề nghiệp rõ ràng</span></div>
+  <main class="article-wide article-layout">
+    <aside class="article-aside">
+      <div class="article-aside-inner">
+        <div><strong>Upzi Insights</strong>Góc nhìn về Gen Z và tuyển dụng Early Career.</div>
+        <div class="rule"></div>
+        <a href="/tips-insights.html">Xem thêm bài viết →</a>
       </div>
+    </aside>
+
+    <article class="article-content">
+      <p class="lead">Khi Gen Z bắt đầu cân nhắc một công việc, họ không chỉ nhìn vào vị trí đang tuyển hay mức lương. <strong>Những gì họ đã biết về doanh nghiệp từ trước đó cũng góp phần quyết định liệu họ có muốn ứng tuyển hay không.</strong></p>
+
+      <p>Người trẻ có nhiều điểm chạm để quan sát doanh nghiệp: nội dung trên mạng xã hội, câu chuyện của nhân viên, hoạt động tại trường, cộng đồng nghề nghiệp hay đơn giản là những gì họ nghe được từ bạn bè và người quen.</p>
+
+      <p>Điều đó khiến Employer Brand không chỉ là một hoạt động truyền thông đi kèm tuyển dụng. Nó trở thành một phần của trải nghiệm ứng viên từ rất sớm, kể cả ở thời điểm doanh nghiệp chưa có một tin tuyển dụng cụ thể.</p>
+
+      <h2>Ứng viên có thể đã biết về doanh nghiệp trước khi nhìn thấy JD</h2>
+
+      <p>Đến lúc một JD xuất hiện, ứng viên không nhất thiết bắt đầu đánh giá doanh nghiệp từ con số 0. Họ có thể đã có một hình dung ban đầu — tích cực, trung tính hoặc tiêu cực — trước khi đọc mô tả công việc.</p>
+
+      <p><strong>JD vì vậy là một điểm chạm quan trọng, nhưng không phải điểm chạm đầu tiên.</strong> Những gì doanh nghiệp thể hiện ra bên ngoài trước mùa tuyển cũng có thể tác động đến việc ứng viên có chú ý đến cơ hội đó hay không.</p>
+
+      <div class="article-quote">Hành trình ứng tuyển có thể bắt đầu trước cả hành trình tìm việc.</div>
+
+      <h2>Gen Z quan tâm đến trải nghiệm phía sau công việc</h2>
+
+      <p>Trong bài viết của VnExpress được Upzi tham khảo, các yếu tố liên quan đến trải nghiệm làm việc xuất hiện nổi bật trong kỳ vọng của Gen Z. Không chỉ là “có việc”, người trẻ còn quan tâm nơi đó có giúp họ phát triển hay không và môi trường có phù hợp với mình hay không.</p>
+
+      <div class="article-stats">
+        <div class="article-stat"><b>60%</b><span>ưu tiên cơ hội học hỏi và phát triển.</span></div>
+        <div class="article-stat"><b>50%</b><span>đề cao môi trường làm việc thân thiện.</span></div>
+        <div class="article-stat"><b>62%</b><span>quan tâm văn hóa cởi mở và tôn trọng khác biệt.</span></div>
+        <div class="article-stat"><b>46%</b><span>quan tâm lộ trình phát triển nghề nghiệp rõ ràng.</span></div>
+      </div>
+
+      <h3>Cơ hội học hỏi và phát triển</h3>
+      <p>Đối với nhóm nhân sự ở giai đoạn đầu sự nghiệp, câu hỏi “mình sẽ học được gì ở đây?” có thể quan trọng không kém tên vị trí. Cơ hội phát triển vì vậy là một phần của giá trị tuyển dụng mà doanh nghiệp cần truyền tải rõ ràng.</p>
+
+      <h3>Văn hóa và môi trường làm việc</h3>
+      <p>Cách doanh nghiệp vận hành, giao tiếp và đối xử với nhân viên ảnh hưởng trực tiếp đến hình ảnh mà ứng viên hình thành. Một thông điệp Employer Branding sẽ khó tạo niềm tin nếu không khớp với những gì ứng viên quan sát được từ trải nghiệm thực tế.</p>
+
+      <h3>Trải nghiệm của nhân viên hiện tại</h3>
+      <p>Nhân viên cũng là một nguồn thông tin về doanh nghiệp. Những câu chuyện và trải nghiệm của họ có thể trở thành bằng chứng giúp ứng viên hiểu môi trường bên trong trước khi quyết định ứng tuyển.</p>
+
+      <h2>Khoảng cách nằm ở điều ứng viên muốn biết và điều doanh nghiệp đang nói</h2>
+
+      <p>Gen Z có thể chủ động tìm hiểu rất nhiều, nhưng họ chỉ có thể đánh giá dựa trên những thông tin họ nhìn thấy. Nếu doanh nghiệp nói nhiều về vị trí tuyển dụng nhưng ít cho thấy môi trường, cơ hội phát triển hay trải nghiệm làm việc, một phần quan trọng trong quyết định của ứng viên vẫn còn bỏ ngỏ.</p>
+
+      <p>Nguồn tham khảo cũng chỉ ra một khoảng cách đáng chú ý: đào tạo kỹ năng mềm và kỹ năng số được người trẻ coi trọng, trong khi chỉ 9% doanh nghiệp ưu tiên triển khai hoạt động này; 7% doanh nghiệp chưa có chiến lược cụ thể.</p>
+
+      <p><strong>Khoảng cách này không chỉ là bài toán truyền thông. Nó là khoảng cách giữa điều ứng viên cần để ra quyết định và điều họ thực sự có thể nhìn thấy về doanh nghiệp.</strong></p>
+
+      <h2>Điều này thay đổi cách doanh nghiệp tiếp cận Gen Z như thế nào?</h2>
+
+      <p>Điểm quan trọng không phải là xuất hiện ở mọi nơi, mà là tạo đủ điểm chạm để ứng viên hiểu doanh nghiệp trước khi nhu cầu tuyển dụng phát sinh.</p>
+
+      <ul>
+        <li><strong>JD không phải điểm chạm đầu tiên.</strong> Nội dung về doanh nghiệp trước mùa tuyển cũng có vai trò trong việc hình thành nhận thức.</li>
+        <li><strong>Thông điệp cần nhất quán với trải nghiệm.</strong> Những gì doanh nghiệp nói về văn hóa và môi trường cần khớp với những gì nhân viên thực sự trải nghiệm.</li>
+        <li><strong>Hiểu điều ứng viên trẻ đang tìm kiếm.</strong> Khi biết họ quan tâm đến điều gì, doanh nghiệp có thể chọn đúng nội dung và điểm chạm để truyền tải.</li>
+      </ul>
+
+      <div class="article-quote">Ứng viên không chỉ đánh giá một công việc. Họ đang đánh giá doanh nghiệp trước khi quyết định liệu có muốn làm việc ở đó hay không.</div>
+
+      <div class="article-source">
+        Nguồn tham khảo: <a href="https://vnexpress.net/gen-z-dan-khien-nha-tuyen-dung-thay-doi-5013490.html" target="_blank" rel="noopener">VnExpress — “Gen Z dần khiến nhà tuyển dụng thay đổi”</a>.
+      </div>
+    </article>
+  </main>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>Tiếp cận Gen Z sớm hơn trong hành trình nghề nghiệp</h2>
+      <p>Upzi giúp doanh nghiệp xây dựng hiện diện với ứng viên trẻ từ khi họ còn ở trường và trong giai đoạn đầu sự nghiệp.</p>
+      <a href="/#leadform">Tìm hiểu Upzi →</a>
     </div>
-
-    <h3>Cơ hội học hỏi và phát triển</h3>
-    <p>Đối với nhóm nhân sự ở giai đoạn đầu sự nghiệp, câu hỏi “mình sẽ học được gì ở đây?” có thể quan trọng không kém tên vị trí. Cơ hội phát triển vì vậy là một phần của giá trị tuyển dụng mà doanh nghiệp cần truyền tải rõ ràng.</p>
-
-    <h3>Văn hóa và môi trường làm việc</h3>
-    <p>Cách doanh nghiệp vận hành, giao tiếp và đối xử với nhân viên ảnh hưởng trực tiếp đến hình ảnh mà ứng viên hình thành. Một thông điệp Employer Branding sẽ khó tạo niềm tin nếu không khớp với những gì ứng viên quan sát được từ trải nghiệm thực tế.</p>
-
-    <h3>Trải nghiệm của nhân viên hiện tại</h3>
-    <p>Nhân viên cũng là một nguồn thông tin về doanh nghiệp. Những câu chuyện và trải nghiệm của họ có thể trở thành bằng chứng giúp ứng viên hiểu môi trường bên trong trước khi quyết định ứng tuyển.</p>
-
-    <h2>Khoảng cách nằm ở điều ứng viên muốn biết và điều doanh nghiệp đang nói</h2>
-    <p>Gen Z có thể chủ động tìm hiểu rất nhiều, nhưng họ chỉ có thể đánh giá dựa trên những thông tin họ nhìn thấy. Nếu doanh nghiệp nói nhiều về vị trí tuyển dụng nhưng ít cho thấy môi trường, cơ hội phát triển hay trải nghiệm làm việc, một phần quan trọng trong quyết định của ứng viên vẫn còn bỏ ngỏ.</p>
-
-    <p>Nguồn tham khảo cũng chỉ ra một khoảng cách đáng chú ý: đào tạo kỹ năng mềm và kỹ năng số được người trẻ coi trọng, trong khi chỉ 9% doanh nghiệp ưu tiên triển khai hoạt động này; 7% doanh nghiệp chưa có chiến lược cụ thể.</p>
-
-    <h2>Điều này thay đổi cách doanh nghiệp tiếp cận Gen Z như thế nào?</h2>
-    <p>Điểm quan trọng không phải là xuất hiện ở mọi nơi, mà là tạo đủ điểm chạm để ứng viên hiểu doanh nghiệp trước khi nhu cầu tuyển dụng phát sinh.</p>
-
-    <ul>
-      <li><strong>JD không phải điểm chạm đầu tiên.</strong> Nội dung về doanh nghiệp trước mùa tuyển cũng có vai trò trong việc hình thành nhận thức.</li>
-      <li><strong>Thông điệp cần nhất quán với trải nghiệm.</strong> Những gì doanh nghiệp nói về văn hóa và môi trường cần khớp với những gì nhân viên thực sự trải nghiệm.</li>
-      <li><strong>Hiểu điều ứng viên trẻ đang tìm kiếm.</strong> Khi biết họ quan tâm đến điều gì, doanh nghiệp có thể chọn đúng nội dung và điểm chạm để truyền tải.</li>
-    </ul>
-
-    <div class="article-pullquote">
-      <p>Ứng viên không chỉ đánh giá một công việc. Họ đang đánh giá doanh nghiệp trước khi quyết định liệu có muốn làm việc ở đó hay không.</p>
-    </div>
-
-    <div class="article-source">
-      Nguồn tham khảo: <a href="https://vnexpress.net/gen-z-dan-khien-nha-tuyen-dung-thay-doi-5013490.html" target="_blank" rel="noopener">VnExpress — “Gen Z dần khiến nhà tuyển dụng thay đổi”</a>.
-    </div>
-  </article>
-
-  <aside class="article-cta">
-    <h2>Muốn tiếp cận ứng viên trẻ sớm hơn?</h2>
-    <p>Tìm hiểu cách Upzi giúp doanh nghiệp xây dựng hiện diện với Gen Z từ khi các bạn còn ở trường và trong giai đoạn đầu sự nghiệp.</p>
-    <a href="/#leadform">Tìm hiểu Upzi →</a>
-  </aside>
+  </section>
 </div>
