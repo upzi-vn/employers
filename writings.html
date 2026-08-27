@@ -96,7 +96,7 @@ footer{background:var(--off);padding:48px 0 28px;border-top:1px solid #eae5f3;co
             <div class="article-img">
               <div class="story-visual">
                 <div class="story-kicker">{{ post.industry | upcase }}{% if post.target %} · {{ post.target | upcase }}{% endif %}</div>
-                <div class="story-number">{{ post.headline_stat }} <small>{{ post.headline_label }}</small></div>
+                {% if post.headline_stat %}<div class="story-number">{{ post.headline_stat }} <small>{{ post.headline_label }}</small></div>{% endif %}
               </div>
             </div>
             <div class="story-body">

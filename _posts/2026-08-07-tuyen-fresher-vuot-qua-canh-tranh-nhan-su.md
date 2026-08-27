@@ -16,15 +16,11 @@ market: "Việt Nam"
 period: "Tháng đầu tiên"
 
 card_class: "construction"
-headline_stat: "19"
-headline_label: "hồ sơ"
-stats:
-  - value: "5"
-    label: "Vị trí Fresher"
-  - value: "790"
-    label: "Lượt xem"
-  - value: "19"
-    label: "Hồ sơ ứng tuyển"
+
+
+cta_heading: "Doanh nghiệp bạn cũng đang cạnh tranh bằng lương?"
+cta_lead: >
+  Thử một hướng khác: mở cơ hội cho Fresher và xây nguồn ứng viên từ sớm.
 
 date: 2026-08-10
 ---
@@ -132,36 +128,6 @@ date: 2026-08-10
 
       </div>
 
-
-      <div class="stat-box">
-
-        <div class="stat">
-
-          <div class="num">
-            5
-          </div>
-
-          <p>
-            Vị trí tuyển dụng được triển khai
-          </p>
-
-        </div>
-
-
-        <div class="stat">
-
-          <div class="num">
-            01
-          </div>
-
-          <p>
-            Tháng đầu tiên triển khai
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
 
   </div>
@@ -257,11 +223,11 @@ date: 2026-08-10
         </div>
 
         <h3>
-          Thử nghiệm với 5 vị trí
+          Thử nghiệm trước khi nhân rộng
         </h3>
 
         <p>
-          Triển khai trong tháng đầu tiên để kiểm chứng
+          Triển khai một nhóm vị trí trong tháng đầu tiên để kiểm chứng
           khả năng tiếp cận và thu hút ứng viên.
         </p>
 
@@ -282,72 +248,90 @@ date: 2026-08-10
     <div class="results-title">
 
       <div class="eyebrow-light">
-        Tóm tắt kết quả
+        Tín hiệu tháng đầu
       </div>
 
       <h2>
-        Các con số quan trọng nổi bật
+        Nhìn thấy gì từ phản hồi của nhân sự trẻ?
       </h2>
 
       <p>
-        Dưới đây là các con số quan trọng nổi bật
-        từ quá trình triển khai tuyển dụng.
+        Giai đoạn đầu giúp doanh nghiệp hiểu rõ hơn nhóm công việc,
+        thông điệp và rào cản đang thực sự ảnh hưởng đến quyết định ứng tuyển.
       </p>
 
     </div>
 
 
-    <div class="results">
+    <div class="solution-grid">
 
-      <div class="result featured">
+      <div class="solution">
 
-        <div class="big">
-          790
+        <div class="solution-number">
+          Sức hút vị trí
         </div>
 
         <h3>
-          Lượt xem
+          Xác định vị trí ưu tiên
         </h3>
 
         <p>
-          Tổng lượt xem các tin tuyển dụng
-          trong tháng đầu tiên.
+          Nhận biết nhóm công việc tạo được sự quan tâm tự nhiên
+          cao hơn từ Fresher.
         </p>
 
       </div>
 
 
-      <div class="result">
+      <div class="solution">
 
-        <div class="big">
-          19
+        <div class="solution-number">
+          Sức mạnh thông điệp
         </div>
 
         <h3>
-          Ứng viên
+          Nội dung tạo chuyển đổi
         </h3>
 
         <p>
-          Hồ sơ ứng tuyển được ghi nhận
-          cho 5 vị trí tuyển dụng.
+          Đào tạo và mentor là hai điểm chạm có ảnh hưởng rõ nhất
+          tới quyết định nộp hồ sơ.
         </p>
 
       </div>
 
 
-      <div class="result">
+      <div class="solution">
 
-        <div class="big">
-          5
+        <div class="solution-number">
+          Tháo gỡ rào cản
         </div>
 
         <h3>
-          Vị trí
+          Giải mã ngành nghề
         </h3>
 
         <p>
-          Các vị trí Fresher được triển khai
-          trong giai đoạn thử nghiệm đầu tiên.
+          Rào cản nằm ở cách doanh nghiệp truyền tải cơ hội,
+          không chỉ ở đặc thù ngành xây dựng.
+        </p>
+
+      </div>
+
+
+      <div class="solution">
+
+        <div class="solution-number">
+          Chuẩn hoá mô hình
+        </div>
+
+        <h3>
+          Nhân rộng toàn hệ thống
+        </h3>
+
+        <p>
+          Đóng gói công thức từ vị trí hiệu quả để áp dụng
+          cho các nhóm tuyển dụng khác.
         </p>
 
       </div>
@@ -451,8 +435,8 @@ date: 2026-08-10
         </h3>
 
         <p>
-          Trong tháng đầu tiên, 5 vị trí tuyển dụng đạt
-          790 lượt xem và ghi nhận 19 hồ sơ ứng tuyển.
+          Tháng đầu tiên cho thấy nhóm vị trí nào thu hút Fresher tốt hơn
+          và thông điệp nào tạo được chuyển đổi.
         </p>
 
       </div>
