@@ -4,6 +4,7 @@ content_type: success-story
 permalink: /resources/success-stories/mo-rong-nguon-ung-vien-chuoi-ban-le/
 title: "Khi Facebook không còn đủ, doanh nghiệp mở rộng nguồn ứng viên bằng một cách tiếp cận khác"
 category: "Success Story"
+image: /images/resources/success-stories/chuoi-ban-le/cover.svg
 description: >
   Thay vì chỉ dùng một tin tuyển dụng cho toàn thành phố, doanh nghiệp cùng Upzi
   phân bổ tin theo khu vực và điều chỉnh JD theo góc nhìn ứng viên.
