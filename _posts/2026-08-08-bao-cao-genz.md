@@ -1,20 +1,27 @@
 ---
-layout: post
-title: Báo cáo xu hướng hành vi ứng viên 2026
+layout: report
+content_type: report
+permalink: /resources/reports/bao-cao-xu-huong-hanh-vi-ung-vien-2026/
+title: "Báo cáo xu hướng hành vi ứng viên 2026"
 category: "Report"
+description: >
+  Một số tín hiệu nổi bật về cách ứng viên đang tìm việc, tiếp cận nội dung
+  và tương tác với cơ hội nghề nghiệp trong 2026.
 ---
 
-Dưới đây là các con số quan trọng nổi bật:
+<p>Báo cáo này tổng hợp một số chỉ dấu nổi bật về hành vi ứng viên trong 2026, giúp Doanh nghiệp nhìn nhanh những thay đổi đang tác động đến cách tiếp cận và tuyển dụng talent trẻ.</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0;">
-  <div style="background: #f7f5fb; padding: 20px; border-radius: 12px; text-align: center;">
-    <h2 style="color: #9345FF; font-size: 36px; margin: 0;">78%</h2>
-    <p style="font-size: 13px; color: #666; margin-top: 5px;">Ứng viên ứng tuyển qua di động</p>
-  </div>
-  <div style="background: #f7f5fb; padding: 20px; border-radius: 12px; text-align: center;">
-    <h2 style="color: #9345FF; font-size: 36px; margin: 0;">3.5x</h2>
-    <p style="font-size: 13px; color: #666; margin-top: 5px;">Tăng trưởng lượt xem bài đăng video</p>
-  </div>
-</div>
+<h2>Một số con số đáng chú ý</h2>
 
-Nội dung chi tiết của báo cáo...
+<ul>
+  <li><strong>78%</strong> ứng viên ứng tuyển qua thiết bị di động.</li>
+  <li><strong>3,5x</strong> tăng trưởng lượt xem đối với nội dung tuyển dụng dạng video.</li>
+</ul>
+
+<p>Các tín hiệu này cho thấy trải nghiệm mobile và cách doanh nghiệp trình bày cơ hội nghề nghiệp đang ngày càng ảnh hưởng trực tiếp đến khả năng tiếp cận ứng viên.</p>
+
+<h2>Điều này có ý nghĩa gì với nhà tuyển dụng?</h2>
+
+<p>Thông tin tuyển dụng cần dễ đọc, dễ hiểu và thuận tiện để hành động trên mobile. Đồng thời, doanh nghiệp có thể cân nhắc nhiều định dạng nội dung hơn thay vì chỉ phụ thuộc vào một JD dạng text.</p>
+
+<p>Với nhóm Intern, Fresher và nhân sự ở giai đoạn đầu sự nghiệp, việc xuất hiện đúng kênh và giảm rào cản trong hành trình ứng tuyển có thể tạo khác biệt đáng kể.</p>
