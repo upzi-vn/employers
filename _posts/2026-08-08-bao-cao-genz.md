@@ -3,7 +3,7 @@ layout: trend
 content_type: trend
 permalink: /resources/trends/5-xu-huong-tuyen-dung-talent-tre-2026/
 title: "5 xu hướng ứng viên trẻ đang thay đổi cách doanh nghiệp tuyển dụng trong 2026"
-display_title: "5 xu hướng ứng viên trẻ"
+display_title: "5 xu hướng ứng viên trẻ đang thay đổi cách doanh nghiệp tuyển dụng"
 trend_year: "2026"
 trend_series: "Talent Guide 2026"
 category: "Trend"
