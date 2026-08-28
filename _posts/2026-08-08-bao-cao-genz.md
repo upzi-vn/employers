@@ -53,8 +53,8 @@ description: >
   <div class="wrap">
     <div class="mid-cta-card">
       <div>
-        <h2>Doanh nghiệp đang tuyển Intern, Fresher hoặc talent trẻ?</h2>
-        <p>Trao đổi cùng Upzi để xem cách tiếp cận ứng viên dưới 2 năm kinh nghiệm phù hợp hơn với nhu cầu tuyển dụng hiện tại.</p>
+        <h2>Đang tuyển talent trẻ?</h2>
+        <p>Upzi hỗ trợ Doanh nghiệp tiếp cận Intern, Fresher và nhân sự dưới 2 năm kinh nghiệm.</p>
       </div>
       <a href="{{ '/' | relative_url }}#leadform">Trao đổi với Upzi →</a>
     </div>
