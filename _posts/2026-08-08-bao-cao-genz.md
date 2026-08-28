@@ -49,6 +49,18 @@ description: >
   </div>
 </section>
 
+<section class="mid-cta">
+  <div class="wrap">
+    <div class="mid-cta-card">
+      <div>
+        <h2>Doanh nghiệp đang tuyển Intern, Fresher hoặc talent trẻ?</h2>
+        <p>Trao đổi cùng Upzi để xem cách tiếp cận ứng viên dưới 2 năm kinh nghiệm phù hợp hơn với nhu cầu tuyển dụng hiện tại.</p>
+      </div>
+      <a href="{{ '/' | relative_url }}#leadform">Trao đổi với Upzi →</a>
+    </div>
+  </div>
+</section>
+
 <section class="data-band">
   <div class="wrap report-grid">
     <div class="section-label">Nhu cầu kỹ năng</div>
