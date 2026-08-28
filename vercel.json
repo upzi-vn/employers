@@ -13,7 +13,8 @@
     { "source": "/insights/xu-huong-tuyen-dung-2026", "destination": "/resources/insights/xu-huong-tuyen-dung-2026", "permanent": true },
     { "source": "/insights/tuyen-fresher-vuot-qua-canh-tranh-nhan-su", "destination": "/resources/success-stories/tuyen-fresher-vuot-qua-canh-tranh-nhan-su", "permanent": true },
     { "source": "/insights/mo-rong-nguon-ung-vien-chuoi-ban-le", "destination": "/resources/success-stories/mo-rong-nguon-ung-vien-chuoi-ban-le", "permanent": true },
-    { "source": "/insights/bao-cao-genz", "destination": "/resources/trends/khoang-cach-giua-dieu-gen-z-muon-va-doanh-nghiep-dang-lam", "permanent": true },
-    { "source": "/resources/reports/bao-cao-xu-huong-hanh-vi-ung-vien-2026", "destination": "/resources/trends/khoang-cach-giua-dieu-gen-z-muon-va-doanh-nghiep-dang-lam", "permanent": true }
+    { "source": "/insights/bao-cao-genz", "destination": "/resources/trends/5-xu-huong-tuyen-dung-talent-tre-2026", "permanent": true },
+    { "source": "/resources/reports/bao-cao-xu-huong-hanh-vi-ung-vien-2026", "destination": "/resources/trends/5-xu-huong-tuyen-dung-talent-tre-2026", "permanent": true },
+    { "source": "/resources/trends/khoang-cach-giua-dieu-gen-z-muon-va-doanh-nghiep-dang-lam", "destination": "/resources/trends/5-xu-huong-tuyen-dung-talent-tre-2026", "permanent": true }
   ]
 }
