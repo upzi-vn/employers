@@ -1,0 +1,32 @@
+{%- comment -%}
+  Mo ta + the chia se mang xa hoi (OG) + canonical — dung chung cho moi bai.
+  Goi tu <head>:  {% include head-meta.html %}
+  Tu lay tu front matter: title, description, image, permalink.
+  Anh .webp / .svg duoc doi sang .jpg cung thu muc, vi Facebook,
+  LinkedIn, Zalo khong doc duoc hai dinh dang do.
+  Muon dat rieng anh chia se thi them:  og_image: /images/....jpg
+{%- endcomment -%}
+{%- assign meta_desc = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign meta_img = page.og_image | default: page.image | default: '/images/og-default.jpg' -%}
+{%- assign meta_img = meta_img | replace: '.webp', '.jpg' | replace: '.svg', '.jpg' -%}
+<meta name="description" content="{{ meta_desc | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Upzi">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ meta_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ meta_img | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ meta_desc | escape }}">
+<meta name="twitter:image" content="{{ meta_img | absolute_url }}">
+{%- if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif %}
+{%- if page.category %}
+<meta property="article:section" content="{{ page.category | escape }}">
+{%- endif %}

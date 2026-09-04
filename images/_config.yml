@@ -1,0 +1,7 @@
+title: Bài viết của Upzi
+description: Chia sẻ bài viết & kiến thức
+
+# Bắt buộc phải có thì absolute_url mới sinh ra địa chỉ đầy đủ.
+# Thiếu dòng này thì og:url và canonical ra đường dẫn cụt,
+# Facebook / LinkedIn / Zalo đọc không hiểu.
+url: https://upzi-employers.vercel.app
