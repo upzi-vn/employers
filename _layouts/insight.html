@@ -5,7 +5,7 @@
   {% include head-tracking.html %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Upzi</title>
-  {% if page.description %}<meta name="description" content="{{ page.description | strip_newlines | escape }}">{% endif %}
+  {% include head-meta.html %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
