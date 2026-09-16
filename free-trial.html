@@ -100,6 +100,9 @@
     .sec-off,.sec-tint{background:var(--lav)}
     .head{max-width:700px;margin-bottom:36px}
     .head-c{text-align:center;margin-left:auto;margin-right:auto}
+    .head-w{max-width:none}
+    .head-w h2{max-width:900px}
+    .head-w p{max-width:820px}
     .eyebrow{display:inline-block;color:var(--purple);background:var(--lav-2);font-size:11.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;padding:6px 13px;border-radius:100px;margin-bottom:14px}
     .head h2,.obj-h{font-size:clamp(26px,3.5vw,38px);font-weight:800;line-height:1.16}
     .head p{color:var(--sub);font-size:16px;margin-top:12px}
@@ -155,12 +158,14 @@
 
     /* steps */
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .steps-2{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto}
     .step{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 12px 30px -28px rgba(85,28,175,.45)}
     .step-arw{position:absolute;right:-14px;top:14px;width:70px;opacity:.5;pointer-events:none}
     .snode{width:42px;height:42px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;box-shadow:0 8px 18px -8px rgba(147,69,255,.55);margin-bottom:16px}
     .step h3{font-size:17.5px;font-weight:800;margin-bottom:6px}
-    .step p{font-size:14.5px;color:var(--sub)}
-    .stime{display:inline-flex;margin-top:15px;background:var(--lav-2);color:var(--purple-dark);border-radius:100px;padding:5px 11px;font-size:11.5px;font-weight:700}
+    .step p{font-size:14.5px;color:var(--sub);line-height:1.55}
+    .step-more{margin-top:22px;text-align:center;font-size:15px;color:var(--sub)}.step-more a{color:var(--purple-dark);font-weight:700}.step p a{color:var(--purple-dark);font-weight:700}
+        .stime{display:inline-flex;margin-top:15px;background:var(--lav-2);color:var(--purple-dark);border-radius:100px;padding:5px 11px;font-size:11.5px;font-weight:700}
 
     /* gen z behaviour */
     .sec-dark{background:#fff;position:relative}
@@ -179,8 +184,8 @@
     .act-types{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
     .act-type{font-size:13px;font-weight:700;color:var(--purple-dark);background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:100px}
     .act-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .act{position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);aspect-ratio:3/2}
-    .act img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .act{position:relative;border-radius:14px;overflow:hidden;background:var(--lav-2);border:1px solid var(--line);aspect-ratio:3/2}
+    .act img{width:100%;height:100%;object-fit:cover;color:transparent;transition:transform .35s ease}
     .act:hover img{transform:scale(1.03)}
     .act figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(25,21,39,.82));color:#fff;font-size:11.5px;line-height:1.35;font-weight:600}
 
@@ -277,6 +282,18 @@
       .final-in{border-radius:22px}
     }
     @media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+    /* ===== BỚT HỘP — chỉ khối "ba bước" còn là thẻ ===== */
+    .st-grid,.beh-grid,.why-list{gap:0 34px}
+    .st,.beh{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:24px 0 4px;box-shadow:none;transition:none}
+    .st:hover,.beh:hover{transform:none;box-shadow:none}
+    .beh-ico,.why-ico{background:transparent;border:0;width:auto;height:auto;border-radius:0;margin-bottom:10px;justify-content:flex-start}
+    .why{padding:24px 0 4px;border-top:1px solid var(--line);display:block}
+    .fit-list{gap:0 34px}
+    .fit-item{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:16px 0}
+    .tcard{background:transparent;border:0;border-radius:0;box-shadow:none;padding:4px 0 0 26px;border-left:4px solid var(--purple);max-width:760px;text-align:left}
+    .tquote{font-size:22px;line-height:1.45}
+    @media(max-width:760px){.st-grid,.beh-grid,.why-list,.fit-list{gap:0}}
   </style>
 </head>
 <body>
@@ -305,7 +322,19 @@
     </div>
   </section>
 
-  <!-- 2. QUY TRÌNH HOÀN CHỈNH -->
+  <!-- 2. CÁCH HOẠT ĐỘNG -->
+  <section class="sec sec-off" id="cach-hoat-dong">
+    <div class="wrap">
+      <div class="head head-c reveal"><div class="eyebrow">Cách hoạt động</div><h2>Đăng tin đầu tiên trong hai bước</h2><p>Anh/Chị đang dùng VietnamWorks thì đăng nhập rồi đăng tin luôn.</p></div>
+      <div class="steps steps-2 stagger">
+        <div class="step"><img class="step-arw" src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">1</div><h3>Đăng nhập</h3><p>Vào Navigos Talent và đăng nhập bằng tài khoản VietnamWorks sẵn có.</p></div>
+        <div class="step"><img class="step-arw" src="/images/arrow-gold.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">2</div><h3>Đăng tin tuyển dụng</h3><p>Nhập vị trí và chọn cấp bậc Intern/Fresher. Chưa có JD thì AI hỗ trợ soạn để Anh/Chị chỉnh lại.</p></div>
+      </div>
+      <p class="step-more reveal">Chưa có tài khoản VietnamWorks? Đăng ký mới rồi hoàn tất hồ sơ công ty một lần. <a href="/activate-account-and-post-job">Xem hướng dẫn có ảnh →</a></p>
+    </div>
+  </section>
+
+  <!-- 3. QUY TRÌNH HOÀN CHỈNH -->
   <section class="sec sec-white">
     <div class="wrap">
       <div class="head head-c reveal">
@@ -355,7 +384,7 @@
     </div>
   </section>
 
-  <!-- 3. NGUỒN ỨNG VIÊN -->
+  <!-- 4. NGUỒN ỨNG VIÊN -->
   <section class="sec sec-tint">
     <div class="wrap">
       <div class="head head-c reveal">
@@ -370,7 +399,7 @@
     </div>
   </section>
 
-  <!-- 4. OBJECTION -->
+  <!-- 5. OBJECTION -->
   <section class="sec sec-white">
     <div class="wrap obj-grid">
       <div class="obj-head reveal">
@@ -387,19 +416,16 @@
     </div>
   </section>
 
-  <!-- 5. CÁCH HOẠT ĐỘNG -->
-  <section class="sec sec-off" id="cach-hoat-dong">
+  <!-- 6. KHÁCH HÀNG NÓI GÌ -->
+  <section class="sec sec-off">
     <div class="wrap">
-      <div class="head head-c reveal"><div class="eyebrow">Cách hoạt động</div><h2>Ba bước để bắt đầu</h2></div>
-      <div class="steps stagger">
-        <div class="step"><img class="step-arw" src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">1</div><h3>Tạo tài khoản</h3><p>Đăng ký bằng email công việc và thiết lập thông tin doanh nghiệp.</p></div>
-        <div class="step"><img class="step-arw" src="/images/arrow-yellow.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">2</div><h3>Đăng vị trí đang tuyển</h3><p>Nhập thông tin vị trí. Nếu chưa có JD hoàn chỉnh, AI có thể hỗ trợ tạo mô tả công việc để Anh/Chị chỉnh sửa trước khi đăng.</p></div>
-        <div class="step"><img class="step-arw" src="/images/arrow-gold.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">3</div><h3>Nhận và sàng lọc ứng viên</h3><p>Hồ sơ ứng tuyển được tập trung trong tài khoản và AI hỗ trợ đánh giá mức độ phù hợp để Anh/Chị ưu tiên những ứng viên nên xem trước.</p></div>
-      </div>
+      <div class="head head-c reveal"><div class="eyebrow">Góc nhìn từ doanh nghiệp</div><h2>Trích từ khảo sát khách hàng Upzi</h2></div>
+      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div></div>
+      <div class="tctrl"><button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button><div class="tdots" id="tdots"></div><button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button></div>
     </div>
   </section>
 
-  <!-- 6. HÀNH VI GEN Z -->
+  <!-- 7. HÀNH VI GEN Z -->
   <section class="sec sec-dark">
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Bối cảnh tuyển dụng</div><h2>Gen Z không còn tiếp cận nghề nghiệp như các thế hệ trước</h2><p>Ba thay đổi trong hành vi khiến việc chỉ đăng tin và chờ ứng viên ngày càng khó tiếp cận nhóm nhân sự trẻ.</p></div>
@@ -411,20 +437,20 @@
     </div>
   </section>
 
-  <!-- 7. UPZI CÓ MẶT Ở ĐÂU -->
+  <!-- 8. UPZI CÓ MẶT Ở ĐÂU -->
   <section class="sec sec-off">
     <div class="wrap">
-      <div class="head reveal"><div class="eyebrow">Upzi có mặt ở đâu</div><h2>Tiếp cận Gen Z từ khi các bạn còn ở trong trường</h2><p>Upzi không chỉ xuất hiện khi ứng viên bắt đầu tìm việc. Thông qua mạng lưới trường Đại học / Cao đẳng và các hoạt động nghề nghiệp dành cho sinh viên, Upzi tiếp cận nhóm ứng viên trẻ ngay trong giai đoạn các bạn tìm hiểu ngành nghề, doanh nghiệp và cơ hội đầu tiên.</p></div>
+      <div class="head head-w reveal"><div class="eyebrow">Upzi có mặt ở đâu</div><h2>Tiếp cận Gen Z từ khi các bạn còn ở trong trường</h2><p>Upzi không chỉ xuất hiện khi ứng viên bắt đầu tìm việc. Thông qua mạng lưới trường Đại học / Cao đẳng và các hoạt động nghề nghiệp dành cho sinh viên, Upzi tiếp cận nhóm ứng viên trẻ ngay trong giai đoạn các bạn tìm hiểu ngành nghề, doanh nghiệp và cơ hội đầu tiên.</p></div>
       <div class="act-types reveal"><span class="act-type">Job Fair</span><span class="act-type">Career Day</span><span class="act-type">Talkshow</span><span class="act-type">Office Tour</span><span class="act-type">CLB Sinh viên</span><span class="act-type">Cuộc thi sinh viên</span></div>
       <div class="act-grid stagger">
         <figure class="act"><img src="/images/event-career-pathfinder.jpg" alt="Sự kiện Career Pathfinder của Upzi, tri ân các doanh nghiệp đối tác" loading="lazy"><figcaption>Career Pathfinder - Tri ân đối tác doanh nghiệp</figcaption></figure>
         <figure class="act"><img src="/images/event-ftu.jpg" alt="Linh vật Upzi cùng sinh viên tại Ngày hội việc làm Đại học Ngoại thương TP.HCM" loading="lazy"><figcaption>Ngày hội việc làm - ĐH Ngoại thương TP.HCM</figcaption></figure>
         <figure class="act"><img src="/images/event-hub.jpg" alt="Career Day Fin-tastic Journey tại Đại học Ngân hàng TP.HCM với Upzi là đơn vị đồng hành" loading="lazy"><figcaption>Career Day “Fin-tastic Journey” - ĐH Ngân hàng TP.HCM</figcaption></figure>
         <figure class="act"><img src="/images/event-hcmute.jpg" alt="Đại diện Upzi chia sẻ về tác động của AI tới nghề nghiệp trước sinh viên ĐH Sư phạm Kỹ thuật TP.HCM" loading="lazy"><figcaption>Chia sẻ về AI &amp; nghề nghiệp - ĐH Sư phạm Kỹ thuật TP.HCM</figcaption></figure>
-        <figure class="act"><img src="/images/event-fpt-officetour.png" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group - FPT Polytechnic</figcaption></figure>
+        <figure class="act"><img src="/images/event-fpt-officetour.jpg" alt="Sinh viên FPT Polytechnic tham quan văn phòng Navigos Group cùng Upzi" loading="lazy"><figcaption>Office Tour tại Navigos Group - FPT Polytechnic</figcaption></figure>
         <figure class="act"><img src="/images/event-gapgap.jpg" alt="Talkshow Gấp Gap do Upzi phối hợp cùng Onboardy và Vietcetera thực hiện" loading="lazy"><figcaption>Talkshow “Gấp Gap” - Upzi × Onboardy × Vietcetera</figcaption></figure>
         <figure class="act"><img src="/images/event-htkd.jpg" alt="Đêm chung kết cuộc thi Hành trình Kinh doanh dành cho sinh viên" loading="lazy"><figcaption>Chung kết cuộc thi “Hành trình Kinh doanh”</figcaption></figure>
-        <figure class="act"><img src="/images/event-hcmus.JPG" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp - ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
+        <figure class="act"><img src="/images/event-hcmus.jpg" alt="Lễ khai mạc Ngày hội Sinh viên và Doanh nghiệp tại Đại học Khoa học Tự nhiên, ĐHQG-HCM" loading="lazy"><figcaption>Ngày hội Sinh viên &amp; Doanh nghiệp - ĐH Khoa học Tự nhiên (ĐHQG-HCM)</figcaption></figure>
       </div>
       <div class="why-list stagger">
         <div class="why"><div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="#9345FF" stroke-width="2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/><path d="M16.5 6.2a3.2 3.2 0 0 1 0 6M18 14.6c2 .6 3.3 2.2 3.3 4.4" stroke="#9345FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Tiếp cận đúng tệp Fresher &amp; Gen Z</h3><p>Kết nối với cộng đồng sinh viên và ứng viên entry-level thông qua hệ sinh thái trường học đối tác.</p></div></div>
@@ -434,17 +460,8 @@
     </div>
   </section>
 
-  <!-- 8. KHÁCH HÀNG NÓI GÌ -->
-  <section class="sec sec-white">
-    <div class="wrap">
-      <div class="head head-c reveal"><div class="eyebrow">Góc nhìn từ doanh nghiệp</div><h2>Trích từ khảo sát khách hàng Upzi</h2></div>
-      <div class="tcard reveal" id="tcard"><div class="tquote" id="tq">“Bên mình tuyển liên tục các vị trí fresher và entry-level nên cần một nguồn ứng viên ổn định hơn, thay vì chỉ phụ thuộc vào job board hay job fair theo từng đợt. Mô hình của Upzi khá phù hợp với nhu cầu đó.”</div><div class="tmeta" id="tm">Doanh nghiệp tuyển Fresher thường xuyên</div></div>
-      <div class="tctrl"><button class="tarrow" onclick="moveT(-1)" aria-label="Slide trước">‹</button><div class="tdots" id="tdots"></div><button class="tarrow" onclick="moveT(1)" aria-label="Slide tiếp theo">›</button></div>
-    </div>
-  </section>
-
   <!-- 9. UPZI PHÙ HỢP KHI NÀO -->
-  <section class="sec sec-off">
+  <section class="sec sec-white">
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Upzi phù hợp khi nào</div><h2>Upzi đáng để thử nếu Anh/Chị đang…</h2></div>
       <div class="fit-list stagger">
@@ -458,7 +475,7 @@
   </section>
 
   <!-- 10. FAQ -->
-  <section class="sec sec-white">
+  <section class="sec sec-off">
     <div class="wrap-n">
       <div class="head head-c reveal"><div class="eyebrow">Giải đáp</div><h2>Câu hỏi thường gặp</h2></div>
       <div class="faq reveal">
