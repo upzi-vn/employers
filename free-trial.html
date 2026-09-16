@@ -82,9 +82,8 @@
     /* hero */
     .hero{position:relative;overflow:hidden;background:radial-gradient(760px 420px at 88% 0%,rgba(147,69,255,.10) 0%,transparent 62%),radial-gradient(620px 420px at 0% 100%,rgba(224,231,34,.13) 0%,transparent 60%),linear-gradient(180deg,var(--lav) 0%,#fff 100%);padding:clamp(48px,7vw,82px) 0;border-bottom:1px solid var(--line)}
     .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,56px);align-items:center}
-    .tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--purple-dark);font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:7px 14px;border-radius:100px;box-shadow:0 4px 14px -8px rgba(85,28,175,.35);margin-bottom:18px}
-    .tag:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--yellow-green)}
-    .hero h1{font-size:clamp(35px,5vw,55px);line-height:1.08;font-weight:800;margin-bottom:18px}
+    .tag{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--purple-dark);font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:7px 14px;border-radius:100px;box-shadow:0 4px 14px -8px rgba(85,28,175,.35);margin-bottom:18px}
+        .hero h1{font-size:clamp(35px,5vw,55px);line-height:1.08;font-weight:800;margin-bottom:18px}
     .hero h1 .hl{color:inherit;background:linear-gradient(180deg,transparent 60%,rgba(224,231,34,.78) 60%);padding:0 4px;white-space:nowrap}
     .hero .lead{font-size:clamp(15.5px,1.6vw,18px);color:var(--sub);max-width:500px;margin-bottom:18px}
     .hero-offer{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--purple-dark);font-weight:700;font-size:14px;padding:10px 15px;border-radius:12px;margin-bottom:24px;box-shadow:0 8px 24px -20px rgba(85,28,175,.5)}
@@ -301,7 +300,7 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a href="/"><img src="/images/logo-upzi.png" srcset="/images/logo-upzi.png 1x, /images/logo-upzi@2x.png 2x" alt="Upzi - Empowered by VietnamWorks" class="logo-img"></a>
-      <a class="nav-cta" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản miễn phí</a>
+      <a class="nav-cta" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản</a>
     </div>
   </header>
 
@@ -310,15 +309,16 @@
     <div class="wrap hero-grid">
       <div>
         <div class="tag">Dành cho doanh nghiệp tuyển Intern, Fresher &amp; nhân sự dưới 2 năm kinh nghiệm</div>
-        <h1>Đăng tin tuyển dụng trên Upzi, <span class="hl">1 slot miễn phí.</span></h1>
-        <p class="lead">Tạo tài khoản, đăng vị trí Anh/Chị đang tuyển và xem hồ sơ ứng viên thực tế.</p>
+        <h1>Tuyển Intern &amp; Fresher từ nguồn ứng viên <span class="hl">253.000 bạn trẻ.</span></h1>
+        <p class="lead">Đăng vị trí Anh/Chị đang tuyển và xem hồ sơ ứng viên thực tế ứng tuyển vào tin.</p>
+        <div class="hero-offer">Bắt đầu bằng 1 slot đăng tin miễn phí.</div>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản &amp; đăng tin miễn phí</a>
+          <a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Đăng tin đầu tiên</a>
           <a class="btn-secondary" href="#cach-hoat-dong">Xem cách hoạt động</a>
         </div>
       </div>
       <div class="hero-visual">
-        <img src="/images/homepage_hero_section.png" alt="Giao diện Navigos Talent One: danh sách ứng viên ứng tuyển kèm tỷ lệ phù hợp do AI đánh giá">
+        <img src="/images/product-talentone.png" alt="Giao diện Navigos Talent One: danh sách ứng viên ứng tuyển kèm tỷ lệ phù hợp do AI đánh giá">
       </div>
     </div>
   </section>
@@ -328,7 +328,7 @@
     <div class="wrap">
       <div class="head head-c reveal"><div class="eyebrow">Cách hoạt động</div><h2>Đăng tin đầu tiên trong hai bước</h2><p>Anh/Chị đang dùng VietnamWorks thì đăng nhập rồi đăng tin luôn.</p></div>
       <div class="steps steps-2 stagger">
-        <div class="step"><img class="step-arw" src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">1</div><h3>Đăng nhập</h3><p>Vào Navigos Talent và đăng nhập bằng tài khoản VietnamWorks sẵn có.</p></div>
+        <div class="step"><img class="step-arw" src="/images/arrow-mint.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">1</div><h3>Đăng nhập</h3><p>Vào <a href="https://talent.navigos.vn/auth/login" target="_blank" rel="noopener">Navigos Talent One</a> và đăng nhập bằng tài khoản VietnamWorks sẵn có.</p></div>
         <div class="step"><img class="step-arw" src="/images/arrow-gold.png" alt="" aria-hidden="true" loading="lazy"><div class="snode">2</div><h3>Đăng tin tuyển dụng</h3><p>Nhập vị trí và chọn cấp bậc Intern/Fresher. Chưa có JD thì AI hỗ trợ soạn để Anh/Chị chỉnh lại.</p></div>
       </div>
       <p class="step-more reveal">Chưa có tài khoản VietnamWorks? Đăng ký mới rồi hoàn tất hồ sơ công ty một lần. <a href="/activate-account-and-post-job">Xem hướng dẫn có ảnh →</a></p>
@@ -357,7 +357,7 @@
                   data-img="/images/product-post-job-ai.png"
                   data-alt="Tạo thông tin tuyển dụng với Navigos AI, kèm đề xuất chỉnh sửa vị trí và khoảng lương">
             <h3>Đăng tin</h3>
-            <p>Đăng miễn phí một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm. AI hỗ trợ soạn nội dung tin tuyển và gợi ý chỉnh chức danh, khoảng lương cho phù hợp.</p>
+            <p>Đăng một vị trí Intern, Fresher hoặc nhân sự dưới 2 năm kinh nghiệm. AI hỗ trợ soạn nội dung tin tuyển và gợi ý chỉnh chức danh, khoảng lương cho phù hợp.</p>
           </button>
           <button type="button" class="wf-item" role="tab" aria-selected="false"
                   data-img="/images/activate-account-and-post-job/asset-002-a5c58f8f.png"
@@ -490,7 +490,7 @@
   </section>
 
   <!-- 11. CTA CUỐI -->
-  <section class="final" id="dang-ky"><div class="wrap"><div class="final-in"><h2>Thử Upzi bằng vị trí <span class="hl">Anh/Chị đang tuyển</span></h2><p>Tạo tài khoản, đăng 1 tin miễn phí và xem hồ sơ ứng viên thực tế trước khi quyết định có tiếp tục sử dụng Upzi.</p><a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Tạo tài khoản &amp; đăng tin miễn phí</a></div></div></section>
+  <section class="final" id="dang-ky"><div class="wrap"><div class="final-in"><h2>Thử Upzi bằng vị trí <span class="hl">Anh/Chị đang tuyển</span></h2><p>Tạo tài khoản, đăng 1 tin miễn phí và xem hồ sơ ứng viên thực tế trước khi quyết định có tiếp tục sử dụng Upzi.</p><a class="btn-primary" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Đăng tin đầu tiên</a></div></div></section>
 
   <footer><div class="wrap"><div class="f-top"><div class="f-col"><img src="/images/logo-upzi-vertical.png" srcset="/images/logo-upzi-vertical.png 1x, /images/logo-upzi-vertical@2x.png 2x" alt="Upzi - Empowered by VietnamWorks" class="f-logo-img"><p>Một sản phẩm của Công Ty Cổ Phần Navigos Group Việt Nam.</p><p style="margin-top:8px">Tầng 20, tòa nhà E.Town Central, 11 Đoàn Văn Bơ, Phường Xóm Chiếu, TP.HCM.</p></div><div class="f-col"><h4>Liên hệ</h4><p>Hotline: 028 7305 8500</p><p>Zalo: 070 3377 017</p><p>Email: upzi-support@navigosgroup.com</p></div><div class="f-col"><h4>Kết nối</h4><p><a href="https://facebook.com/UpziFanpage" target="_blank" rel="noopener">facebook.com/UpziFanpage</a></p></div></div><div class="f-bot">© 2026 Upzi - Member of Navigos Group. All rights reserved.</div></div></footer>
 
