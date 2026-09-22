@@ -161,7 +161,10 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   }
   h2.title{font-size:clamp(25px,3.4vw,38px);font-weight:800;line-height:1.16;}
   h2.title .u{background:linear-gradient(180deg,transparent 62%,rgba(224,231,34,.8) 62%);padding:0 3px;}
-  .lede-2{color:var(--sub);font-size:16px;margin-top:12px;max-width:600px;}
+  .lede-2{color:var(--sub);font-size:16px;margin-top:12px;max-width:660px;line-height:1.6;}
+  .lede-2 a{color:var(--purple-dark);font-weight:700;text-decoration:none;
+    border-bottom:1.5px solid rgba(147,69,255,.35);}
+  .lede-2 a:hover{border-bottom-color:var(--purple-dark);}
 
   /* ---------- WHY ---------- */
   .why-split{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(26px,4vw,52px);align-items:center;margin-top:34px;}
@@ -223,6 +226,32 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   .jd-art{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);
     box-shadow:0 22px 50px -30px rgba(85,28,175,.5);}
   @media(max-width:900px){.jd{grid-template-columns:1fr;}}
+
+  /* ---------- HERO: dong VietnamWorks ---------- */
+  .hero-vnw{margin-top:16px;font-size:15px;line-height:1.55;color:var(--sub);}
+  .hero-vnw a{color:var(--purple-dark);font-weight:700;text-decoration:none;
+    border-bottom:1.5px solid rgba(147,69,255,.35);}
+  .hero-vnw a:hover{border-bottom-color:var(--purple-dark);}
+
+  /* ---------- FORK: hai duong bat dau ---------- */
+  .fork{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(18px,2.4vw,26px);margin-top:30px;align-items:start;}
+  .fork-card{background:#fff;border:1.5px solid var(--line);border-radius:20px;
+    padding:clamp(22px,2.8vw,30px);}
+  .fork-main{border-color:rgba(147,69,255,.45);box-shadow:0 14px 34px -22px rgba(147,69,255,.55);}
+  .fork-tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;
+    text-transform:uppercase;color:#fff;background:var(--purple);
+    border-radius:100px;padding:5px 12px;margin-bottom:14px;}
+  .fork-tag.alt{background:#EFEBF7;color:#6B6478;}
+  .fork-card h3{font-size:clamp(19px,2vw,22px);font-weight:800;margin-bottom:10px;line-height:1.3;}
+  .fork-card p{font-size:15.5px;line-height:1.6;color:var(--sub);}
+  .fork-card .fork-for{font-size:13.5px;font-weight:600;color:var(--purple-dark);
+    padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid var(--line);}
+  .fork-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .fork-help{margin-top:20px;font-size:14.5px;line-height:1.6;color:var(--sub);}
+  .fork-help a{color:var(--purple-dark);font-weight:700;text-decoration:none;
+    border-bottom:1.5px solid rgba(147,69,255,.35);}
+  .fork-help a:hover{border-bottom-color:var(--purple-dark);}
+  @media(max-width:860px){.fork{grid-template-columns:1fr;}}
 
   /* ---------- PREP ---------- */
   .prep{
@@ -390,6 +419,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
           <a class="btn" href="https://talent.navigos.vn/auth/register" target="_blank" rel="noopener">Đăng tin đầu tiên →</a>
           <a class="btn line" href="#dang-tin">Xem cách đăng tin</a>
         </div>
+        <p class="hero-vnw">Doanh nghiệp đã có tài khoản VietnamWorks có thể <a href="https://talent.navigos.vn/auth/login" target="_blank" rel="noopener">đăng nhập</a> và đăng tin ngay.</p>
         <div class="hero-meta">
           <div><span class="tick">✓</span> Tạo tài khoản, nhận 1 slot đăng tin tuyển dụng miễn phí</div>
           <div><span class="tick">✓</span> Chỉ khoảng 5 phút</div>
@@ -467,13 +497,45 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   </div>
 </section>
 
+<!-- BẮT ĐẦU TỪ ĐÂU -->
+<section class="blk bg-soft" style="padding-bottom:clamp(30px,4vw,46px);">
+  <div class="wrap">
+    <span class="kicker">Bắt đầu</span>
+    <h2 class="title">Hai cách để <span class="u">bắt đầu đăng tin</span></h2>
+    <p class="lede-2">Upzi nằm trong hệ thống Navigos Talent One, dùng chung tài khoản với VietnamWorks. Anh/Chị bắt đầu theo cách phù hợp với tài khoản công ty đang có.</p>
+
+    <div class="fork">
+      <div class="fork-card fork-main">
+        <span class="fork-tag">Cách 1</span>
+        <h3>Đăng nhập bằng tài khoản VietnamWorks</h3>
+        <p class="fork-for">Dành cho công ty đang dùng VietnamWorks để tuyển dụng</p>
+        <p>Tài khoản nhà tuyển dụng VietnamWorks dùng được luôn cho Upzi. Tại trang đăng nhập Navigos Talent One, chọn <b>“Đăng nhập bằng VietnamWorks”</b> và chuyển thẳng sang bước đăng tin.</p>
+        <div class="fork-cta">
+          <a class="btn" href="https://talent.navigos.vn/auth/login" target="_blank" rel="noopener">Đăng nhập</a>
+          <a class="btn line" href="#dang-tin">Hướng dẫn đăng tin</a>
+        </div>
+      </div>
+      <div class="fork-card">
+        <span class="fork-tag alt">Cách 2</span>
+        <h3>Đăng ký tài khoản mới</h3>
+        <p class="fork-for">Dành cho công ty lần đầu tuyển dụng cùng Navigos</p>
+        <p>Đăng ký tài khoản, hoàn tất hồ sơ công ty và thông tin pháp nhân. Các bước thực hiện kèm hình ảnh minh họa ở phần bên dưới.</p>
+        <div class="fork-cta">
+          <a class="btn line" href="#tao-tai-khoan">Hướng dẫn tạo tài khoản</a>
+        </div>
+      </div>
+    </div>
+    <p class="fork-help">Chưa rõ công ty đã có tài khoản hay chưa, Anh/Chị liên hệ Upzi qua hotline <a href="tel:02873058500">028 7305 8500</a> hoặc Zalo <a href="https://zalo.me/0703377017" target="_blank" rel="noopener">070 3377 017</a> để được kiểm tra.</p>
+  </div>
+</section>
+
 <!-- CHUẨN BỊ -->
-<section class="blk bg-soft" style="padding-bottom:clamp(28px,3.5vw,40px);">
+<section class="blk bg-soft" id="tao-tai-khoan" style="padding-top:clamp(28px,3.5vw,40px);padding-bottom:clamp(28px,3.5vw,40px);">
   <div class="wrap">
     <div class="prep">
       <div class="prep-badge">📋</div>
       <div>
-        <h3>Chuẩn bị trước khi bắt đầu</h3>
+        <h3>Chuẩn bị trước khi tạo tài khoản mới</h3>
         <ul>
           <li><span class="c">✓</span> Giấy phép đăng ký kinh doanh (bản chụp hoặc bản scan)</li>
           <li><span class="c">✓</span> Logo và ảnh bìa công ty</li>
@@ -488,6 +550,7 @@ document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
   <div class="wrap">
     <span class="kicker">Phần 1</span>
     <h2 class="title">Điền thông tin công ty</h2>
+    <p class="lede-2">Phần 1 và Phần 2 dành cho doanh nghiệp tạo tài khoản mới. Trường hợp đã <a href="https://talent.navigos.vn/auth/login" target="_blank" rel="noopener">đăng nhập bằng tài khoản VietnamWorks</a>, Anh/Chị chuyển sang <a href="#dang-tin">Phần 3 – Đăng tin tuyển dụng</a>.</p>
 
     <div class="step-row" style="margin-top:34px;">
       <div>
